@@ -49,7 +49,8 @@ app.get("/api/champions", async () => {
         title: c.title,
         icon: c.iconUrl,
         tags: c.tags,
-        difficulty: c.difficulty,
+        difficulty: s?.difficulty ?? c.difficulty,
+        difficultySource: s?.difficulty !== undefined ? "curated" : "riot",
         cc: attrs.cc,
         mobility: attrs.mobility,
         blurb: c.blurb,
@@ -82,6 +83,7 @@ app.post<{ Body: { values?: Record<string, unknown>; reset?: boolean } }>(
 interface FicheBody {
   style?: Record<string, number>;
   tempo?: number;
+  difficulty?: number;
   cc?: number;
   mobility?: number;
 }
@@ -92,10 +94,10 @@ app.post<{ Params: { id: string }; Body: FicheBody }>("/api/fiches/:id", async (
   const champ = [...champions.values()].find((c) => c.id === req.params.id);
   if (!champ) return reply.code(404).send({ error: "Champion inconnu" });
   const body = req.body ?? {};
-  if (body.style || body.tempo !== undefined) {
+  if (body.style || body.tempo !== undefined || body.difficulty !== undefined) {
     updateStyle(
       champ.id,
-      { style: body.style as any, tempo: body.tempo },
+      { style: body.style as any, tempo: body.tempo, difficulty: body.difficulty },
       champ.tags[0] ?? "Specialist",
     );
   }

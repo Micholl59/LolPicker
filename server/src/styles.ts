@@ -15,6 +15,8 @@ export interface ChampionStyle {
   archetype: string;
   style: StyleVector;
   tempo: number;
+  // Difficulté curée (1-10) ; prime sur celle de Data Dragon quand présente
+  difficulty?: number;
   plan?: { early: string; mid: string; late: string; draft: string };
   provenance: "curated" | "draft";
   sources: string[];
@@ -55,7 +57,7 @@ export function loadStyles(): Map<string, ChampionStyle> {
 // Met à jour (ou crée) la fiche d'un champion et persiste le fichier
 export function updateStyle(
   id: string,
-  patch: { style?: StyleVector; tempo?: number; archetype?: string },
+  patch: { style?: StyleVector; tempo?: number; archetype?: string; difficulty?: number },
   fallbackArchetype: string,
 ): ChampionStyle {
   const raw = JSON.parse(fs.readFileSync(STYLES_FILE, "utf8")) as Record<string, any>;
@@ -73,6 +75,9 @@ export function updateStyle(
   }
   if (patch.tempo !== undefined) {
     existing.tempo = Math.min(100, Math.max(0, Math.round(Number(patch.tempo) || 0)));
+  }
+  if (patch.difficulty !== undefined) {
+    existing.difficulty = Math.min(10, Math.max(1, Math.round(Number(patch.difficulty) || 1)));
   }
   if (patch.archetype) existing.archetype = String(patch.archetype);
   existing.editedAt = new Date().toISOString().slice(0, 10);

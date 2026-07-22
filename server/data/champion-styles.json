@@ -19,9 +19,30 @@
   },
   "Garen": {
     "runes": [
-      { "keystone": 8437, "quand": "adversaire à distance : encaisse le poke et scale (Poigne de l'immortel)", "cond": { "ranged": true } },
-      { "keystone": 8005, "quand": "trades courts contre un burst mêlée : punis chaque échange rapide", "cond": { "melee": true, "archetypes": ["Assassin"] } },
-      { "keystone": 8010, "quand": "trades moyens/longs contre une mêlée (Darius, Mordekaiser…) : le duel s'étire, Conqueror s'empile", "cond": { "melee": true } }
+      {
+        "keystone": 8437,
+        "quand": "adversaire à distance : encaisse le poke et scale (Poigne de l'immortel)",
+        "cond": {
+          "ranged": true
+        }
+      },
+      {
+        "keystone": 8005,
+        "quand": "trades courts contre un burst mêlée : punis chaque échange rapide",
+        "cond": {
+          "melee": true,
+          "archetypes": [
+            "Assassin"
+          ]
+        }
+      },
+      {
+        "keystone": 8010,
+        "quand": "trades moyens/longs contre une mêlée (Darius, Mordekaiser…) : le duel s'étire, Conqueror s'empile",
+        "cond": {
+          "melee": true
+        }
+      }
     ],
     "archetype": "Juggernaut",
     "style": {
@@ -45,7 +66,8 @@
       "https://wiki.leagueoflegends.com/en-us/Garen/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
     ],
-    "editedAt": "2026-07-22"
+    "editedAt": "2026-07-22",
+    "difficulty": 1
   },
   "Malzahar": {
     "archetype": "Battlemage",
@@ -69,12 +91,25 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Malzahar/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 2
   },
   "Singed": {
     "runes": [
-      { "keystone": 8437, "quand": "mêlée qui te course : chaque Fling/poison proc la Poigne", "cond": { "melee": true } },
-      { "keystone": 8230, "quand": "adversaire à distance : Rush phasique pour proxy et échapper", "cond": { "ranged": true } }
+      {
+        "keystone": 8437,
+        "quand": "mêlée qui te course : chaque Fling/poison proc la Poigne",
+        "cond": {
+          "melee": true
+        }
+      },
+      {
+        "keystone": 8230,
+        "quand": "adversaire à distance : Rush phasique pour proxy et échapper",
+        "cond": {
+          "ranged": true
+        }
+      }
     ],
     "archetype": "Specialist",
     "style": {
@@ -97,12 +132,25 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Singed/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 4
   },
   "Malphite": {
     "runes": [
-      { "keystone": 8437, "quand": "adversaire AD mêlée : Poigne + armure, la lane devient injouable pour lui", "cond": { "melee": true } },
-      { "keystone": 8229, "quand": "adversaire à distance : joue poke Q avec Comète des arcanes", "cond": { "ranged": true } }
+      {
+        "keystone": 8437,
+        "quand": "adversaire AD mêlée : Poigne + armure, la lane devient injouable pour lui",
+        "cond": {
+          "melee": true
+        }
+      },
+      {
+        "keystone": 8229,
+        "quand": "adversaire à distance : joue poke Q avec Comète des arcanes",
+        "cond": {
+          "ranged": true
+        }
+      }
     ],
     "archetype": "Vanguard",
     "style": {
@@ -125,12 +173,25 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Malphite/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 2
   },
   "Nasus": {
     "runes": [
-      { "keystone": 8021, "quand": "gros poke à distance : Jeu de jambes pour survivre à la lane", "cond": { "ranged": true } },
-      { "keystone": 8437, "quand": "matchup mêlée : trades courts sous tour et sustain en stackant", "cond": { "melee": true } }
+      {
+        "keystone": 8021,
+        "quand": "gros poke à distance : Jeu de jambes pour survivre à la lane",
+        "cond": {
+          "ranged": true
+        }
+      },
+      {
+        "keystone": 8437,
+        "quand": "matchup mêlée : trades courts sous tour et sustain en stackant",
+        "cond": {
+          "melee": true
+        }
+      }
     ],
     "archetype": "Juggernaut",
     "style": {
@@ -153,7 +214,8 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Nasus/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 3
   },
   "Warwick": {
     "archetype": "Diver",
@@ -177,12 +239,25 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Warwick/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 2
   },
   "Mordekaiser": {
     "runes": [
-      { "keystone": 8230, "quand": "adversaire qui kite ou fuit (ranged/mobile) : Rush phasique pour coller", "cond": { "ranged": true } },
-      { "keystone": 8010, "quand": "duel mêlée prolongé : Conqueror alimente dégâts et soins", "cond": { "melee": true } }
+      {
+        "keystone": 8230,
+        "quand": "adversaire qui kite ou fuit (ranged/mobile) : Rush phasique pour coller",
+        "cond": {
+          "ranged": true
+        }
+      },
+      {
+        "keystone": 8010,
+        "quand": "duel mêlée prolongé : Conqueror alimente dégâts et soins",
+        "cond": {
+          "melee": true
+        }
+      }
     ],
     "archetype": "Juggernaut",
     "style": {
@@ -205,7 +280,8 @@
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Mordekaiser/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 3
   },
   "Locke": {
     "archetype": "Assassin",
@@ -230,41 +306,60 @@
       "https://esports.gg/news/league-of-legends/league-of-legends-locke-release-date-and-abilities/",
       "https://win.gg/locke-league-of-legends-preview/",
       "https://www.sheepesports.com/en/all/articles/all-locke-abilities-explained/en"
-    ]
+    ],
+    "difficulty": 9
   },
   "Darius": {
     "archetype": "Juggernaut",
     "style": {
-      "splitpush": 60,
-      "teamfight": 55,
-      "pick": 45,
+      "splitpush": 45,
+      "teamfight": 65,
+      "pick": 55,
       "poke": 5,
-      "engage": 35,
+      "engage": 40,
       "peel": 10,
       "roam": 15
     },
     "tempo": 35,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Darius/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Lane bully : trade au corps-à-corps, touche le manche de Décimation (Q) pour les dégâts max et empile l'Hémorragie. Sans mobilité, tu es vulnérable quand ton E (Appréhender) est en CD.",
+      "mid": "Ta guillotine (R) exécute à vrai dégât et se réinitialise sur un kill. Attrape les cibles isolées avec Appréhender à travers les murs. Waveclear faible (Titanic Hydra aide).",
+      "late": "En teamfight, empile l'Hémorragie sur plusieurs cibles pour déclencher Puissance noxienne, puis enchaîne les R. Reste dans la mêlée : plus le combat dure, plus tu es fort.",
+      "draft": "Fort contre les mêlées immobiles qui stackent l'armure. Faible contre les fighters mobiles (Jax, Riven, Irelia) et le poke à distance."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 4
   },
   "Sett": {
     "archetype": "Juggernaut",
     "style": {
-      "splitpush": 50,
+      "splitpush": 45,
       "teamfight": 70,
       "pick": 45,
       "poke": 5,
-      "engage": 55,
+      "engage": 60,
       "peel": 20,
       "roam": 15
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Sett",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Trades avec le W chargé (le Grip d'acier inflige de vrais dégâts selon les coups encaissés). Garde ta passive pour les gros échanges. Solide en 1v1 rapproché.",
+      "mid": "Ton R (Toute la mise) attrape la cible clé et l'écrase sur son équipe : cherche l'engage sur un carry mal placé. Le W traverse et zone en plein combat.",
+      "late": "Frontline-engage : entre avec R sur la meilleure cible, W au milieu du fight pour les vrais dégâts et la zone, encaisse et disloque leur backline.",
+      "draft": "Fort contre les compos sans peel et les mêlées. Faible contre le kite et les Blessures graves ; manque de mobilité pour rattraper."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 3
   },
   "Illaoi": {
     "archetype": "Juggernaut",
@@ -312,10 +407,19 @@
       "roam": 25
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Aatrox/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Zone avec le sweetspot du Q (le bout du coup fait mal et te soigne). Utilise la Ruée sombre (E) pour repositionner tes Q et esquiver les sorts. Trades prolongés grâce au vol de vie.",
+      "mid": "Force les fights quand ton R (Faucheur de mondes) est prêt : il te ressuscite, autorise les tower dives et amplifie tes soins. Enchaîne les Chaînes infernales (W) sur le knock-up du Q.",
+      "late": "Ta valeur est le teamfight : entre, soigne-toi sur plusieurs cibles, le R te relève si tu tombes. Correct en side lane mais tu brilles en groupe.",
+      "draft": "Fort contre les mêlées rapprochées. Faible contre le kite (garde ses distances pendant ton R) et les Blessures graves qui coupent tes soins."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Fiora": {
     "archetype": "Skirmisher",
@@ -329,10 +433,19 @@
       "roam": 15
     },
     "tempo": 65,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Fiora/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Rush Tiamat pour le waveclear, farm safe et évite les trades prolongés early. Ton Riposte (W) bloque un CC/dash clé — garde-le pour ça, pas pour les dégâts.",
+      "mid": "Escarmouches en jouant tes Vitals (les points faibles) : positionne-toi pour les faire apparaître du bon côté. Black Cleaver pour spammer tes sorts.",
+      "late": "Splitpush agressif : ton R (Grand Défi) et les Vitals infligent des vrais dégâts qui tuent même les tanks. Force-les à venir te répondre à plusieurs.",
+      "draft": "Forte contre les tanks et les immobiles à longs CD. Faible contre la pression early, les Blessures graves (Thornmail) et les duellistes late (Jax, Master Yi)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 8
   },
   "Jax": {
     "archetype": "Skirmisher",
@@ -346,10 +459,19 @@
       "roam": 15
     },
     "tempo": 75,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Jax/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 5,
+    "plan": {
+      "early": "Duelliste qui scale : farme safe (Spectre's Cowl contre le harass), évite les fights. Contre-attaque (E) en défensif pour bloquer les autos.",
+      "mid": "Core Trinité. Active Contre-attaque (E) offensivement seulement quand la cible est proche et ne peut pas fuir (stun). Regroupe pour les objectifs.",
+      "late": "Pic max : vitesse d'attaque cap avec Rageblade + passive. Splitpush et duels — personne ne te gagne en 1v1 prolongé. Guardian Angel contre le burst.",
+      "draft": "Fort dans les fights prolongés et contre les immobiles. Faible contre le harass early qui t'empêche de farmer."
+    },
+    "editedAt": "2026-07-22"
   },
   "Tryndamere": {
     "archetype": "Skirmisher",
@@ -380,10 +502,19 @@
       "roam": 35
     },
     "tempo": 60,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Camille/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Trinité en core (synergie avec les vrais dégâts du Q). Poke au Balayage tactique (W), établis le contrôle avec le Grappin (E). Trades avec les deux charges du Q.",
+      "mid": "Pick les cibles isolées : engage au Grappin, R (Ultimatum hextech) pour enfermer un carry en 1v1. Ajoute un peu de défensif (Sterak, Visage) sans lâcher les dégâts.",
+      "late": "Splitpush et menace de pick : ton R a une courte portée, saute sur un backliner isolé. Les vrais dégâts du Q déchirent les tanks.",
+      "draft": "Forte contre les compos mono-dégâts et les cibles isolées. Faible contre les dégâts mixtes, si le Grappin rate (long CD), et contre les knockbacks qui te sortent de ton R."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Shen": {
     "archetype": "Warden",
@@ -533,10 +664,19 @@
       "roam": 30
     },
     "tempo": 40,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Riven/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 9,
+    "plan": {
+      "early": "Combo fighter agressif : lead avec Ailes brisées (Q) + Éclat de ki, Valeur (E) en défensif. Kit sans mana + bouclier instantané = pression constante. Empile les Doran, cherche les kills tôt.",
+      "mid": "Pic avec Black Cleaver : active ton R (Lame de l'exilée) EN DÉBUT de fight (15 s, amplifie tout). Rotate pour les kills, snowball dur.",
+      "late": "Mobilité pour les flanks. Wind Slash (recast R) punit les cibles basses. Les animation cancels maximisent ton burst.",
+      "draft": "Forte contre les mêlées immobiles. Faible contre les silences, stuns, interrupts (Alistar) et le stack d'armure (Malphite)."
+    },
+    "editedAt": "2026-07-22"
   },
   "Gwen": {
     "archetype": "Skirmisher",
@@ -652,10 +792,19 @@
       "roam": 30
     },
     "tempo": 25,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Renekton/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Domine la lane : gros dégâts de base et fury. Harcèle en engage/disengage au Slice and Dice (E). Empile la fury pour un Cull the Meek (Q) empowered qui te soigne. Évite les trades longs contre le poke ranged.",
+      "mid": "Powerspike au niveau 6 (Dominus). Gank et force les fights pendant ton pic : c'est ta fenêtre, convertis ton avance vite.",
+      "late": "Tu faiblis nettement : sans avance tu deviens un tank utilitaire. Joue en engage/frontline plutôt qu'en carry.",
+      "draft": "Fort contre les mêlées. Faible contre le kite ranged (Teemo, Kennen, Jayce), les silences et les dégâts en pourcentage de PV."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Pantheon": {
     "archetype": "Diver",
@@ -686,10 +835,19 @@
       "roam": 25
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Irelia/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 8,
+    "plan": {
+      "early": "Max Q (Assaut des lames, sur les sbires mourants/cibles marquées pour reset). Sheen contre ranged, Tiamat contre mêlée. Empile ta vitesse d'attaque (passive).",
+      "mid": "Snowball : ton E (Duo sans faille) stun et engage. Le R (Tranchant du gardien) force les flashs. Garde tes stacks de passive.",
+      "late": "Menace de teamfight : R pour initier, contrôler le positionnement et couper les projectiles. Focus prioritaire pour l'ennemi vu tes dégâts + CC.",
+      "draft": "Forte contre les immobiles. Faible contre le CC dur et l'anti-mobilité (Malphite, Garen, Darius, Zac, Olaf)."
+    },
+    "editedAt": "2026-07-22"
   },
   "MasterYi": {
     "archetype": "Skirmisher",
@@ -788,10 +946,19 @@
       "roam": 70
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Nocturne/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 4,
+    "plan": {
+      "early": "Pression jungle agressive (Umbra Blades). Duskbringer sur les ganks pour chase. Conteste les skirmishes early, mais tu es squishy.",
+      "mid": "Menace de pick n°1 : Paranoïa (R) global pour sauter sur un surextendu et couper leur vision. Bait les disables ennemis avec ton spellshield (W), puis fear (E).",
+      "late": "Fighter/assassin mobile : dash en teamfight sur les cibles basses. Le R sépare l'ennemi (perte de vision). Ta vision conditionne ton R.",
+      "draft": "Fort : duel early, pression globale. Faible : early squishy, dépendant de la vision pour cibler son R."
+    },
+    "editedAt": "2026-07-22"
   },
   "RekSai": {
     "archetype": "Diver",
@@ -924,10 +1091,19 @@
       "roam": 60
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Hecarim/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Prends le buff bleu (tu es dépendant du mana), farm efficacement et prépare les ganks dès que ton R est disponible. Duel early faible : évite les invades.",
+      "mid": "Passe du farm à la pression map constante grâce à ta vitesse de déplacement. Gank avec Charge dévastatrice (chargée avant le R pour le dégât max) puis R (Assaut des ombres) pour peur et repositionner.",
+      "late": "Un des rares bruisers qui ne faiblit pas en late : énorme en teamfight. Flanke avec le R sur leur backline, Esprit d'effroi (W) en pleine zone de dégâts pour un sustain quasi invulnérable.",
+      "draft": "Fort : mobilité, menace AoE, sustain, scaling. Faible contre les slows (annulent Sentier de guerre), le CC dur et les duels early."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 4
   },
   "XinZhao": {
     "archetype": "Diver",
@@ -958,10 +1134,19 @@
       "roam": 70
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Kayn/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Choisis ta forme selon la compo ennemie : Assassin de l'ombre (contre squishy, burst) ou Rhaast (contre tanky/sustain, teamfight). Faible avant transformation : clear vite (dash à travers les murs) et gank pour accélérer.",
+      "mid": "Une fois transformé, ton pic arrive. Assassin : burst les isolés au R. Rhaast : sustain à travers les fights, items défensifs (Visage, Death's Dance). Warrior + Black Cleaver en core.",
+      "late": "Assassin : R sur un carry isolé. Rhaast : entre en frontline et soigne-toi sur plusieurs cibles.",
+      "draft": "Fort : flexibilité de forme, mobilité, setups de gank. Faible avant transformation — l'ennemi cherchera à te pressurer early (Blessures graves contre Rhaast, Zhonya contre Assassin)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 6
   },
   "Graves": {
     "archetype": "Specialist",
@@ -975,10 +1160,19 @@
       "roam": 40
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Graves/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Skirmisher agressif : Warrior. Bully et escarmouches. Gère tes cartouches : reste au corps-à-corps pour les dégâts max (auto mono-cible de près, AoE de loin), recule pour recharger. Powerspike au 6 (Dégâts collatéraux).",
+      "mid": "Splitpusher redoutable : ton fusil défonce les tours. Duels : E + R en burst sur un assassin. Kite tes camps pour garder tes PV.",
+      "late": "Après avoir lâché Tir rapide (E) et R, tu es très vulnérable au CC : positionne-toi bien, garde ton dash pour l'après-combat.",
+      "draft": "Fort contre les bruisers mêlée. Faible contre l'engage dur à CC fiable et le stack d'armure."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Khazix": {
     "archetype": "Assassin",
@@ -992,10 +1186,19 @@
       "roam": 75
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Kha%27Zix/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Ta mécanique : l'isolation (Goût de la peur, Q, fait bien plus de dégâts sur une cible sans alliés proches). Gank les isolés avec l'invisibilité de Menace invisible. Warrior en premier.",
+      "mid": "Items de lethality (Youmuu, Duskblade). Cherche les carries squishy séparés de leur équipe. Évolue selon ton besoin (Q isolation, W poke, E saut, R invisibilité).",
+      "late": "Évite les teamfights groupés : chasse les isolés et les splitpush. Très vulnérable quand ton Saut (E) et ton R sont en CD.",
+      "draft": "Fort contre les compos éparpillées et squishy. Faible contre les équipes groupées et les duellistes (Jax, Fiora) même isolés."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Evelynn": {
     "archetype": "Assassin",
@@ -1128,10 +1331,19 @@
       "roam": 55
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Viego",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farm et cherche les escarmouches : sur un kill, ta passive te fait posséder le corps ennemi (ses sorts + un coup gratuit de ton R). Gank avec le stun du W (charge-le contre un mur).",
+      "mid": "Roi des escarmouches autour des objectifs : chaque kill en fight te donne un nouveau corps à plein PV et un reset. Provoque les 2v2 / 3v3 où tu domines.",
+      "late": "En teamfight, entre en second : laisse le combat entamer les PV, prends une âme (kill) et enchaîne, idéalement en possédant leur carry. Vise toujours la cible la plus rentable.",
+      "draft": "Fort contre les compos squishy où les resets s'enchaînent. Faible contre les tanks (peu à posséder), le kite et les Blessures graves."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 8
   },
   "LeeSin": {
     "archetype": "Diver",
@@ -1145,10 +1357,19 @@
       "roam": 65
     },
     "tempo": 20,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Lee_Sin/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Ta fenêtre, c'est l'early : full clear ou invade, puis gank tôt avec Onde sonique (Q) → Frappe résonnante pour coller. Prends le tempo sur les objectifs pendant ton pic de puissance.",
+      "mid": "Playmaker : le R (Furie du dragon) éjecte une cible dans ton équipe, ou repousse un plongeon (peel). Cherche l'insec sur leur carry. Convertis ton avance vite, tu perds en puissance avec le temps.",
+      "late": "Tu scales mal : joue en amorce de fight (R d'un carry vers ton équipe, ou peel), pas en carry. Reste sur l'information et le contrôle de vision.",
+      "draft": "Fort en early contre les junglers lents et les immobiles. Faible contre les dégâts magiques, le CC dur et les compos qui scalent mieux."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 10
   },
   "Elise": {
     "archetype": "Diver",
@@ -1179,10 +1400,19 @@
       "roam": 55
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Ekko/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 8,
+    "plan": {
+      "early": "Skirmish et harcèle depuis une relative sécurité. Farm au Q en empilant la passive. Utilise le W (Convergence parallèle) en défensif contre les ganks.",
+      "mid": "Roame et pick : place le W pour zoner/piéger, Q slow pour isoler, puis burst. Le R (Faille temporelle) te soigne et repositionne — offensif après avoir entamé, ou fuite quand critique (n'hésite pas).",
+      "late": "Excellent en suivi d'AoE à fort impact. Splitpush avec waveclear + fuite. Time bien ton R en teamfight.",
+      "draft": "Fort avec du CC (Gnar, Vi, Draven). Faible contre le burst mage (LeBlanc) et les duellistes bruiser (Fiora)."
+    },
+    "editedAt": "2026-07-22"
   },
   "Diana": {
     "archetype": "Diver",
@@ -1196,10 +1426,19 @@
       "roam": 45
     },
     "tempo": 60,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Diana/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 5,
+    "plan": {
+      "early": "Combo autour de marquer une cible (Q) puis dash (Croissant fatal). Rater un Q n'est pas punitif (CD faible). Le bouclier (W) a une durée limitée : l'ennemi peut l'attendre.",
+      "mid": "Reste sur les cibles avec R (Chute lunaire, pull) + dash, Lame d'argent pour le dégât bonus. Cherche les fights où ton pull groupe l'ennemi.",
+      "late": "En teamfight, entre avec R pour tirer leur backline dans ton équipe, puis burst. Zhonya pour survivre à ton propre engage.",
+      "draft": "Forte contre les compos groupées (pull AoE) et squishy. Faible contre le CC quand ta mobilité est déjà utilisée."
+    },
+    "editedAt": "2026-07-22"
   },
   "Fiddlesticks": {
     "archetype": "Specialist",
@@ -1332,10 +1571,19 @@
       "roam": 20
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Morgana/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 3,
+    "plan": {
+      "early": "Spellthief, poke. Combo Lien maléfique (Q, snare longue portée) + Ombre tourmentée prudemment (mana). Le Bouclier noir (E) te rend dure à ganker.",
+      "mid": "Zhonya en core. Positionne-toi bien (le R exige de coller à l'ennemi). Le Bouclier noir sur un allié annule le CC ennemi clé — ça décide les fights.",
+      "late": "Formidable en scaling : R (Chaînes de l'âme) gros dégât + long stun. Utilitaire via le Bouclier noir + dégâts.",
+      "draft": "Forte contre les supports à CC lourd (Thresh, Leona — le Bouclier noir les annule) et les compos scaling. Faible contre le poke quand le Q est en CD et les supports qui gardent leurs distances (Sona, Brand)."
+    },
+    "editedAt": "2026-07-22"
   },
   "Brand": {
     "archetype": "Burst Mage",
@@ -1366,10 +1614,19 @@
       "roam": 10
     },
     "tempo": 90,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Veigar/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farm au Frappe funeste (Q) pour empiler ton AP (double last-hit quand possible). Très vulnérable au harass (portée courte) : garde une position safe, ne te fais pas zoner.",
+      "mid": "100+ AP accumulés : setup tes picks avec le stun de l'Horizon des événements (E) → Matière noire (W). Roame pour créer de la pression.",
+      "late": "Scaling infini : one-shot les squishy avec E (cage/stun) → Matière noire → Explosion primordiale. Le CD faible de Matière noire spamme en teamfight. Très fragile : reste protégé.",
+      "draft": "Fort : scaling, zone (la cage), gros burst. Faible early, peu mobile, vulnérable quand ses sorts sont en CD."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 4
   },
   "Lux": {
     "archetype": "Burst Mage",
@@ -1400,10 +1657,19 @@
       "roam": 20
     },
     "tempo": 60,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Syndra/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 6,
+    "plan": {
+      "early": "Rush Q rang 5 (bonus Transcendant). Harcèle au Q (Sphère noire) quand l'ennemi last-hit. Ne spam pas le Q dans la vague (ça push et draine ton mana). Vise 30%+ CDR.",
+      "mid": "Combo Q > Q > W > E (dégât, slow, stun). Après ton E (Dispersion), l'ennemi est vulnérable (long CD). Positionne backline, poke à distance. Attention aux ganks (pas d'échappatoire).",
+      "late": "R (Déchaînement) avec 4 sphères = un des plus gros dégâts mono-cible du jeu, one-shot les squishy. Empile 2-3 sphères avant de commit. Zhonya pour survivre.",
+      "draft": "Forte contre les immobiles, bon waveclear, combo à CC. Faible contre les assassins mobiles (Fizz surtout) et les ganks early."
+    },
+    "editedAt": "2026-07-22"
   },
   "Ahri": {
     "archetype": "Burst Mage",
@@ -1417,10 +1683,19 @@
       "roam": 55
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Ahri/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farm en sécurité, harcèle au Q (Orbe de déception, gros dégâts au retour) en gérant ton mana. Garde le Charme (E) pour les moments clés, ne le gaspille pas.",
+      "mid": "Roameuse : ton R (Ruée spirituelle, 3 dashs) te fait couvrir la carte pour ganker les side lanes. Un Charme réussi vaut un kill. Repère les cibles isolées.",
+      "late": "En fight, pick un carry avec E→Q→W et garde des charges de R pour repositionner si on te saute dessus. Kit très mobile mais dépendant de tes skillshots.",
+      "draft": "Forte en teamfight, pick et mobilité. Faible si tes skillshots (le Charme surtout) ratent ou si ton R est en CD."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Zed": {
     "archetype": "Assassin",
@@ -1434,10 +1709,19 @@
       "roam": 55
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Zed/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Contrôle la lane au poke (Shuriken tranchant). Ta passive fait bonus sur les cibles basses. Garde énergie et CD avant de commit ton R. Duskblade en objectif.",
+      "mid": "Ton pic arrive avec les items de lethality. Roame avec l'Ombre vivante (W) pour pick les isolés. Time bien ton R (Marque de mort) : tu es vulnérable après avoir lâché W et R.",
+      "late": "Continue de cibler les carries isolés. Pré-place l'Ombre avant de R pour avoir une sortie. Guardian Angel si on te focus trop.",
+      "draft": "Fort contre les squishy peu mobiles. Faible contre le stack d'armure, le CC lourd et les Zhonya."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 8
   },
   "Talon": {
     "archetype": "Assassin",
@@ -1468,10 +1752,19 @@
       "roam": 20
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Yasuo/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farm au Q en gérant le bouclier de Flux. Le Mur de vent (W) bloque les projectiles — garde-le contre les ranged, ne le crame pas. Colle avec Balayage (E) sur les sbires.",
+      "mid": "Powerspike sur les items de crit (ta passive double le taux de crit). Harcèle avec E + Tempête d'acier. Cherche activement les knock-ups pour ton R.",
+      "late": "Ta valeur : dash à travers la ligne ennemie et R sur n'importe quelle cible airborne (même knock-up par un allié). Très dépendant de la compo — il te faut des CC alliés.",
+      "draft": "Fort avec des alliés à knock-up (Nami, Alistar, Malphite). Faible contre le stack d'armure, les champions qui bloquent le Q (Jax, Fiora, Pantheon) et le CC dur."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 8
   },
   "Yone": {
     "archetype": "Skirmisher",
@@ -1536,10 +1829,19 @@
       "roam": 45
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Sylas",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Trades avec la chaîne (E) → coups chargés (Q) et le vol de vie ; tu es fort en 1v1 dès le début. Gère ton mana, tes sorts coûtent cher.",
+      "mid": "Ton identité : voler l'ultime clé de l'équipe adverse (R). Regarde leur compo pour savoir quel ultime tu prendras (engage, dégâts, disengage) et adapte ton jeu autour.",
+      "late": "Bruiser-mage sustain : entre en fight, vole un gros ultime, soigne-toi au W. Choisis ta cible de vol selon ce qui manque à ton équipe.",
+      "draft": "Fort contre les compos avec un ultime dévastateur à voler. Faible contre le poke qui t'use avant l'engage et les Blessures graves."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Viktor": {
     "archetype": "Battlemage",
@@ -1570,10 +1872,19 @@
       "roam": 15
     },
     "tempo": 70,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Orianna/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 7,
+    "plan": {
+      "early": "Défenses early faibles : trade quand sa boule n'est pas sur elle. Sustain mana early (Catalyst/Tear). Poke en plaçant la boule (Q) puis recast.",
+      "mid": "Domine avec la boule : zone et poke (elle inflige des dégâts à tout ce qu'elle traverse). Regroupe pour les skirmishes où ton Onde de choc crée l'avantage.",
+      "late": "Ta win condition : le R (Commande : Onde de choc) groupe l'ennemi (tire vers/hors) pour le suivi AoE de ton équipe. Bouclier (E) sur ton initiateur, garde tes distances.",
+      "draft": "Forte contre les compos groupées et avec des alliés à engage. Faible contre les assassins gap-closer qui passent ton peel."
+    },
+    "editedAt": "2026-07-22"
   },
   "Azir": {
     "archetype": "Specialist",
@@ -1757,10 +2068,19 @@
       "roam": 50
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Akali/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 8,
+    "plan": {
+      "early": "Items de lethality (Youmuu, Duskblade). Harcèle avec le bord du Q (slow). Laisse ton équipe initier, puis frappe les cibles arrière.",
+      "mid": "Roame pour pick les isolés. Le Voile crépusculaire (W) donne invisibilité + vitesse pour ton combo (mais fenêtre pour les skillshots ennemis). R+Flash pour surprendre.",
+      "late": "Transition AD-tank (Black Cleaver, Death's Dance) tout en gardant le waveclear (Ravenous Hydra). Landing le 1er stun du R est essentiel pour le kill.",
+      "draft": "Forte contre les squishy immobiles. Faible contre ce qui l'empêche de rentrer au corps-à-corps (poke, disengage)."
+    },
+    "editedAt": "2026-07-22"
   },
   "Katarina": {
     "archetype": "Assassin",
@@ -1774,10 +2094,19 @@
       "roam": 55
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Katarina/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Poke avec les rebonds de la Lame bondissante (Q) sur les sbires plutôt qu'en trade direct. Évite les all-in sans dague au sol bien placée.",
+      "mid": "Ta puissance = les resets de la passive (Voracité) : chaque kill/assist réinitialise tes CD. Place tes dagues AVANT de commit. Snowball sur les kills.",
+      "late": "Death Lotus (R) seulement quand les disables ennemis sont indisponibles. Joue autour des teamfights groupés plutôt que les picks solo. Zhonya en core pour survivre à ton propre engage.",
+      "draft": "Forte contre les squishy immobiles. Faible contre le burst (Diana, Kassadin), les mages à CC (LeBlanc, Syndra) et le contrôle de zone (Malzahar, Azir)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Fizz": {
     "archetype": "Assassin",
@@ -1995,10 +2324,19 @@
       "roam": 5
     },
     "tempo": 80,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Jinx/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farme et poke en sécurité (roquettes Q à distance, Zap! W). Ne rentre pas au minigun tant que ce n'est pas safe : tu es fragile et immobile en early.",
+      "mid": "Contrôle les fights à distance. Ta passive (Tout feu tout flamme) te donne vitesse et reset à chaque kill/assist ou tour détruite — enchaîne les objectifs.",
+      "late": "Hypercarry : à full build tu shred tout, minigun en AoE avec Runaan. Reste au bord du combat, laisse le front encaisser, et clean quand c'est sûr.",
+      "draft": "Forte : dégâts AoE, longue portée, scaling. Faible contre tout CC et les plongeons sur elle — aucune échappatoire."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 4
   },
   "Caitlyn": {
     "archetype": "Marksman",
@@ -2012,10 +2350,19 @@
       "roam": 10
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Caitlyn/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Lane bully : exploite ta portée supérieure et tes pièges (W) pour zoner et poker au Piltover Peacemaker (Q). Un piège pré-posé garantit un combo headshot. Domine la lane tôt.",
+      "mid": "Siege : pousse et prends les tours avec ta portée et la Firecannon. Place les pièges dans les chokes. Tu es forte AVANT les autres ADC — pressione pendant ce pic.",
+      "late": "Ton late est plus faible que les hypercarries : joue le poke et le siège, garde le filet (E) pour survivre. Le R s'interrompt si un ennemi passe devant la cible.",
+      "draft": "Forte contre les lanes passives et le poke. Faible contre les dives et les ADC qui la surpassent en late (Jinx, Kog'Maw)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Ashe": {
     "archetype": "Marksman",
@@ -2029,10 +2376,19 @@
       "roam": 10
     },
     "tempo": 60,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Ashe/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Farm avec le bonus de Tir de givre. Doran puis Bilgewater. Reste avec ton équipe, pas de roam solo. Permaslow pour kiter.",
+      "mid": "Runaan/BorK. Ta Flèche de cristal enchantée (R) est un stun à portée globale (durée selon la distance) : initie les fights groupés ou pick cross-map. Volée applique le givre en AoE.",
+      "late": "IE + Lord Dominik. Le kite devient primordial : garde la distance en permaslow. R pour sécuriser un pick sur un isolé. Hawkshot pour la vision safe.",
+      "draft": "Forte avec des fighters qui exploitent tes slows et suivent ton engage. Faible contre les gap-closers (Alistar, Irelia) et le poke oppressant (Ezreal)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 3
   },
   "Ezreal": {
     "archetype": "Marksman",
@@ -2046,10 +2402,19 @@
       "roam": 15
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Ezreal/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Poke au Tir mystique (Q) : chaque Q touché réduit tous tes CD. Farm avec (récupère les sbires durs) et empile la Larme. Garde le Saut arcanique (E) pour esquiver, pas pour les dégâts.",
+      "mid": "Powerspike à 2 items (Muramana + Trinité). Escarmouches : spam Q, kite au E. Ton R traverse la carte pour finir une cible ou sécuriser un objectif.",
+      "late": "Full réduction de CD, spam de sorts, positionnement safe grâce au E. Waveclear faible (sorts mono-cible) : surveille les vagues qui poussent.",
+      "draft": "Fort : harcèle à distance, build flexible (AD/AP), pression map au R. Faible contre les all-in quand le E est en CD."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Kaisa": {
     "archetype": "Marksman",
@@ -2063,10 +2428,19 @@
       "roam": 15
     },
     "tempo": 75,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Kai%27Sa/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Manamune + bottes. Farm en appliquant le Plasma (passive) via le CC de ton support ; la passive fait plus mal sur les cibles basses.",
+      "mid": "Évolue tes sorts selon ton build (Q pour AD, W pour AP). Roame avec vision pour pick les isolés au Chercheur du Néant (W).",
+      "late": "Groupe : déclenche les ruptures de Plasma en teamfight, utilise le R (Instinct de tueuse) pour repositionner/dive et son bouclier pour survivre au burst.",
+      "draft": "Forte avec des supports à CC (Leona, Thresh) pour le kill explosif. Faible contre les compos groupées et défensives."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 7
   },
   "Jhin": {
     "archetype": "Marksman",
@@ -2080,10 +2454,19 @@
       "roam": 15
     },
     "tempo": 50,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Jhin/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Last-hit en gérant tes 4 balles (la 4e crit et fait mal). Poke à la Grenade dansante (Q). Place tes pièges (W) en défensif. Évite les trades longs.",
+      "mid": "Contrôle les objectifs avec les pièges autour du drake/nashor. Root au Fleuret mortel (W) sur une cible piégée, puis Rideau final (R) depuis une position préparée.",
+      "late": "Positionne-toi loin derrière ou R depuis un angle caché. Lock les cibles marquées, laisse tes alliés finir, cueille les fuyards à la 4e balle. Portée énorme = sécurité.",
+      "draft": "Fort avec du CC fiable (Morgana, Nautilus) et une frontline qui te protège. Faible contre le burst mobile (Lucian, Yasuo) et les compos très tanky."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Vayne": {
     "archetype": "Marksman",
@@ -2097,10 +2480,19 @@
       "roam": 5
     },
     "tempo": 90,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Vayne/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 8,
+    "plan": {
+      "early": "Faible early : ne push pas, farm safe sous tour au Tumble (Q). Les bullies (Caitlyn, MF) vont te priver — joue défensif et scale.",
+      "mid": "Au 6, ton duel explose. Participation teamfight limitée : n'initie pas, laisse ton équipe engager. BorK en core. Silver Bolts (vrais dégâts au 3e coup) déchire les tanks.",
+      "late": "Monstre 1v1 : positionne pour garder la distance de kite. Tumble pour repositionner (pas pour fuir), Condamnation (E) mur les cibles, Final Hour (R) donne stealth + AD.",
+      "draft": "Forte contre les tanks. Faible contre les bullies early et le burst ciblé."
+    },
+    "editedAt": "2026-07-22"
   },
   "Tristana": {
     "archetype": "Marksman",
@@ -2131,10 +2523,19 @@
       "roam": 20
     },
     "tempo": 30,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Lucian/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 7,
+    "plan": {
+      "early": "Lane bully : trades courts en spammant Lightslinger (passive double-shot entre chaque sort). Doran's Blade, abuse la portée trompeuse de Lumière perçante (Q).",
+      "mid": "BorK + Black Cleaver. Marque au Rayon ardent (W) pour le chase. Tire ENTRE chaque sort. Garde le dash (E) pour repositionner, pas pour l'agression gratuite.",
+      "late": "La CDR (pas la vitesse d'attaque) scale ton weaving. Burst > sustain : gagne les échanges courts, évite les fights prolongés. Reste mobile au E.",
+      "draft": "Fort avec des supports engage (Leona). Faible contre les ADC à sustain (Vayne) et le poke longue portée qui empêche les trades rapprochés."
+    },
+    "editedAt": "2026-07-22"
   },
   "MissFortune": {
     "archetype": "Marksman",
@@ -2165,10 +2566,19 @@
       "roam": 10
     },
     "tempo": 20,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Draven/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 8,
+    "plan": {
+      "early": "Attrape tes haches tournantes (Q) : si tu les perds, tu ne fais plus rien. Garde la conscience de la carte en jonglant. Doran + potions, cherche les kills tôt (passive = or).",
+      "mid": "Stormrazor + bottes. Domine les 2v2 quand tes haches sont actives, ne fight jamais sans. Sécurise les kills pour empiler l'or (Ligue de Draven).",
+      "late": "Bloodthirster pour le sustain, puis IE + Phantom Dancer. Positionnement risqué (aucune défense) : dépend de la protection de ton équipe.",
+      "draft": "Fort avec des supports engage (Blitzcrank, Alistar, Zyra). Faible contre ce qui exploite le positionnement de tes haches et le CC dur inéchappable."
+    },
+    "editedAt": "2026-07-22"
   },
   "Xayah": {
     "archetype": "Marksman",
@@ -2403,10 +2813,19 @@
       "roam": 45
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Thresh/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Early faible : ne surextends pas. Cherche les Peines de mort (Q, le hook) pour les picks, et récupère les âmes à distance via la Lanterne (W) dans les matchups agressifs.",
+      "mid": "Ta puissance monte avec les âmes collectées. Initie les fights Q→E (Fouet), protège les carries avec la Lanterne (bouclier + extraction). Playmaker offensif comme défensif.",
+      "late": "Utility totale : hook la cible clé, flay pour peel ou setup de combo, lanterne pour sauver un allié. Peut pivoter offensif au-delà de 200 âmes.",
+      "draft": "Fort avec des mêlées à repositionner et en pick. Faible contre les disengages forts et ce qui te zone des âmes (Lulu, Morgana, Braum)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 8
   },
   "Blitzcrank": {
     "archetype": "Catcher",
@@ -2420,10 +2839,19 @@
       "roam": 40
     },
     "tempo": 35,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Blitzcrank/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Tout tourne autour du Grappin fusée (Q). Garde ton mana (100/grab). Cache-toi en buisson : la simple menace du hook zone l'ennemi. N'engage jamais sans suivi garanti de ton équipe.",
+      "mid": "Catch fréquent : hook une cible isolée, Poing surpuissant (E, knock-up qui empêche le dash) puis Champ statique (R, silence). Le combo 1-2-3 dévaste un isolé.",
+      "late": "Reste avec l'équipe : tu n'as pas les dégâts pour tuer seul une cible saine, joue l'utilitaire et le pick.",
+      "draft": "Fort contre les supports tanky (Alistar, Leona) qui profitent de tes engages gratuits. Faible contre les mobiles qui esquivent le hook (Ezreal, Rakan)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Nautilus": {
     "archetype": "Vanguard",
@@ -2437,10 +2865,19 @@
       "roam": 40
     },
     "tempo": 40,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Nautilus/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Menace d'engage : Dredge Line (Q) sur les cibles isolées, pas les tanks. Ta passive (root sans CD entre cibles) chain le CC. Pression de lane constante.",
+      "mid": "Traduis la pression en setup de gank avec ton jungler. Engage les groupes serrés au Q + R.",
+      "late": "Q d'abord, puis R sur leur backline squishy (le R traque, indodgeable hors stasis). Peel les assassins/ADC de tes carries. Full tank (Locket, Dead Man).",
+      "draft": "Fort contre les compos squishy et les scénarios à fort engage. Faible contre le poke/kite et les mages burst soutenus."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 4
   },
   "Leona": {
     "archetype": "Vanguard",
@@ -2454,10 +2891,19 @@
       "roam": 35
     },
     "tempo": 40,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Leona/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Menace d'engage permanente : marque la cible avec ta passive (Lumière du soleil) avant que ton ADC frappe. Combo E (Lame du zénith) → Q (bouclier stun) pour lock. Relic Shield start.",
+      "mid": "Présence map : utilise Éruption solaire (R) dès qu'il est prêt pour pick et contrôler les objectifs. Coordonne tes engages avec ton équipe.",
+      "late": "Initiatrice : entre avec R sur un groupe ou sur le backliner selon la plus grosse menace, encaisse énormément, chain-CC. Ton équipe suit derrière.",
+      "draft": "Forte : engage à CC dur, très tanky, amplifie les dégâts alliés. Faible contre le kite après ta rotation et si ton équipe ne suit pas."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 3
   },
   "Lulu": {
     "archetype": "Enchanter",
@@ -2471,10 +2917,19 @@
       "roam": 15
     },
     "tempo": 70,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Lulu/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Poke et zone avec Pix (Aide, Pix ! sur ton ADC) et Glitterlance. Le W (Métamorphose) transforme un ennemi ou boost un allié. Spellthief start pour l'or.",
+      "mid": "Enchante ton hypercarry : E (bouclier + Pix pour le dégât), W pour peel ou setup. Reste collée à ta win condition, jamais devant.",
+      "late": "Peel maximum : R (Croissance sauvage) sur ton carry knock-up les plongeurs et lui donne PV + un burst de zone. W la plus grosse menace. Redemption/Mikael pour protéger.",
+      "draft": "Forte quand l'ennemi s'engage à fond (elle punit l'all-in) et pour pomper un hypercarry. Faible contre le harass prolongé qui empêche les fights décisifs."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 5
   },
   "Janna": {
     "archetype": "Enchanter",
@@ -2539,10 +2994,19 @@
       "roam": 15
     },
     "tempo": 55,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Nami/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "plan": {
+      "early": "Enchanteresse offensive. Q (Prison aquatique) est un CC à long CD et projectile lent : anticipe le mouvement. Poke aux rebonds du W. Setup les kills en Q + R. Gère ton mana (CD longs).",
+      "mid": "Ardent Censer + Redemption pour amplifier les fights. Bénédiction de l'appel des marées (E) sur ton ADC pour les all-in (buff on-hit + vitesse). Reste près de tes alliés.",
+      "late": "Raz-de-marée (R) très fiable pour engage ou disengage (coupe les fuites, protège). Présence teamfight soutenue via CDR/mana.",
+      "draft": "Forte avec des compos AD (Ardent Censer). Faible contre le poke (Brand, Zyra) et les blocages de sorts (Braum, Yasuo)."
+    },
+    "editedAt": "2026-07-22",
+    "difficulty": 6
   },
   "Milio": {
     "archetype": "Enchanter",
@@ -2641,10 +3105,19 @@
       "roam": 85
     },
     "tempo": 35,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Pyke/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 7,
+    "plan": {
+      "early": "Domine la lane par le positionnement agressif. Enchaîne Brochette (Q) → Vague fantôme pour garantir le stun. Menace de gank via la furtivité. Items de vision.",
+      "mid": "Roame beaucoup pour pick et convertir en objectifs. Le R (Mort venue d'en bas) exécute les cibles basses et se reset — donne le bounty complet à l'allié qui assiste (double or pour l'équipe).",
+      "late": "Initiateur : cible les menaces prioritaires. Tes sorts d'engage sont aussi des fuites — ne commit jamais sans sortie.",
+      "draft": "Fort avec des ADC immobiles (Jhin) à protéger. Faible contre les supports à CC abondant (Nautilus) qui neutralisent ton engage."
+    },
+    "editedAt": "2026-07-22"
   },
   "Rakan": {
     "archetype": "Catcher",
@@ -2692,10 +3165,19 @@
       "roam": 35
     },
     "tempo": 45,
-    "provenance": "draft",
+    "provenance": "curated",
     "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Alistar/Strategy",
       "https://wiki.leagueoflegends.com/en-us/Champion_classes"
-    ]
+    ],
+    "difficulty": 5,
+    "plan": {
+      "early": "Relic Shield. Gagne les trades au CC pour proc le soin (Rugissement). Menace d'engage permanente.",
+      "mid": "Combo WQ (Coup de tête pendant le dash + Pulvérisation) = un mini-R imblocable toutes les ~10 s : engage un carry ou peel un assassin de ton porteur. Frozen Heart pour le mana/CDR.",
+      "late": "Initiateur fiable : ton R (Volonté inébranlable) retire le CC et réduit énormément les dégâts, dive efficace. Reste groupé pour la valeur défensive du R.",
+      "draft": "Fort contre les compos groupées et sans vrais dégâts. Faible contre les supports ranged, le kite et les vrais dégâts."
+    },
+    "editedAt": "2026-07-22"
   },
   "Rell": {
     "archetype": "Vanguard",

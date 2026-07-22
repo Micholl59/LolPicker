@@ -2,11 +2,12 @@
 
 ## À faire
 
-- [ ] **Clé API Reddit** : créer l'app sur reddit.com/prefs/apps (type "script",
-  cocher le reCAPTCHA ; vérifier email + enregistrement API si refus), puis
-  **phase 2 styles** : enrichir les ~150 fiches `draft` de
-  `server/data/champion-styles.json` avec des preuves Reddit (r/summonerschool,
-  subreddits de mains).
+- [ ] **Phase 2 styles (en cours)** : enrichir les fiches `draft` restantes
+  (108 + 12 à créer au 2026-07-22) depuis le wiki LoL (pages `/Strategy`) +
+  guides. Reddit viendra en complément quand la clé API sera dispo. **53 curated
+  / 173** (plan + difficulté curée). Lots 1-2-3 faits (voir mémoire). Lot 3 :
+  Jax, Irelia, Riven, Diana, Ekko, Nocturne, Orianna, Syndra, Akali, Lucian,
+  Vayne, Draven, Pyke, Morgana, Alistar.
 - [ ] **Règles de runes de matchup** : n'existent que pour 5 champions curated
   (bloc `runes` dans les fiches). À étendre au fil de la phase 2.
 - [ ] **Mode draft — affinage** : valeurs de `champion-attributes.json`
@@ -34,6 +35,14 @@
   persistées dans `server/data/weights.json` (2026-07-22)
 - [x] Fiches éditables : curseurs sur les 7 dimensions + tempo + CC +
   mobilité, sauvegarde dans les fichiers de données (2026-07-22)
+- [x] Difficulté curée : la note Riot (`info.difficulty`, trop grossière —
+  Garen=5, Locke=5) est overridée par une valeur maison dans les fiches curated
+  (38 posées), éditable au curseur ; les non-curées gardent la valeur Riot
+  marquée « à affiner ». Le score de découverte utilise la difficulté effective
+  (2026-07-22)
+- [x] Tips Riot (Data Dragon `allytips`) masqués sur les fiches curated (le plan
+  vérifié fait foi) — corrige les infos Riot anciennes/trompeuses ; toutes les
+  données restent 100 % LoL PC (jamais Wild Rift) (2026-07-22)
 - [x] Fusion des onglets Picks + Draft en un seul écran : compos toujours
   visibles (vides = score général, remplies = score ajusté avec delta affiché),
   endpoint unique `/api/draft` (l'ancien `/api/recommendations` supprimé)

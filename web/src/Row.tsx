@@ -137,7 +137,9 @@ export function Row({
           ) : (
             <p className="blurb">{rec.blurb}</p>
           )}
-          {rec.tips.length > 0 && (
+          {/* Tips bruts de Riot (Data Dragon) : seulement en l'absence de plan
+              vérifié, car ils sont parfois anciens/imprécis */}
+          {!rec.plan && rec.tips.length > 0 && (
             <ul>
               {rec.tips.map((t, i) => (
                 <li key={i}>{t}</li>

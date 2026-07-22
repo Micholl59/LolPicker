@@ -17,6 +17,7 @@ interface Fiche {
   tempo: number | null;
   styleTags: string[];
   plan: { early: string; mid: string; late: string; draft: string } | null;
+  difficultySource: "curated" | "riot";
   provenance: "curated" | "draft" | null;
   sources: string[];
   wrByRole: Record<string, { wr: number; pickRate: number }>;
@@ -156,6 +157,7 @@ export default function Fiches() {
               </p>
               <p className="row-reason">
                 Difficulté {selected.difficulty}/10
+                {selected.difficultySource === "riot" && " (valeur Riot, à affiner)"}
                 {Object.entries(selected.wrByRole).map(([r, s]) => (
                   <span key={r}>
                     {" "}
@@ -223,6 +225,18 @@ export default function Fiches() {
                   </div>
                 ),
               )}
+              <div className="bar-row">
+                <span className="bar-label">Difficulté</span>
+                <input
+                  type="range"
+                  min={1}
+                  max={10}
+                  step={1}
+                  value={edit.difficulty ?? 5}
+                  onChange={(e) => setEdit({ ...edit, difficulty: Number(e.target.value) })}
+                />
+                <span className="bar-value">{edit.difficulty ?? 5}/10</span>
+              </div>
             </div>
           )}
 
@@ -243,6 +257,7 @@ export default function Fiches() {
                       tempo: selected.tempo ?? 50,
                       cc: selected.cc,
                       mobility: selected.mobility,
+                      difficulty: selected.difficulty,
                     });
                     setEditing(true);
                     setSaved(false);
@@ -256,11 +271,11 @@ export default function Fiches() {
               <>
                 <button
                   onClick={async () => {
-                    const { tempo, cc, mobility, ...style } = edit;
+                    const { tempo, cc, mobility, difficulty, ...style } = edit;
                     const res = await fetch(`/api/fiches/${selected.id}`, {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ style, tempo, cc, mobility }),
+                      body: JSON.stringify({ style, tempo, cc, mobility, difficulty }),
                     });
                     if (res.ok) {
                       setEditing(false);
@@ -291,7 +306,9 @@ export default function Fiches() {
             <p className="blurb">{selected.blurb}</p>
           )}
 
-          {selected.tips.length > 0 && (
+          {/* Conseils bruts de Riot (Data Dragon) : masqués sur les fiches
+              complètes, où le plan vérifié fait foi */}
+          {!selected.plan && selected.tips.length > 0 && (
             <ul className="fiche-tips">
               {selected.tips.map((t, i) => (
                 <li key={i}>{t}</li>

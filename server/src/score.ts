@@ -77,6 +77,11 @@ export function computeRole(
     const champ = champions.get(champKey);
     if (!champ) continue;
 
+    const champStyle = styles.get(champ.id) ?? null;
+    // Difficulté effective : notre valeur curée (fiable) prime sur celle de Riot
+    // (Data Dragon), dont l'échelle est trop grossière (Garen=5, Locke=5…)
+    const difficulty = champStyle?.difficulty ?? champ.difficulty;
+
     const line = lines[champKey] ?? null;
     const perso = personal?.byChampRole[`${champKey}|${role}`] ?? null;
     const persoAll = personal?.byChampRole[`${champKey}|*`] ?? null;
@@ -125,15 +130,14 @@ export function computeRole(
       reason = `Tu le joues sur d'autres rôles (${wrAll.toFixed(0)} % WR sur ${pAllGames} parties) · ${patchDesc(wrPatch)}`;
     } else {
       // Champion à découvrir : malus proportionnel à la difficulté
-      score = base - (champ.difficulty - 1) * getW("score.difficultyMalus");
+      score = base - (difficulty - 1) * getW("score.difficultyMalus");
       const tried = (perso?.games ?? 0) + (persoAll?.games ?? 0);
       if (tried > 0) score += getW("score.triedBonus");
-      reason = `${tried > 0 ? "Déjà essayé" : "Jamais joué"} · difficulté ${champ.difficulty}/10, ${difficultyDesc(champ.difficulty)} · ${patchDesc(wrPatch)}`;
+      reason = `${tried > 0 ? "Déjà essayé" : "Jamais joué"} · difficulté ${difficulty}/10, ${difficultyDesc(difficulty)} · ${patchDesc(wrPatch)}`;
     }
 
     // Bonus d'affinité de style : fort en découverte (le perso ne dit rien),
     // léger sur le pool (le winrate perso capture déjà l'adéquation)
-    const champStyle = styles.get(champ.id) ?? null;
     let styleBonus = 0;
     if (profile && champStyle) {
       const a = affinity(profile, champStyle); // -1..1
@@ -157,7 +161,7 @@ export function computeRole(
       wrPatch: wrPatch === null ? null : Math.round(wrPatch * 1000) / 10,
       gamesPatch: line?.games ?? 0,
       pickRate: line ? Math.round(line.pickRate * 1000) / 10 : null,
-      difficulty: champ.difficulty,
+      difficulty,
       persoGames: pGames >= POOL_MIN_GAMES ? pGames : pAllGames,
       persoWr: persoWr === null ? null : Math.round(persoWr * 10) / 10,
       persoKda: persoKda === null ? null : Math.round(persoKda * 10) / 10,
