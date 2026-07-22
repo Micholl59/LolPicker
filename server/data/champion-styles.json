@@ -1,0 +1,2836 @@
+{
+  "_meta": {
+    "dimensions": [
+      "splitpush",
+      "teamfight",
+      "pick",
+      "poke",
+      "engage",
+      "peel",
+      "roam"
+    ],
+    "tempo": "0 = fort en early, 100 = scaling late game",
+    "provenance": {
+      "curated": "fiche rédigée à partir de preuves web citées dans sources",
+      "draft": "vecteur provisoire (taxonomie wiki + connaissance du jeu), à renforcer avec des preuves Reddit"
+    },
+    "taxonomySource": "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+    "updatedAt": "2026-07-22"
+  },
+  "Garen": {
+    "runes": [
+      { "keystone": 8437, "quand": "adversaire à distance : encaisse le poke et scale (Poigne de l'immortel)", "cond": { "ranged": true } },
+      { "keystone": 8005, "quand": "trades courts contre un burst mêlée : punis chaque échange rapide", "cond": { "melee": true, "archetypes": ["Assassin"] } },
+      { "keystone": 8010, "quand": "trades moyens/longs contre une mêlée (Darius, Mordekaiser…) : le duel s'étire, Conqueror s'empile", "cond": { "melee": true } }
+    ],
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 85,
+      "teamfight": 40,
+      "pick": 45,
+      "poke": 5,
+      "engage": 30,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 55,
+    "plan": {
+      "early": "Trades courts Q-E puis retraite : tu restes tanky en duel rapproché. W contre les bursts. Farm sans risque, tu scales avec les items.",
+      "mid": "À 2 items (Black Cleaver acheté), pousse la sidelane en continu. Duel quiconque vient répondre — peu de champions gagnent le 1v1 — et exécute avec R.",
+      "late": "Split du côté opposé aux objectifs : soit tu prends l'inhibiteur, soit ton équipe joue en surnombre. Rejoins seulement les fights décisifs.",
+      "draft": "Fort contre les mêlées sans échappatoire. Faible contre les ranged qui kitent (Vayne, Quinn) et les stacks d'armure."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Garen/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ],
+    "editedAt": "2026-07-22"
+  },
+  "Malzahar": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 55,
+      "pick": 75,
+      "poke": 30,
+      "engage": 15,
+      "peel": 25,
+      "roam": 10
+    },
+    "tempo": 65,
+    "plan": {
+      "early": "Early faible : E (Visions) pour farmer et régénérer le mana, évite les trades directs pour garder le bouclier passif. Attention aux ganks.",
+      "mid": "Pousse les vagues en permanence avec E+voidlings, puis suis ton jungler : ton R est un pick garanti sur la cible focus. Force les objectifs après chaque R réussi.",
+      "late": "Menace de suppression : le simple fait d'avoir R disponible interdit à leur carry d'avancer. Reste statique derrière ton équipe, pousse les vagues à distance.",
+      "draft": "Fort contre les assassins mêlée (bouclier + R défensif). Faible si l'ennemi stacke les QSS ou te force à roam — ton jeu est statique."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Malzahar/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Singed": {
+    "runes": [
+      { "keystone": 8437, "quand": "mêlée qui te course : chaque Fling/poison proc la Poigne", "cond": { "melee": true } },
+      { "keystone": 8230, "quand": "adversaire à distance : Rush phasique pour proxy et échapper", "cond": { "ranged": true } }
+    ],
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 80,
+      "teamfight": 45,
+      "pick": 35,
+      "poke": 15,
+      "engage": 40,
+      "peel": 20,
+      "roam": 40
+    },
+    "tempo": 50,
+    "plan": {
+      "early": "Le poison contrôle la lane. Si le matchup est mauvais : proxy entre les deux tours ennemies — tu es l'un des seuls champions du jeu à pouvoir le faire.",
+      "mid": "Pression constante sur la carte : vagues proxifiées, fling sur les isolés. Tu forces 2 ennemis à te chasser pendant que ton équipe joue à 4v3.",
+      "late": "Disruption maximale : cours dans leur backline, fling leur carry, survis. Tu gagnes en étant insupportable, pas en faisant des kills.",
+      "draft": "Fort contre les mêlées qui te poursuivent. Faible contre les ranged et les slows — ta mobilité est ton kit."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Singed/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Malphite": {
+    "runes": [
+      { "keystone": 8437, "quand": "adversaire AD mêlée : Poigne + armure, la lane devient injouable pour lui", "cond": { "melee": true } },
+      { "keystone": 8229, "quand": "adversaire à distance : joue poke Q avec Comète des arcanes", "cond": { "ranged": true } }
+    ],
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 85,
+      "pick": 40,
+      "poke": 35,
+      "engage": 95,
+      "peel": 30,
+      "roam": 15
+    },
+    "tempo": 70,
+    "plan": {
+      "early": "Survis et farm : poke au Q, le bouclier passif encaisse. Stacke l'armure contre un AD, joue safe contre un AP.",
+      "mid": "Dès le R : cherche le flank. Un R sur 2+ ennemis transforme n'importe quel fight. Préviens ton équipe avant d'engager.",
+      "late": "Mur infranchissable : R initie les fights décisifs, ton équipe suit. Ne split jamais — ta valeur est le 5v5.",
+      "draft": "Excellent contre full AD (stacke l'armure librement). Faible contre 2+ AP. Pick-le quand ton équipe manque d'engage."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Malphite/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nasus": {
+    "runes": [
+      { "keystone": 8021, "quand": "gros poke à distance : Jeu de jambes pour survivre à la lane", "cond": { "ranged": true } },
+      { "keystone": 8437, "quand": "matchup mêlée : trades courts sous tour et sustain en stackant", "cond": { "melee": true } }
+    ],
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 90,
+      "teamfight": 25,
+      "pick": 35,
+      "poke": 5,
+      "engage": 15,
+      "peel": 15,
+      "roam": 5
+    },
+    "tempo": 90,
+    "plan": {
+      "early": "Survis. Tu es plus faible que tout bruiser niveau 2-3 — encaisse, last-hit au Q pour stacker, demande de l'aide contre les bullies.",
+      "mid": "Continue de stacker, deviens tanky. Toujours vulnérable aux ganks : warde ou stacke sous tour.",
+      "late": "Splitpush quasi exclusif : personne ne gagne le 1v1 contre un Nasus stacké. Wither leur meilleur duelliste, prends les tours, force-les à venir à 2-3.",
+      "draft": "Fort contre les tanks passifs. Faible contre les bullies early (Darius, Renekton, Teemo) et le poke ranged."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Nasus/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Warwick": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 55,
+      "pick": 65,
+      "poke": 5,
+      "engage": 60,
+      "peel": 15,
+      "roam": 55
+    },
+    "tempo": 40,
+    "plan": {
+      "early": "Full clear puis gank les cibles sous 50 % PV : ton passif te les signale (traînées de sang) et te donne la vitesse pour arriver.",
+      "mid": "Duelliste suprême en fight long — personne ne te outsustain. Contrôle les objectifs : ton W transforme chaque skirmish autour du drake.",
+      "late": "R la cible prioritaire pour l'isoler, enchaîne les CD entre E et R. Reste sur les carries.",
+      "draft": "Fort contre les immobiles et faibles duellistes. Faible contre le kite et les Blessures graves."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Warwick/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Mordekaiser": {
+    "runes": [
+      { "keystone": 8230, "quand": "adversaire qui kite ou fuit (ranged/mobile) : Rush phasique pour coller", "cond": { "ranged": true } },
+      { "keystone": 8010, "quand": "duel mêlée prolongé : Conqueror alimente dégâts et soins", "cond": { "melee": true } }
+    ],
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 75,
+      "pick": 65,
+      "poke": 10,
+      "engage": 35,
+      "peel": 10,
+      "roam": 10
+    },
+    "tempo": 60,
+    "plan": {
+      "early": "Sustain avec W, trades autour du passif (3 hits). Sans mobilité, tu es très vulnérable aux ganks : warde court.",
+      "mid": "2 items offensifs = bouclier quasi permanent. En fight, touche 3-4 ennemis pour le charger à fond.",
+      "late": "R leur plus grosse menace (le carry fed) : tu gagnes le 1v1 dans le royaume de la mort et ton équipe joue à 5v4 — c'est un outil de teamfight, pas de split.",
+      "draft": "Fort contre les compos mêlée. Faible contre le kite (aucune mobilité) et les CC chains qui l'empêchent de charger son bouclier."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Mordekaiser/Strategy",
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Locke": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 45,
+      "pick": 85,
+      "poke": 25,
+      "engage": 30,
+      "peel": 5,
+      "roam": 70
+    },
+    "tempo": 45,
+    "plan": {
+      "early": "Assassin à setup : marque avec Q (3 charges), le passif punit les PV manquants. Trade sur les fenêtres où l'ennemi a gaspillé un sort.",
+      "mid": "Roam sur les lanes affaiblies : ton R exécute sous un seuil de PV, chaque cible entamée est une proie. Ne plonge jamais sans setup complet.",
+      "late": "Entre en fight en second : laisse le combat entamer les PV, puis R nettoie les cibles sous le seuil d'exécution.",
+      "draft": "Punit les joueurs imprudents et les compos sans peel. Faible contre les tanks et les équipes groupées disciplinées."
+    },
+    "provenance": "curated",
+    "sources": [
+      "https://esports.gg/news/league-of-legends/league-of-legends-locke-release-date-and-abilities/",
+      "https://win.gg/locke-league-of-legends-preview/",
+      "https://www.sheepesports.com/en/all/articles/all-locke-abilities-explained/en"
+    ]
+  },
+  "Darius": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 60,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 5,
+      "engage": 35,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sett": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 50,
+      "teamfight": 70,
+      "pick": 45,
+      "poke": 5,
+      "engage": 55,
+      "peel": 20,
+      "roam": 15
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Illaoi": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 75,
+      "teamfight": 60,
+      "pick": 30,
+      "poke": 20,
+      "engage": 25,
+      "peel": 10,
+      "roam": 5
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Olaf": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 50,
+      "pick": 55,
+      "poke": 10,
+      "engage": 60,
+      "peel": 10,
+      "roam": 35
+    },
+    "tempo": 25,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Aatrox": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 70,
+      "pick": 40,
+      "poke": 15,
+      "engage": 50,
+      "peel": 15,
+      "roam": 25
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Fiora": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 95,
+      "teamfight": 30,
+      "pick": 40,
+      "poke": 10,
+      "engage": 20,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Jax": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 85,
+      "teamfight": 45,
+      "pick": 40,
+      "poke": 5,
+      "engage": 40,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 75,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Tryndamere": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 95,
+      "teamfight": 25,
+      "pick": 30,
+      "poke": 5,
+      "engage": 25,
+      "peel": 5,
+      "roam": 15
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Camille": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 75,
+      "teamfight": 45,
+      "pick": 70,
+      "poke": 5,
+      "engage": 50,
+      "peel": 10,
+      "roam": 35
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Shen": {
+    "archetype": "Warden",
+    "style": {
+      "splitpush": 70,
+      "teamfight": 60,
+      "pick": 25,
+      "poke": 5,
+      "engage": 45,
+      "peel": 80,
+      "roam": 85
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "KSante": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 70,
+      "pick": 55,
+      "poke": 10,
+      "engage": 65,
+      "peel": 40,
+      "roam": 15
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ornn": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 90,
+      "pick": 30,
+      "poke": 15,
+      "engage": 80,
+      "peel": 40,
+      "roam": 10
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sion": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 75,
+      "teamfight": 60,
+      "pick": 30,
+      "poke": 25,
+      "engage": 70,
+      "peel": 25,
+      "roam": 20
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "DrMundo": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 65,
+      "teamfight": 55,
+      "pick": 20,
+      "poke": 25,
+      "engage": 30,
+      "peel": 15,
+      "roam": 10
+    },
+    "tempo": 85,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Chogath": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 65,
+      "pick": 45,
+      "poke": 30,
+      "engage": 40,
+      "peel": 30,
+      "roam": 5
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Urgot": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 60,
+      "pick": 50,
+      "poke": 30,
+      "engage": 30,
+      "peel": 15,
+      "roam": 10
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kled": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 10,
+      "engage": 80,
+      "peel": 5,
+      "roam": 30
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Riven": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 65,
+      "teamfight": 50,
+      "pick": 55,
+      "poke": 5,
+      "engage": 45,
+      "peel": 10,
+      "roam": 30
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Gwen": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 75,
+      "teamfight": 50,
+      "pick": 35,
+      "poke": 10,
+      "engage": 30,
+      "peel": 10,
+      "roam": 10
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Teemo": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 70,
+      "teamfight": 30,
+      "pick": 25,
+      "poke": 65,
+      "engage": 5,
+      "peel": 15,
+      "roam": 10
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kayle": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 60,
+      "pick": 15,
+      "poke": 30,
+      "engage": 5,
+      "peel": 55,
+      "roam": 5
+    },
+    "tempo": 100,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Yorick": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 100,
+      "teamfight": 20,
+      "pick": 25,
+      "poke": 15,
+      "engage": 15,
+      "peel": 5,
+      "roam": 5
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Volibear": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 50,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 5,
+      "engage": 65,
+      "peel": 15,
+      "roam": 30
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Gnar": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 75,
+      "pick": 30,
+      "poke": 45,
+      "engage": 65,
+      "peel": 20,
+      "roam": 10
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Renekton": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 10,
+      "engage": 55,
+      "peel": 15,
+      "roam": 30
+    },
+    "tempo": 25,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Pantheon": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 45,
+      "pick": 65,
+      "poke": 40,
+      "engage": 60,
+      "peel": 15,
+      "roam": 70
+    },
+    "tempo": 20,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Irelia": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 65,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 10,
+      "engage": 50,
+      "peel": 10,
+      "roam": 25
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "MasterYi": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 60,
+      "teamfight": 40,
+      "pick": 55,
+      "poke": 5,
+      "engage": 30,
+      "peel": 5,
+      "roam": 30
+    },
+    "tempo": 85,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Amumu": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 90,
+      "pick": 50,
+      "poke": 10,
+      "engage": 90,
+      "peel": 25,
+      "roam": 40
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Rammus": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 60,
+      "pick": 65,
+      "poke": 5,
+      "engage": 80,
+      "peel": 20,
+      "roam": 55
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Shaco": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 30,
+      "pick": 75,
+      "poke": 10,
+      "engage": 20,
+      "peel": 10,
+      "roam": 75
+    },
+    "tempo": 30,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "JarvanIV": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 75,
+      "pick": 55,
+      "poke": 15,
+      "engage": 85,
+      "peel": 15,
+      "roam": 55
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nocturne": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 50,
+      "pick": 80,
+      "poke": 5,
+      "engage": 65,
+      "peel": 5,
+      "roam": 70
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "RekSai": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 50,
+      "pick": 70,
+      "poke": 5,
+      "engage": 60,
+      "peel": 15,
+      "roam": 65
+    },
+    "tempo": 30,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "MonkeyKing": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 80,
+      "pick": 50,
+      "poke": 10,
+      "engage": 75,
+      "peel": 10,
+      "roam": 45
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Briar": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 55,
+      "pick": 65,
+      "poke": 5,
+      "engage": 75,
+      "peel": 5,
+      "roam": 55
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Naafiri": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 45,
+      "pick": 75,
+      "poke": 15,
+      "engage": 50,
+      "peel": 5,
+      "roam": 70
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Shyvana": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 60,
+      "pick": 30,
+      "poke": 15,
+      "engage": 50,
+      "peel": 5,
+      "roam": 25
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Udyr": {
+    "archetype": "Juggernaut",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 50,
+      "pick": 45,
+      "poke": 5,
+      "engage": 55,
+      "peel": 15,
+      "roam": 45
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Vi": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 60,
+      "pick": 80,
+      "poke": 5,
+      "engage": 75,
+      "peel": 10,
+      "roam": 50
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Hecarim": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 70,
+      "pick": 50,
+      "poke": 5,
+      "engage": 80,
+      "peel": 10,
+      "roam": 60
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "XinZhao": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 55,
+      "pick": 60,
+      "poke": 5,
+      "engage": 70,
+      "peel": 15,
+      "roam": 50
+    },
+    "tempo": 30,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kayn": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 55,
+      "pick": 70,
+      "poke": 5,
+      "engage": 45,
+      "peel": 5,
+      "roam": 70
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Graves": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 50,
+      "pick": 45,
+      "poke": 15,
+      "engage": 25,
+      "peel": 10,
+      "roam": 40
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Khazix": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 35,
+      "pick": 90,
+      "poke": 10,
+      "engage": 25,
+      "peel": 5,
+      "roam": 75
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Evelynn": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 30,
+      "pick": 95,
+      "poke": 5,
+      "engage": 25,
+      "peel": 5,
+      "roam": 80
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Lillia": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 80,
+      "pick": 40,
+      "poke": 35,
+      "engage": 55,
+      "peel": 15,
+      "roam": 40
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sejuani": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 85,
+      "pick": 60,
+      "poke": 10,
+      "engage": 90,
+      "peel": 30,
+      "roam": 40
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zac": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 85,
+      "pick": 55,
+      "poke": 5,
+      "engage": 95,
+      "peel": 30,
+      "roam": 55
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nunu": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 60,
+      "pick": 55,
+      "poke": 10,
+      "engage": 70,
+      "peel": 30,
+      "roam": 65
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Karthus": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 75,
+      "pick": 25,
+      "poke": 30,
+      "engage": 10,
+      "peel": 10,
+      "roam": 30
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nidalee": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 40,
+      "pick": 70,
+      "poke": 75,
+      "engage": 20,
+      "peel": 15,
+      "roam": 65
+    },
+    "tempo": 25,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Viego": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 65,
+      "pick": 65,
+      "poke": 5,
+      "engage": 45,
+      "peel": 5,
+      "roam": 55
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "LeeSin": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 55,
+      "pick": 60,
+      "poke": 15,
+      "engage": 65,
+      "peel": 20,
+      "roam": 65
+    },
+    "tempo": 20,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Elise": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 40,
+      "pick": 80,
+      "poke": 20,
+      "engage": 50,
+      "peel": 10,
+      "roam": 70
+    },
+    "tempo": 15,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ekko": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 60,
+      "pick": 65,
+      "poke": 20,
+      "engage": 40,
+      "peel": 10,
+      "roam": 55
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Diana": {
+    "archetype": "Diver",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 80,
+      "pick": 55,
+      "poke": 15,
+      "engage": 70,
+      "peel": 5,
+      "roam": 45
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Fiddlesticks": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 90,
+      "pick": 60,
+      "poke": 10,
+      "engage": 75,
+      "peel": 15,
+      "roam": 40
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Skarner": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 70,
+      "pick": 80,
+      "poke": 5,
+      "engage": 75,
+      "peel": 25,
+      "roam": 40
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ivern": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 60,
+      "pick": 45,
+      "poke": 10,
+      "engage": 35,
+      "peel": 85,
+      "roam": 60
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kindred": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 60,
+      "pick": 45,
+      "poke": 25,
+      "engage": 15,
+      "peel": 35,
+      "roam": 45
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Belveth": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 5,
+      "engage": 40,
+      "peel": 5,
+      "roam": 40
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Gragas": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 70,
+      "pick": 55,
+      "poke": 30,
+      "engage": 75,
+      "peel": 30,
+      "roam": 45
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Annie": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 70,
+      "pick": 60,
+      "poke": 25,
+      "engage": 55,
+      "peel": 15,
+      "roam": 25
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Morgana": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 55,
+      "pick": 75,
+      "poke": 25,
+      "engage": 30,
+      "peel": 70,
+      "roam": 20
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Brand": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 85,
+      "pick": 45,
+      "poke": 55,
+      "engage": 15,
+      "peel": 15,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Veigar": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 60,
+      "pick": 65,
+      "poke": 30,
+      "engage": 20,
+      "peel": 30,
+      "roam": 10
+    },
+    "tempo": 90,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Lux": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 60,
+      "pick": 70,
+      "poke": 70,
+      "engage": 10,
+      "peel": 40,
+      "roam": 20
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Syndra": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 55,
+      "pick": 80,
+      "poke": 45,
+      "engage": 15,
+      "peel": 25,
+      "roam": 20
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ahri": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 55,
+      "pick": 80,
+      "poke": 30,
+      "engage": 25,
+      "peel": 15,
+      "roam": 55
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zed": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 60,
+      "teamfight": 30,
+      "pick": 85,
+      "poke": 35,
+      "engage": 15,
+      "peel": 5,
+      "roam": 55
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Talon": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 35,
+      "pick": 80,
+      "poke": 15,
+      "engage": 25,
+      "peel": 5,
+      "roam": 90
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Yasuo": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 60,
+      "pick": 40,
+      "poke": 15,
+      "engage": 45,
+      "peel": 15,
+      "roam": 20
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Yone": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 60,
+      "pick": 50,
+      "poke": 20,
+      "engage": 50,
+      "peel": 10,
+      "roam": 25
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Vex": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 65,
+      "pick": 60,
+      "poke": 35,
+      "engage": 45,
+      "peel": 25,
+      "roam": 40
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Akshan": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 40,
+      "pick": 60,
+      "poke": 30,
+      "engage": 20,
+      "peel": 10,
+      "roam": 60
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sylas": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 65,
+      "pick": 55,
+      "poke": 15,
+      "engage": 45,
+      "peel": 10,
+      "roam": 45
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Viktor": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 80,
+      "pick": 30,
+      "poke": 55,
+      "engage": 10,
+      "peel": 25,
+      "roam": 10
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Orianna": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 90,
+      "pick": 35,
+      "poke": 45,
+      "engage": 45,
+      "peel": 50,
+      "roam": 15
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Azir": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 40,
+      "teamfight": 80,
+      "pick": 30,
+      "poke": 55,
+      "engage": 35,
+      "peel": 35,
+      "roam": 10
+    },
+    "tempo": 85,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Cassiopeia": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 70,
+      "pick": 45,
+      "poke": 30,
+      "engage": 20,
+      "peel": 35,
+      "roam": 10
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Xerath": {
+    "archetype": "Artillery",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 55,
+      "pick": 55,
+      "poke": 95,
+      "engage": 5,
+      "peel": 20,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ziggs": {
+    "archetype": "Artillery",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 60,
+      "pick": 30,
+      "poke": 90,
+      "engage": 10,
+      "peel": 25,
+      "roam": 10
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Vladimir": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 80,
+      "pick": 25,
+      "poke": 35,
+      "engage": 30,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 85,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Swain": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 85,
+      "pick": 55,
+      "poke": 30,
+      "engage": 50,
+      "peel": 20,
+      "roam": 15
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Rumble": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 80,
+      "pick": 30,
+      "poke": 40,
+      "engage": 45,
+      "peel": 15,
+      "roam": 15
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Galio": {
+    "archetype": "Warden",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 80,
+      "pick": 35,
+      "poke": 30,
+      "engage": 65,
+      "peel": 60,
+      "roam": 75
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Taliyah": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 60,
+      "pick": 60,
+      "poke": 35,
+      "engage": 35,
+      "peel": 45,
+      "roam": 75
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Hwei": {
+    "archetype": "Artillery",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 75,
+      "pick": 50,
+      "poke": 70,
+      "engage": 20,
+      "peel": 40,
+      "roam": 15
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Akali": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 45,
+      "pick": 80,
+      "poke": 25,
+      "engage": 30,
+      "peel": 5,
+      "roam": 50
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Katarina": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 70,
+      "pick": 65,
+      "poke": 10,
+      "engage": 35,
+      "peel": 5,
+      "roam": 55
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Fizz": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 40,
+      "pick": 85,
+      "poke": 10,
+      "engage": 35,
+      "peel": 5,
+      "roam": 45
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Leblanc": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 35,
+      "pick": 90,
+      "poke": 40,
+      "engage": 15,
+      "peel": 5,
+      "roam": 70
+    },
+    "tempo": 30,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Anivia": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 70,
+      "pick": 50,
+      "poke": 25,
+      "engage": 20,
+      "peel": 45,
+      "roam": 5
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "TwistedFate": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 45,
+      "teamfight": 40,
+      "pick": 65,
+      "poke": 30,
+      "engage": 20,
+      "peel": 20,
+      "roam": 95
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ryze": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 60,
+      "pick": 45,
+      "poke": 25,
+      "engage": 20,
+      "peel": 20,
+      "roam": 55
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "AurelionSol": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 80,
+      "pick": 40,
+      "poke": 40,
+      "engage": 35,
+      "peel": 25,
+      "roam": 30
+    },
+    "tempo": 95,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Lissandra": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 75,
+      "pick": 65,
+      "poke": 25,
+      "engage": 65,
+      "peel": 40,
+      "roam": 30
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zoe": {
+    "archetype": "Burst Mage",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 45,
+      "pick": 90,
+      "poke": 80,
+      "engage": 10,
+      "peel": 10,
+      "roam": 30
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Qiyana": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 60,
+      "pick": 80,
+      "poke": 10,
+      "engage": 45,
+      "peel": 5,
+      "roam": 60
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Heimerdinger": {
+    "archetype": "Specialist",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 50,
+      "pick": 25,
+      "poke": 60,
+      "engage": 10,
+      "peel": 35,
+      "roam": 5
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Aurora": {
+    "archetype": "Battlemage",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 65,
+      "pick": 55,
+      "poke": 45,
+      "engage": 35,
+      "peel": 25,
+      "roam": 35
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Mel": {
+    "archetype": "Artillery",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 70,
+      "pick": 45,
+      "poke": 75,
+      "engage": 15,
+      "peel": 45,
+      "roam": 15
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Jinx": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 85,
+      "pick": 25,
+      "poke": 30,
+      "engage": 10,
+      "peel": 15,
+      "roam": 5
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Caitlyn": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 70,
+      "engage": 10,
+      "peel": 25,
+      "roam": 10
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ashe": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 70,
+      "pick": 70,
+      "poke": 45,
+      "engage": 45,
+      "peel": 30,
+      "roam": 10
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Ezreal": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 55,
+      "pick": 40,
+      "poke": 75,
+      "engage": 10,
+      "peel": 15,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kaisa": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 70,
+      "pick": 55,
+      "poke": 25,
+      "engage": 35,
+      "peel": 10,
+      "roam": 15
+    },
+    "tempo": 75,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Jhin": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 65,
+      "pick": 60,
+      "poke": 55,
+      "engage": 20,
+      "peel": 20,
+      "roam": 15
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Vayne": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 60,
+      "teamfight": 55,
+      "pick": 35,
+      "poke": 10,
+      "engage": 15,
+      "peel": 15,
+      "roam": 5
+    },
+    "tempo": 90,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Tristana": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 55,
+      "teamfight": 55,
+      "pick": 40,
+      "poke": 20,
+      "engage": 35,
+      "peel": 25,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Lucian": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 60,
+      "pick": 50,
+      "poke": 35,
+      "engage": 30,
+      "peel": 10,
+      "roam": 20
+    },
+    "tempo": 30,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "MissFortune": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 85,
+      "pick": 30,
+      "poke": 40,
+      "engage": 15,
+      "peel": 10,
+      "roam": 10
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Draven": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 55,
+      "pick": 45,
+      "poke": 15,
+      "engage": 25,
+      "peel": 10,
+      "roam": 10
+    },
+    "tempo": 20,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Xayah": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 75,
+      "pick": 40,
+      "poke": 25,
+      "engage": 20,
+      "peel": 40,
+      "roam": 10
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Aphelios": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 80,
+      "pick": 35,
+      "poke": 35,
+      "engage": 10,
+      "peel": 20,
+      "roam": 5
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zeri": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 75,
+      "pick": 30,
+      "poke": 35,
+      "engage": 25,
+      "peel": 15,
+      "roam": 25
+    },
+    "tempo": 75,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Samira": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 85,
+      "pick": 45,
+      "poke": 10,
+      "engage": 55,
+      "peel": 10,
+      "roam": 10
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "KogMaw": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 80,
+      "pick": 15,
+      "poke": 40,
+      "engage": 5,
+      "peel": 10,
+      "roam": 5
+    },
+    "tempo": 90,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Twitch": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 70,
+      "pick": 70,
+      "poke": 15,
+      "engage": 25,
+      "peel": 5,
+      "roam": 40
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sivir": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 50,
+      "teamfight": 70,
+      "pick": 20,
+      "poke": 35,
+      "engage": 25,
+      "peel": 35,
+      "roam": 10
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Varus": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 65,
+      "pick": 55,
+      "poke": 70,
+      "engage": 30,
+      "peel": 15,
+      "roam": 10
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Kalista": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 60,
+      "pick": 45,
+      "poke": 25,
+      "engage": 50,
+      "peel": 25,
+      "roam": 15
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Smolder": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 35,
+      "teamfight": 70,
+      "pick": 25,
+      "poke": 45,
+      "engage": 10,
+      "peel": 20,
+      "roam": 5
+    },
+    "tempo": 95,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nilah": {
+    "archetype": "Skirmisher",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 80,
+      "pick": 40,
+      "poke": 10,
+      "engage": 55,
+      "peel": 30,
+      "roam": 10
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Senna": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 70,
+      "pick": 50,
+      "poke": 65,
+      "engage": 15,
+      "peel": 55,
+      "roam": 15
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Corki": {
+    "archetype": "Marksman",
+    "style": {
+      "splitpush": 30,
+      "teamfight": 60,
+      "pick": 30,
+      "poke": 65,
+      "engage": 15,
+      "peel": 15,
+      "roam": 20
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Thresh": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 70,
+      "pick": 90,
+      "poke": 15,
+      "engage": 65,
+      "peel": 70,
+      "roam": 45
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Blitzcrank": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 45,
+      "pick": 100,
+      "poke": 10,
+      "engage": 70,
+      "peel": 40,
+      "roam": 40
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nautilus": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 70,
+      "pick": 80,
+      "poke": 5,
+      "engage": 85,
+      "peel": 55,
+      "roam": 40
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Leona": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 75,
+      "pick": 75,
+      "poke": 5,
+      "engage": 95,
+      "peel": 45,
+      "roam": 35
+    },
+    "tempo": 40,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Lulu": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 75,
+      "pick": 15,
+      "poke": 35,
+      "engage": 10,
+      "peel": 95,
+      "roam": 15
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Janna": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 65,
+      "pick": 10,
+      "poke": 25,
+      "engage": 10,
+      "peel": 100,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Soraka": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 70,
+      "pick": 10,
+      "poke": 40,
+      "engage": 5,
+      "peel": 90,
+      "roam": 15
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Sona": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 80,
+      "pick": 15,
+      "poke": 45,
+      "engage": 30,
+      "peel": 70,
+      "roam": 10
+    },
+    "tempo": 80,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Nami": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 75,
+      "pick": 40,
+      "poke": 40,
+      "engage": 35,
+      "peel": 75,
+      "roam": 15
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Milio": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 70,
+      "pick": 10,
+      "poke": 35,
+      "engage": 10,
+      "peel": 95,
+      "roam": 10
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Yuumi": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 70,
+      "pick": 10,
+      "poke": 30,
+      "engage": 5,
+      "peel": 85,
+      "roam": 10
+    },
+    "tempo": 75,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Karma": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 70,
+      "pick": 40,
+      "poke": 65,
+      "engage": 30,
+      "peel": 70,
+      "roam": 20
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zilean": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 15,
+      "teamfight": 70,
+      "pick": 45,
+      "poke": 45,
+      "engage": 20,
+      "peel": 85,
+      "roam": 30
+    },
+    "tempo": 60,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Bard": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 60,
+      "pick": 75,
+      "poke": 35,
+      "engage": 45,
+      "peel": 50,
+      "roam": 95
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Pyke": {
+    "archetype": "Assassin",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 45,
+      "pick": 90,
+      "poke": 20,
+      "engage": 60,
+      "peel": 15,
+      "roam": 85
+    },
+    "tempo": 35,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Rakan": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 85,
+      "pick": 55,
+      "poke": 10,
+      "engage": 90,
+      "peel": 55,
+      "roam": 45
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Braum": {
+    "archetype": "Warden",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 75,
+      "pick": 40,
+      "poke": 5,
+      "engage": 45,
+      "peel": 95,
+      "roam": 30
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Alistar": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 75,
+      "pick": 55,
+      "poke": 5,
+      "engage": 90,
+      "peel": 65,
+      "roam": 35
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Rell": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 85,
+      "pick": 60,
+      "poke": 5,
+      "engage": 95,
+      "peel": 45,
+      "roam": 35
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Renata": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 85,
+      "pick": 40,
+      "poke": 30,
+      "engage": 40,
+      "peel": 80,
+      "roam": 15
+    },
+    "tempo": 65,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Seraphine": {
+    "archetype": "Enchanter",
+    "style": {
+      "splitpush": 5,
+      "teamfight": 90,
+      "pick": 45,
+      "poke": 55,
+      "engage": 40,
+      "peel": 65,
+      "roam": 10
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Zyra": {
+    "archetype": "Catcher",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 75,
+      "pick": 60,
+      "poke": 60,
+      "engage": 25,
+      "peel": 35,
+      "roam": 15
+    },
+    "tempo": 50,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Velkoz": {
+    "archetype": "Artillery",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 65,
+      "pick": 50,
+      "poke": 90,
+      "engage": 10,
+      "peel": 25,
+      "roam": 10
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Poppy": {
+    "archetype": "Warden",
+    "style": {
+      "splitpush": 25,
+      "teamfight": 60,
+      "pick": 55,
+      "poke": 10,
+      "engage": 50,
+      "peel": 85,
+      "roam": 30
+    },
+    "tempo": 45,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Taric": {
+    "archetype": "Warden",
+    "style": {
+      "splitpush": 10,
+      "teamfight": 85,
+      "pick": 30,
+      "poke": 5,
+      "engage": 45,
+      "peel": 90,
+      "roam": 20
+    },
+    "tempo": 70,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  },
+  "Maokai": {
+    "archetype": "Vanguard",
+    "style": {
+      "splitpush": 20,
+      "teamfight": 80,
+      "pick": 55,
+      "poke": 20,
+      "engage": 75,
+      "peel": 45,
+      "roam": 30
+    },
+    "tempo": 55,
+    "provenance": "draft",
+    "sources": [
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+    ]
+  }
+}

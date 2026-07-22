@@ -1,0 +1,652 @@
+{
+  "_meta": {
+    "cc": "quantité de contrôle de foule apportée (0-100)",
+    "mobility": "dashs, blinks, vitesse — capacité à échapper ou survivre au CC (0-100)",
+    "note": "provisoire (draft) : valeurs à affiner. frontline/dégâts/burst sont dérivés (archétype + Data Dragon).",
+    "updatedAt": "2026-07-22"
+  },
+  "Garen": {
+    "cc": 25,
+    "mobility": 35
+  },
+  "Malzahar": {
+    "cc": 60,
+    "mobility": 10
+  },
+  "Singed": {
+    "cc": 45,
+    "mobility": 55
+  },
+  "Malphite": {
+    "cc": 75,
+    "mobility": 40
+  },
+  "Nasus": {
+    "cc": 50,
+    "mobility": 15
+  },
+  "Warwick": {
+    "cc": 65,
+    "mobility": 55
+  },
+  "Mordekaiser": {
+    "cc": 45,
+    "mobility": 15
+  },
+  "Locke": {
+    "cc": 25,
+    "mobility": 70
+  },
+  "Darius": {
+    "cc": 45,
+    "mobility": 20
+  },
+  "Sett": {
+    "cc": 55,
+    "mobility": 25
+  },
+  "Illaoi": {
+    "cc": 30,
+    "mobility": 15
+  },
+  "Olaf": {
+    "cc": 10,
+    "mobility": 40
+  },
+  "Aatrox": {
+    "cc": 45,
+    "mobility": 45
+  },
+  "Fiora": {
+    "cc": 20,
+    "mobility": 60
+  },
+  "Jax": {
+    "cc": 25,
+    "mobility": 60
+  },
+  "Tryndamere": {
+    "cc": 15,
+    "mobility": 55
+  },
+  "Camille": {
+    "cc": 55,
+    "mobility": 80
+  },
+  "Shen": {
+    "cc": 50,
+    "mobility": 50
+  },
+  "KSante": {
+    "cc": 70,
+    "mobility": 55
+  },
+  "Ornn": {
+    "cc": 75,
+    "mobility": 25
+  },
+  "Sion": {
+    "cc": 70,
+    "mobility": 25
+  },
+  "DrMundo": {
+    "cc": 20,
+    "mobility": 25
+  },
+  "Chogath": {
+    "cc": 70,
+    "mobility": 10
+  },
+  "Urgot": {
+    "cc": 45,
+    "mobility": 25
+  },
+  "Kled": {
+    "cc": 50,
+    "mobility": 65
+  },
+  "Riven": {
+    "cc": 45,
+    "mobility": 80
+  },
+  "Gwen": {
+    "cc": 15,
+    "mobility": 55
+  },
+  "Teemo": {
+    "cc": 30,
+    "mobility": 35
+  },
+  "Kayle": {
+    "cc": 15,
+    "mobility": 30
+  },
+  "Yorick": {
+    "cc": 35,
+    "mobility": 10
+  },
+  "Volibear": {
+    "cc": 55,
+    "mobility": 40
+  },
+  "Gnar": {
+    "cc": 70,
+    "mobility": 55
+  },
+  "Renekton": {
+    "cc": 45,
+    "mobility": 55
+  },
+  "Pantheon": {
+    "cc": 50,
+    "mobility": 45
+  },
+  "Irelia": {
+    "cc": 40,
+    "mobility": 85
+  },
+  "MasterYi": {
+    "cc": 5,
+    "mobility": 25
+  },
+  "Amumu": {
+    "cc": 85,
+    "mobility": 55
+  },
+  "Rammus": {
+    "cc": 60,
+    "mobility": 50
+  },
+  "Shaco": {
+    "cc": 25,
+    "mobility": 60
+  },
+  "JarvanIV": {
+    "cc": 65,
+    "mobility": 65
+  },
+  "Nocturne": {
+    "cc": 45,
+    "mobility": 60
+  },
+  "RekSai": {
+    "cc": 50,
+    "mobility": 70
+  },
+  "MonkeyKing": {
+    "cc": 60,
+    "mobility": 60
+  },
+  "Briar": {
+    "cc": 45,
+    "mobility": 60
+  },
+  "Naafiri": {
+    "cc": 20,
+    "mobility": 65
+  },
+  "Shyvana": {
+    "cc": 15,
+    "mobility": 40
+  },
+  "Udyr": {
+    "cc": 40,
+    "mobility": 40
+  },
+  "Vi": {
+    "cc": 65,
+    "mobility": 70
+  },
+  "Hecarim": {
+    "cc": 55,
+    "mobility": 75
+  },
+  "XinZhao": {
+    "cc": 45,
+    "mobility": 55
+  },
+  "Kayn": {
+    "cc": 40,
+    "mobility": 90
+  },
+  "Graves": {
+    "cc": 25,
+    "mobility": 55
+  },
+  "Khazix": {
+    "cc": 15,
+    "mobility": 80
+  },
+  "Evelynn": {
+    "cc": 40,
+    "mobility": 60
+  },
+  "Lillia": {
+    "cc": 50,
+    "mobility": 55
+  },
+  "Sejuani": {
+    "cc": 90,
+    "mobility": 50
+  },
+  "Zac": {
+    "cc": 85,
+    "mobility": 70
+  },
+  "Nunu": {
+    "cc": 65,
+    "mobility": 45
+  },
+  "Karthus": {
+    "cc": 25,
+    "mobility": 10
+  },
+  "Nidalee": {
+    "cc": 15,
+    "mobility": 75
+  },
+  "Viego": {
+    "cc": 40,
+    "mobility": 65
+  },
+  "LeeSin": {
+    "cc": 45,
+    "mobility": 80
+  },
+  "Elise": {
+    "cc": 55,
+    "mobility": 65
+  },
+  "Ekko": {
+    "cc": 55,
+    "mobility": 75
+  },
+  "Diana": {
+    "cc": 55,
+    "mobility": 65
+  },
+  "Fiddlesticks": {
+    "cc": 80,
+    "mobility": 35
+  },
+  "Skarner": {
+    "cc": 80,
+    "mobility": 45
+  },
+  "Ivern": {
+    "cc": 55,
+    "mobility": 35
+  },
+  "Kindred": {
+    "cc": 25,
+    "mobility": 60
+  },
+  "Belveth": {
+    "cc": 35,
+    "mobility": 75
+  },
+  "Gragas": {
+    "cc": 70,
+    "mobility": 60
+  },
+  "Annie": {
+    "cc": 70,
+    "mobility": 15
+  },
+  "Morgana": {
+    "cc": 75,
+    "mobility": 10
+  },
+  "Brand": {
+    "cc": 50,
+    "mobility": 10
+  },
+  "Veigar": {
+    "cc": 70,
+    "mobility": 10
+  },
+  "Lux": {
+    "cc": 60,
+    "mobility": 10
+  },
+  "Syndra": {
+    "cc": 55,
+    "mobility": 10
+  },
+  "Ahri": {
+    "cc": 50,
+    "mobility": 70
+  },
+  "Zed": {
+    "cc": 15,
+    "mobility": 80
+  },
+  "Talon": {
+    "cc": 20,
+    "mobility": 75
+  },
+  "Yasuo": {
+    "cc": 45,
+    "mobility": 85
+  },
+  "Yone": {
+    "cc": 55,
+    "mobility": 75
+  },
+  "Vex": {
+    "cc": 65,
+    "mobility": 25
+  },
+  "Akshan": {
+    "cc": 15,
+    "mobility": 75
+  },
+  "Sylas": {
+    "cc": 55,
+    "mobility": 65
+  },
+  "Viktor": {
+    "cc": 45,
+    "mobility": 10
+  },
+  "Orianna": {
+    "cc": 60,
+    "mobility": 10
+  },
+  "Azir": {
+    "cc": 45,
+    "mobility": 45
+  },
+  "Cassiopeia": {
+    "cc": 35,
+    "mobility": 10
+  },
+  "Xerath": {
+    "cc": 45,
+    "mobility": 10
+  },
+  "Ziggs": {
+    "cc": 35,
+    "mobility": 25
+  },
+  "Vladimir": {
+    "cc": 25,
+    "mobility": 35
+  },
+  "Swain": {
+    "cc": 60,
+    "mobility": 15
+  },
+  "Rumble": {
+    "cc": 40,
+    "mobility": 20
+  },
+  "Galio": {
+    "cc": 80,
+    "mobility": 45
+  },
+  "Taliyah": {
+    "cc": 55,
+    "mobility": 45
+  },
+  "Hwei": {
+    "cc": 55,
+    "mobility": 15
+  },
+  "Akali": {
+    "cc": 20,
+    "mobility": 90
+  },
+  "Katarina": {
+    "cc": 10,
+    "mobility": 90
+  },
+  "Fizz": {
+    "cc": 40,
+    "mobility": 85
+  },
+  "Leblanc": {
+    "cc": 35,
+    "mobility": 90
+  },
+  "Anivia": {
+    "cc": 60,
+    "mobility": 10
+  },
+  "TwistedFate": {
+    "cc": 50,
+    "mobility": 15
+  },
+  "Ryze": {
+    "cc": 35,
+    "mobility": 25
+  },
+  "AurelionSol": {
+    "cc": 55,
+    "mobility": 30
+  },
+  "Lissandra": {
+    "cc": 80,
+    "mobility": 45
+  },
+  "Zoe": {
+    "cc": 55,
+    "mobility": 35
+  },
+  "Qiyana": {
+    "cc": 55,
+    "mobility": 70
+  },
+  "Heimerdinger": {
+    "cc": 45,
+    "mobility": 10
+  },
+  "Aurora": {
+    "cc": 45,
+    "mobility": 55
+  },
+  "Mel": {
+    "cc": 45,
+    "mobility": 20
+  },
+  "Jinx": {
+    "cc": 35,
+    "mobility": 15
+  },
+  "Caitlyn": {
+    "cc": 35,
+    "mobility": 25
+  },
+  "Ashe": {
+    "cc": 65,
+    "mobility": 10
+  },
+  "Ezreal": {
+    "cc": 10,
+    "mobility": 65
+  },
+  "Kaisa": {
+    "cc": 10,
+    "mobility": 60
+  },
+  "Jhin": {
+    "cc": 40,
+    "mobility": 15
+  },
+  "Vayne": {
+    "cc": 25,
+    "mobility": 55
+  },
+  "Tristana": {
+    "cc": 25,
+    "mobility": 60
+  },
+  "Lucian": {
+    "cc": 10,
+    "mobility": 65
+  },
+  "MissFortune": {
+    "cc": 20,
+    "mobility": 25
+  },
+  "Draven": {
+    "cc": 20,
+    "mobility": 30
+  },
+  "Xayah": {
+    "cc": 40,
+    "mobility": 30
+  },
+  "Aphelios": {
+    "cc": 30,
+    "mobility": 10
+  },
+  "Zeri": {
+    "cc": 15,
+    "mobility": 70
+  },
+  "Samira": {
+    "cc": 25,
+    "mobility": 55
+  },
+  "KogMaw": {
+    "cc": 15,
+    "mobility": 5
+  },
+  "Twitch": {
+    "cc": 20,
+    "mobility": 25
+  },
+  "Sivir": {
+    "cc": 15,
+    "mobility": 30
+  },
+  "Varus": {
+    "cc": 55,
+    "mobility": 5
+  },
+  "Kalista": {
+    "cc": 35,
+    "mobility": 60
+  },
+  "Smolder": {
+    "cc": 25,
+    "mobility": 35
+  },
+  "Nilah": {
+    "cc": 40,
+    "mobility": 55
+  },
+  "Senna": {
+    "cc": 40,
+    "mobility": 15
+  },
+  "Corki": {
+    "cc": 10,
+    "mobility": 45
+  },
+  "Thresh": {
+    "cc": 85,
+    "mobility": 40
+  },
+  "Blitzcrank": {
+    "cc": 80,
+    "mobility": 45
+  },
+  "Nautilus": {
+    "cc": 95,
+    "mobility": 45
+  },
+  "Leona": {
+    "cc": 95,
+    "mobility": 45
+  },
+  "Lulu": {
+    "cc": 60,
+    "mobility": 15
+  },
+  "Janna": {
+    "cc": 55,
+    "mobility": 35
+  },
+  "Soraka": {
+    "cc": 40,
+    "mobility": 15
+  },
+  "Sona": {
+    "cc": 50,
+    "mobility": 15
+  },
+  "Nami": {
+    "cc": 65,
+    "mobility": 15
+  },
+  "Milio": {
+    "cc": 35,
+    "mobility": 15
+  },
+  "Yuumi": {
+    "cc": 35,
+    "mobility": 60
+  },
+  "Karma": {
+    "cc": 45,
+    "mobility": 25
+  },
+  "Zilean": {
+    "cc": 60,
+    "mobility": 35
+  },
+  "Bard": {
+    "cc": 65,
+    "mobility": 45
+  },
+  "Pyke": {
+    "cc": 60,
+    "mobility": 80
+  },
+  "Rakan": {
+    "cc": 85,
+    "mobility": 85
+  },
+  "Braum": {
+    "cc": 75,
+    "mobility": 40
+  },
+  "Alistar": {
+    "cc": 90,
+    "mobility": 60
+  },
+  "Rell": {
+    "cc": 90,
+    "mobility": 45
+  },
+  "Renata": {
+    "cc": 70,
+    "mobility": 15
+  },
+  "Seraphine": {
+    "cc": 65,
+    "mobility": 10
+  },
+  "Zyra": {
+    "cc": 60,
+    "mobility": 5
+  },
+  "Velkoz": {
+    "cc": 45,
+    "mobility": 10
+  },
+  "Poppy": {
+    "cc": 70,
+    "mobility": 45
+  },
+  "Taric": {
+    "cc": 65,
+    "mobility": 20
+  },
+  "Maokai": {
+    "cc": 80,
+    "mobility": 35
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+server/cache/
+*.log
+
+# Config locale de l'éditeur / Claude Code (chemins et identifiants machine)
+.claude/
