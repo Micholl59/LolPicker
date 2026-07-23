@@ -3,11 +3,10 @@
 ## À faire
 
 - [ ] **Phase 2 styles (en cours)** : enrichir les fiches `draft` restantes
-  (108 + 12 à créer au 2026-07-22) depuis le wiki LoL (pages `/Strategy`) +
-  guides. Reddit viendra en complément quand la clé API sera dispo. **53 curated
-  / 173** (plan + difficulté curée). Lots 1-2-3 faits (voir mémoire). Lot 3 :
-  Jax, Irelia, Riven, Diana, Ekko, Nocturne, Orianna, Syndra, Akali, Lucian,
-  Vayne, Draven, Pyke, Morgana, Alistar.
+  (63 + 12 à créer au 2026-07-23) depuis le wiki LoL (pages `/Strategy`) +
+  guides. Reddit viendra en complément quand la clé API sera dispo. **98 curated
+  / 173** (plan + difficulté curée). Lots 1 à 6 faits (voir mémoire). Commit
+  prévu quand TOUTES les fiches seront curées (demande utilisateur).
 - [ ] **Règles de runes de matchup** : n'existent que pour 5 champions curated
   (bloc `runes` dans les fiches). À étendre au fil de la phase 2.
 - [ ] **Mode draft — affinage** : valeurs de `champion-attributes.json`
