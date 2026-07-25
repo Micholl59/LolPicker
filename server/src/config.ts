@@ -1,12 +1,46 @@
 import dotenv from "dotenv";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.join(__dirname, "..", ".env") });
+const ENV_FILE = path.join(__dirname, "..", ".env");
+dotenv.config({ path: ENV_FILE });
+
+// La clé Riot dev expire toutes les 24h : on la relit à chaque appel plutôt
+// que de la figer au démarrage, pour qu'un changement via /api/settings soit
+// pris en compte sans redémarrer le serveur.
+function readEnvFile(): Record<string, string> {
+  try {
+    const raw = fs.readFileSync(ENV_FILE, "utf8");
+    const out: Record<string, string> = {};
+    for (const line of raw.split("\n")) {
+      const m = line.match(/^([A-Z0-9_]+)=(.*)$/);
+      if (m) out[m[1]] = m[2].trim();
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+export function getRiotApiKey(): string {
+  return readEnvFile().RIOT_API_KEY ?? process.env.RIOT_API_KEY ?? "";
+}
+
+export function setRiotApiKey(key: string): void {
+  const env = readEnvFile();
+  env.RIOT_API_KEY = key.trim();
+  if (!env.RIOT_CLUSTER) env.RIOT_CLUSTER = config.cluster;
+  if (!env.API_PORT) env.API_PORT = String(config.port);
+  const body = Object.entries(env)
+    .map(([k, v]) => `${k}=${v}`)
+    .join("\n");
+  fs.writeFileSync(ENV_FILE, body + "\n");
+  process.env.RIOT_API_KEY = env.RIOT_API_KEY; // cohérence si relu via process.env
+}
 
 export const config = {
-  riotApiKey: process.env.RIOT_API_KEY ?? "",
   cluster: process.env.RIOT_CLUSTER ?? "europe",
   port: Number(process.env.API_PORT ?? 3001),
   cacheDir: path.join(__dirname, "..", "cache"),

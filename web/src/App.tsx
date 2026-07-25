@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import Fiches from "./Fiches";
 import Picks from "./Picks";
 import Weights from "./Weights";
+import Settings from "./Settings";
 
 export default function App() {
   const [riotId, setRiotId] = useState(() => localStorage.getItem("riotId") ?? "");
   const [inputValue, setInputValue] = useState(riotId);
-  const [view, setView] = useState<"picks" | "fiches" | "calculs">("picks");
+  const [view, setView] = useState<"picks" | "fiches" | "calculs" | "reglages">("picks");
   const [refreshToken, setRefreshToken] = useState(0);
 
   useEffect(() => {
@@ -27,6 +28,9 @@ export default function App() {
             </button>
             <button className={view === "calculs" ? "active" : ""} onClick={() => setView("calculs")}>
               Calculs
+            </button>
+            <button className={view === "reglages" ? "active" : ""} onClick={() => setView("reglages")}>
+              Réglages
             </button>
           </nav>
         </div>
@@ -59,6 +63,7 @@ export default function App() {
       {view === "picks" && <Picks riotId={riotId} refreshToken={refreshToken} />}
       {view === "fiches" && <Fiches />}
       {view === "calculs" && <Weights />}
+      {view === "reglages" && <Settings />}
     </div>
   );
 }

@@ -22,7 +22,7 @@
     "mobility": 40
   },
   "Nasus": {
-    "cc": 50,
+    "cc": 60,
     "mobility": 15
   },
   "Warwick": {
@@ -648,5 +648,53 @@
   "Maokai": {
     "cc": 80,
     "mobility": 35
+  },
+  "Gangplank": {
+    "cc": 40,
+    "mobility": 25
+  },
+  "Jayce": {
+    "cc": 35,
+    "mobility": 55
+  },
+  "Kassadin": {
+    "cc": 30,
+    "mobility": 85
+  },
+  "Kennen": {
+    "cc": 70,
+    "mobility": 55
+  },
+  "Neeko": {
+    "cc": 65,
+    "mobility": 45
+  },
+  "Quinn": {
+    "cc": 40,
+    "mobility": 80
+  },
+  "Rengar": {
+    "cc": 45,
+    "mobility": 75
+  },
+  "TahmKench": {
+    "cc": 65,
+    "mobility": 30
+  },
+  "Trundle": {
+    "cc": 55,
+    "mobility": 30
+  },
+  "Ambessa": {
+    "cc": 45,
+    "mobility": 85
+  },
+  "Yunara": {
+    "cc": 15,
+    "mobility": 40
+  },
+  "Zaahen": {
+    "cc": 55,
+    "mobility": 50
   }
 }

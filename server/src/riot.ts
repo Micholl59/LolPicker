@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { config } from "./config.js";
+import { config, getRiotApiKey } from "./config.js";
 import { cacheGet, cacheGetWithAge, cacheSet } from "./cache.js";
 import type { Role } from "./ugg.js";
 
@@ -16,8 +16,9 @@ export class RiotError extends Error {
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function riotFetch<T>(url: string, retries = 2): Promise<T> {
-  if (!config.riotApiKey) throw new RiotError("Clé API Riot absente (server/.env)", 0);
-  const res = await fetch(url, { headers: { "X-Riot-Token": config.riotApiKey } });
+  const apiKey = getRiotApiKey();
+  if (!apiKey) throw new RiotError("Clé API Riot absente — renseigne-la dans Réglages", 0);
+  const res = await fetch(url, { headers: { "X-Riot-Token": apiKey } });
   if (res.status === 429 && retries > 0) {
     const wait = Number(res.headers.get("Retry-After") ?? 10);
     await sleep(Math.min(wait, 30) * 1000);

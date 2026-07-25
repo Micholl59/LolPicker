@@ -39,9 +39,11 @@ direct). Chemin du lockfile surchargeable via `LOL_LOCKFILE`.
 Copie `server/.env.example` vers `server/.env` et renseigne :
 
 - `RIOT_API_KEY` : clé sur <https://developer.riotgames.com> (la clé dev expire
-  toutes les 24 h — la régénérer puis relancer le serveur). Sans clé valide,
-  l'app fonctionne en mode dégradé : recommandations basées uniquement sur le
-  patch et la difficulté.
+  toutes les 24 h). Une fois l'app lancée, inutile de toucher au fichier : le
+  changement quotidien se fait dans l'onglet **Réglages**, qui enregistre la
+  nouvelle clé et la teste immédiatement, sans redémarrer le serveur. Sans clé
+  valide, l'app fonctionne en mode dégradé : recommandations basées uniquement
+  sur le patch et la difficulté.
 - `RIOT_CLUSTER` : `europe` (EUW/EUNE), `americas` ou `asia`.
 
 ## Sources de données

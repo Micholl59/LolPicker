@@ -2,7 +2,7 @@ import Fastify from "fastify";
 import fastifyStatic from "@fastify/static";
 import cors from "@fastify/cors";
 import fs from "node:fs";
-import { config } from "./config.js";
+import { config, getRiotApiKey, setRiotApiKey } from "./config.js";
 import { getVersion, getChampions } from "./ddragon.js";
 import { getPatchStats, ROLES, type Role } from "./ugg.js";
 import { resolveAccount, getPersonalStats, getPersonalCacheAge, RiotError } from "./riot.js";
@@ -23,6 +23,39 @@ if (fs.existsSync(config.webDist)) {
 }
 
 app.get("/api/health", async () => ({ ok: true }));
+
+// Page Réglages : la clé API Riot (dev) expire toutes les 24h et se change
+// ici sans redémarrer le serveur. Pas d'authentification volontairement (app
+// mono-utilisateur, usage local pour l'instant) — la clé n'est jamais
+// renvoyée en clair, seulement son statut.
+app.get("/api/settings", async () => {
+  const key = getRiotApiKey();
+  return {
+    hasKey: key.length > 0,
+    keyPreview: key ? `${key.slice(0, 9)}…${key.slice(-4)}` : null,
+    cluster: config.cluster,
+  };
+});
+
+app.post<{ Body: { apiKey?: string } }>("/api/settings/riot-key", async (req, reply) => {
+  const apiKey = (req.body?.apiKey ?? "").trim();
+  if (!apiKey) return reply.code(400).send({ error: "Clé vide" });
+  setRiotApiKey(apiKey);
+  // Test immédiat contre une route Riot légère (ne consomme presque rien du quota)
+  try {
+    const res = await fetch(
+      `https://${config.cluster}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Riot/Games`,
+      { headers: { "X-Riot-Token": apiKey } },
+    );
+    if (res.status === 401 || res.status === 403) {
+      return { saved: true, valid: false, message: "Clé enregistrée mais rejetée par Riot (invalide/expirée)" };
+    }
+    // 404 = clé valide, ce Riot ID précis n'existe juste pas
+    return { saved: true, valid: true, message: "Clé enregistrée et validée par Riot" };
+  } catch {
+    return { saved: true, valid: null, message: "Clé enregistrée, impossible de la tester (hors-ligne ?)" };
+  }
+});
 
 app.get("/api/champions", async () => {
   const ddVersion = await getVersion();

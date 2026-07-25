@@ -2,11 +2,12 @@
 
 ## À faire
 
-- [ ] **Phase 2 styles (en cours)** : enrichir les fiches `draft` restantes
-  (63 + 12 à créer au 2026-07-23) depuis le wiki LoL (pages `/Strategy`) +
-  guides. Reddit viendra en complément quand la clé API sera dispo. **98 curated
-  / 173** (plan + difficulté curée). Lots 1 à 6 faits (voir mémoire). Commit
-  prévu quand TOUTES les fiches seront curées (demande utilisateur).
+- [ ] **Phase 2 bis (optionnel)** : renforcer les fiches avec des preuves Reddit
+  quand la clé API sera disponible (r/summonerschool, subreddits de mains), et
+  affiner au fil des retours de jeu. Les fiches rédigées sans page `/Strategy`
+  (champions récents) sont les plus à vérifier.
+- [ ] **Règles de runes par matchup** : seuls 5 champions ont le bloc `runes`
+  (Garen, Nasus, Mordekaiser, Malphite, Singed) — à étendre.
 - [ ] **Règles de runes de matchup** : n'existent que pour 5 champions curated
   (bloc `runes` dans les fiches). À étendre au fil de la phase 2.
 - [ ] **Mode draft — affinage** : valeurs de `champion-attributes.json`
@@ -34,11 +35,19 @@
   persistées dans `server/data/weights.json` (2026-07-22)
 - [x] Fiches éditables : curseurs sur les 7 dimensions + tempo + CC +
   mobilité, sauvegarde dans les fichiers de données (2026-07-22)
+- [x] **Phase 2 styles TERMINÉE : 173/173 fiches curées** (plan de jeu FR
+  early/mid/late/draft + difficulté maison 1-10 + sources), dont les 12
+  champions qui n'avaient aucune fiche (vecteur de style + attributs créés)
+  (2026-07-23)
 - [x] Difficulté curée : la note Riot (`info.difficulty`, trop grossière —
   Garen=5, Locke=5) est overridée par une valeur maison dans les fiches curated
   (38 posées), éditable au curseur ; les non-curées gardent la valeur Riot
   marquée « à affiner ». Le score de découverte utilise la difficulté effective
   (2026-07-22)
+- [x] Onglet Réglages : changer la clé API Riot depuis l'UI (sans redémarrer le
+  serveur), testée immédiatement contre l'API Riot. Pas d'authentification
+  volontairement (usage local mono-utilisateur pour l'instant — à revoir avant
+  tout partage) (2026-07-23)
 - [x] Tips Riot (Data Dragon `allytips`) masqués sur les fiches curated (le plan
   vérifié fait foi) — corrige les infos Riot anciennes/trompeuses ; toutes les
   données restent 100 % LoL PC (jamais Wild Rift) (2026-07-22)

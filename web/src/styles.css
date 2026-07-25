@@ -475,6 +475,79 @@ button:disabled {
   color: #e0a55e;
 }
 
+.settings-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  max-width: 520px;
+}
+
+.settings-card h2 {
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.settings-hint {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.settings-hint a {
+  color: var(--blue);
+}
+
+.settings-current {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.settings-current code {
+  color: var(--gold);
+  background: rgba(200, 170, 110, 0.1);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.settings-row {
+  display: flex;
+  gap: 8px;
+}
+
+.settings-row input {
+  flex: 1;
+  width: auto;
+  font-family: monospace;
+}
+
+.settings-status {
+  margin-top: 12px;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.settings-status.ok {
+  color: var(--green);
+  background: rgba(63, 182, 139, 0.1);
+}
+
+.settings-status.warn {
+  color: #e0a55e;
+  background: rgba(224, 165, 94, 0.1);
+}
+
+.settings-status.error {
+  color: #e07070;
+  background: rgba(224, 112, 112, 0.1);
+}
+
 .roles {
   display: flex;
   gap: 6px;
