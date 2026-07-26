@@ -144,6 +144,43 @@ export function analyzeTeam(
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
+const COUNTER_ROLE_W: Record<Role, string> = {
+  top: "draft.counterRoleTop",
+  mid: "draft.counterRoleMid",
+  adc: "draft.counterRoleAdc",
+  support: "draft.counterRoleSupport",
+  jungle: "draft.counterRoleJungle",
+};
+
+export interface CounterEffect {
+  delta: number;
+  wr: number; // winrate du candidat contre l'adversaire de lane
+  games: number;
+  enemyName: string;
+}
+
+// Effet du contre-pick : on compare le winrate DANS CE MATCHUP au winrate
+// habituel du champion dans ce rôle. On isole ainsi l'effet du duel, sans
+// recompter la force générale du champion (déjà dans la note de base).
+export function counterEffect(
+  champKey: string,
+  role: Role,
+  baselineWr: number | null, // winrate du champion dans le rôle, en %
+  table: Map<string, { wr: number; games: number }>,
+  enemyName: string,
+): CounterEffect | null {
+  const line = table.get(champKey);
+  if (!line || baselineWr === null) return null;
+  if (line.games < getW("draft.counterMinGames")) return null;
+
+  const ecart = line.wr - baselineWr;
+  const brut = ecart * getW("draft.counterFactor") * getW(COUNTER_ROLE_W[role]);
+  const cap = getW("draft.counterMax");
+  const delta = Math.round(clamp(brut, -cap, cap));
+  if (delta === 0) return null;
+  return { delta, wr: line.wr, games: line.games, enemyName };
+}
+
 // Ajuste une recommandation selon les deux compositions. Retourne le delta et
 // les explications, sans muter l'original.
 export function adjustForDraft(

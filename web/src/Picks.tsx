@@ -223,8 +223,11 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
     live: "Champ select suivi en direct",
   };
 
+  const counters = result?.counters ?? null;
+
   return (
-    <div>
+    <div className="picks-layout">
+      <div className="picks-main">
       {result && (
         <p className="status">
           <span className="patch-inline">Patch {result.patch.display}</span>
@@ -338,6 +341,60 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
           ))}
         </main>
       )}
+      </div>
+
+      <aside className="picks-side">
+        <section className="side-card side-items">
+          <p className="side-title">Objets</p>
+          <p className="side-empty">
+            Recommandations d'achat selon la draft — à venir.
+          </p>
+        </section>
+
+        <section className="side-card side-counters">
+          <p className="side-title">
+            Counters
+            {counters && (
+              <span className="side-sub">
+                {" "}
+                face à <img className="side-face" src={counters.enemyIcon} alt="" />{" "}
+                {counters.enemyName}
+              </span>
+            )}
+          </p>
+          {!counters ? (
+            <p className="side-empty">
+              Ajoute l'adversaire de ta lane ({ROLE_LABELS[role]}) chez les ennemis pour voir les
+              contre-picks chiffrés.
+            </p>
+          ) : (
+            <>
+              <p className="side-group good">Le contrent</p>
+              {counters.best.map((c) => (
+                <div key={c.name} className="ct-row">
+                  <img src={c.icon} alt="" loading="lazy" />
+                  <span className="ct-name">{c.name}</span>
+                  <b className="ct-wr good">{c.wr.toFixed(1).replace(".", ",")} %</b>
+                  <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
+                </div>
+              ))}
+              <p className="side-group bad">Se font contrer</p>
+              {counters.worst.map((c) => (
+                <div key={c.name} className="ct-row">
+                  <img src={c.icon} alt="" loading="lazy" />
+                  <span className="ct-name">{c.name}</span>
+                  <b className="ct-wr bad">{c.wr.toFixed(1).replace(".", ",")} %</b>
+                  <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
+                </div>
+              ))}
+              <p className="side-foot">
+                Winrate réel du duel (nb de parties à droite) · l'effet sur les scores est renforcé
+                au top et au mid, réglable dans Calculs
+              </p>
+            </>
+          )}
+        </section>
+      </aside>
     </div>
   );
 }

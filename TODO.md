@@ -11,11 +11,21 @@
   La page de runes par défaut (u.gg), elle, marche déjà pour tous.
 - [ ] **Mode draft — affinage** : valeurs de `champion-attributes.json`
   (provisoires) ; jauge burst/DPS.
-- [ ] **Phase 3 styles** : valider les vecteurs avec les champs `challenges`
-  des matchs déjà téléchargés (turretTakedowns, soloKills,
-  damageDealtToObjectives…).
+- [ ] ~~**Phase 3 styles**~~ : **abandonné le 2026-07-25** (décision utilisateur,
+  approche jugée non pertinente). Étude faite si on veut y revenir : les 510
+  matchs en cache ont 100 % de couverture sur `damageDealtToTurrets`,
+  `timeCCingOthers`, `totalHealsOnTeammates`, `soloKills`, `killParticipation`,
+  `teamDamagePercentage`… Deux limites qui ont motivé l'abandon : le **poke n'est
+  mesurable par aucune métrique**, et le comportement mesuré est confondu avec le
+  champion joué (jouer Garen produit du splitpush quel que soit le goût du
+  joueur). Valider les vecteurs eux-mêmes demanderait les parties de milliers de
+  joueurs, pas seulement les nôtres.
 - [ ] Hébergement pour les amis + demande de clé Riot permanente (Personal API
   Key sur developer.riotgames.com).
+
+- [ ] **Panneau Objets** (carré en haut à droite de l'écran Picks) : emplacement
+  créé et visible, contenu à faire — recommandations d'achat selon la draft,
+  pendant la partie.
 
 ## Fait
 
@@ -34,6 +44,16 @@
   persistées dans `server/data/weights.json` (2026-07-22)
 - [x] Fiches éditables : curseurs sur les 7 dimensions + tempo + CC +
   mobilité, sauvegarde dans les fichiers de données (2026-07-22)
+- [x] **Counters dans le score de draft** : le winrate réel du duel contre
+  l'adversaire de ta lane ajuste la note, comparé au winrate habituel du
+  champion (pour ne pas recompter sa force générale). Pondéré par rôle —
+  top ×1,5 et mid ×1,4 (duel de lane décisif), jungle ×0,7. Effet borné à
+  ±15 points, seuil de 300 parties. Tout est réglable dans l'onglet Calculs.
+  Astuce de perf : on télécharge les matchups de **l'adversaire** une seule
+  fois puis on inverse, au lieu d'un fichier de 3 Mo par candidat (2026-07-25)
+- [x] **Écran Picks réorganisé** : draft à gauche, colonne de droite avec
+  l'emplacement Objets en haut et le panneau Counters en bas (meilleurs et
+  pires contre-picks parmi tous les champions du rôle) (2026-07-25)
 - [x] **Matchups réels** : endpoint u.gg `matchups` décodé
   (`[champId, victoires, parties, …]`, vérifié par recoupement du winrate
   agrégé). Source vivante cachée 24 h : contre-picks chiffrés dans les fiches

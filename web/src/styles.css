@@ -24,9 +24,139 @@ body {
 }
 
 .app {
-  max-width: 760px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 20px 16px 60px;
+}
+
+/* Écran de draft : partie en cours à gauche, panneaux à droite */
+.picks-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+.picks-main {
+  min-width: 0;
+}
+
+.picks-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 16px;
+}
+
+.side-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.side-items {
+  min-height: 120px;
+}
+
+.side-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.side-sub {
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+.side-face {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  vertical-align: -4px;
+}
+
+.side-empty {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.side-group {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 10px 0 5px;
+}
+
+.side-group.good {
+  color: var(--green);
+}
+
+.side-group.bad {
+  color: #e07070;
+}
+
+.ct-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.ct-row img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.ct-name {
+  flex: 1;
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ct-wr {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ct-wr.good,
+.ct-delta.good {
+  color: var(--green);
+}
+
+.ct-wr.bad,
+.ct-delta.bad {
+  color: #e07070;
+}
+
+.ct-delta {
+  font-size: 11.5px;
+  font-style: normal;
+  min-width: 26px;
+  text-align: right;
+}
+
+.side-foot {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .picks-layout {
+    grid-template-columns: 1fr;
+  }
+  .picks-side {
+    position: static;
+  }
 }
 
 header {

@@ -164,6 +164,55 @@ export const WEIGHT_DEFS: WeightDef[] = [
     min: 0, max: 15, step: 1, default: 4, group: "Mode draft",
   },
   {
+    key: "draft.counterFactor",
+    label: "Force des counters",
+    description:
+      "Points de note par point d'écart entre le winrate du matchup et le winrate habituel du champion. Ex. un champion à 55 % contre cet adversaire au lieu de 50 % gagne 5 × ce facteur.",
+    min: 0, max: 5, step: 0.1, default: 1.2, group: "Counters",
+  },
+  {
+    key: "draft.counterMax",
+    label: "Bonus/malus de counter max",
+    description: "Borne du seul effet counter, avant le plafond global de la draft.",
+    min: 0, max: 30, step: 1, default: 15, group: "Counters",
+  },
+  {
+    key: "draft.counterMinGames",
+    label: "Parties minimum pour un counter",
+    description: "En dessous, l'échantillon du matchup est jugé trop faible et l'effet est ignoré.",
+    min: 50, max: 3000, step: 50, default: 300, group: "Counters",
+  },
+  {
+    key: "draft.counterRoleTop",
+    label: "Multiplicateur — Top",
+    description: "Le duel de lane décide beaucoup au top : effet renforcé.",
+    min: 0, max: 3, step: 0.1, default: 1.5, group: "Counters",
+  },
+  {
+    key: "draft.counterRoleMid",
+    label: "Multiplicateur — Mid",
+    description: "Duel de lane également déterminant au mid.",
+    min: 0, max: 3, step: 0.1, default: 1.4, group: "Counters",
+  },
+  {
+    key: "draft.counterRoleAdc",
+    label: "Multiplicateur — ADC",
+    description: "Lane à deux : le matchup direct pèse moins que sur les lanes solo.",
+    min: 0, max: 3, step: 0.1, default: 0.9, group: "Counters",
+  },
+  {
+    key: "draft.counterRoleSupport",
+    label: "Multiplicateur — Support",
+    description: "Lane à deux, effet atténué.",
+    min: 0, max: 3, step: 0.1, default: 0.8, group: "Counters",
+  },
+  {
+    key: "draft.counterRoleJungle",
+    label: "Multiplicateur — Jungle",
+    description: "Pas de duel de lane imposé : le contre-pick compte moins.",
+    min: 0, max: 3, step: 0.1, default: 0.7, group: "Counters",
+  },
+  {
     key: "draft.deltaClamp",
     label: "Ajustement draft max",
     description: "L'ensemble des bonus/malus de draft est borné à ± cette valeur.",

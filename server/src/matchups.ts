@@ -58,6 +58,33 @@ async function getMatchups(champKey: string, ddVersion: string): Promise<ByRole>
   return out;
 }
 
+// Table de counters vue depuis l'adversaire, puis INVERSÉE : un seul
+// téléchargement (celui de l'adversaire de lane) donne le winrate de tous les
+// candidats contre lui, au lieu d'un fichier de 3 Mo par candidat.
+export interface CounterLine {
+  wr: number; // winrate du candidat contre l'adversaire, en %
+  games: number;
+}
+
+export async function getCounterTable(
+  enemyKey: string,
+  role: Role,
+  ddVersion: string,
+): Promise<Map<string, CounterLine>> {
+  const out = new Map<string, CounterLine>();
+  let byRole: ByRole;
+  try {
+    byRole = await getMatchups(enemyKey, ddVersion);
+  } catch {
+    return out; // u.gg indisponible : la draft continue sans counters
+  }
+  for (const line of byRole[role] ?? []) {
+    // line.wr est le winrate de l'ADVERSAIRE contre ce champion
+    out.set(line.key, { wr: Math.round((100 - line.wr) * 10) / 10, games: line.games });
+  }
+  return out;
+}
+
 export interface MatchupView {
   name: string;
   icon: string;

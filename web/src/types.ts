@@ -22,6 +22,12 @@ export interface Recommendation {
   plan: { early: string; mid: string; late: string; draft: string } | null;
   styleBonus: number;
   draftDelta?: number;
+  counter?: {
+    delta: number;
+    wr: number;
+    games: number;
+    enemyName: string;
+  } | null;
 }
 
 export interface PlayerProfile {
@@ -38,8 +44,21 @@ export interface TeamAnalysis {
   labels: string[];
 }
 
+export interface CounterEntry {
+  name: string;
+  icon: string;
+  wr: number;
+  games: number;
+}
+
 export interface DraftResult {
   role: Role;
+  counters: {
+    enemyName: string;
+    enemyIcon: string;
+    best: CounterEntry[];
+    worst: CounterEntry[];
+  } | null;
   patch: { ddragonVersion: string; display: string; statsFetchedAt: number };
   player: {
     riotId: string | null;

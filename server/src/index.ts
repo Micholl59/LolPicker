@@ -8,11 +8,11 @@ import { getPatchStats, ROLES, type Role } from "./ugg.js";
 import { resolveAccount, getPersonalStats, getPersonalCacheAge, RiotError } from "./riot.js";
 import { computeRole } from "./score.js";
 import { computeProfile, loadStyles, styleTags, type PlayerProfile } from "./styles.js";
-import { analyzeTeam, adjustForDraft, loadAttributes, updateAttributes } from "./draft.js";
+import { analyzeTeam, adjustForDraft, counterEffect, loadAttributes, updateAttributes } from "./draft.js";
 import { updateStyle } from "./styles.js";
 import { allWeights, saveWeights, resetWeights } from "./weights.js";
 import { getRunesFor } from "./runes.js";
-import { getMatchupReport } from "./matchups.js";
+import { getMatchupReport, getCounterTable } from "./matchups.js";
 import { getLcuDraft } from "./lcu.js";
 
 const app = Fastify({ logger: { level: "info" } });
@@ -227,6 +227,14 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
   const enemy = analyzeTeam(enemyIds, byId, patch);
   const picked = new Set([...allyIds, ...enemyIds]);
 
+  // Adversaire direct de ta lane : c'est lui qui pilote l'effet de contre-pick
+  const enemyLanerId = enemy.lanes.findIndex((l) => l === role);
+  const enemyLaner = enemyLanerId >= 0 ? byId.get(enemy.picks[enemyLanerId]) ?? null : null;
+  // Un seul téléchargement (celui de l'adversaire), puis inversion
+  const counterTable = enemyLaner
+    ? await getCounterTable(enemyLaner.key, role, ddVersion)
+    : new Map();
+
   const base = computeRole(role, patch, champions, personal, profile);
   const adjust = (recs: typeof base.pool) =>
     recs
@@ -236,18 +244,53 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
       })
       .map((r) => {
         const { delta, notes } = adjustForDraft(r, ally, enemy, byId, champions);
+        const counter = enemyLaner
+          ? counterEffect(r.key, role, r.wrPatch, counterTable, enemyLaner.name)
+          : null;
+        const notesAll = [...notes];
+        if (counter) {
+          notesAll.push(
+            counter.delta > 0
+              ? `bon contre ${counter.enemyName} (${counter.wr.toFixed(1).replace(".", ",")} %)`
+              : `contré par ${counter.enemyName} (${counter.wr.toFixed(1).replace(".", ",")} %)`,
+          );
+        }
+        const total = delta + (counter?.delta ?? 0);
         return {
           ...r,
-          score: Math.min(99, Math.max(5, r.score + delta)),
-          draftDelta: delta,
-          reason: notes.length > 0 ? `${r.reason} · ${notes.join(" · ")}` : r.reason,
+          score: Math.min(99, Math.max(5, r.score + total)),
+          draftDelta: total,
+          counter,
+          reason: notesAll.length > 0 ? `${r.reason} · ${notesAll.join(" · ")}` : r.reason,
         };
       })
       .sort((a, b) => b.score - a.score);
 
+  // Panneau counters : meilleurs et pires contre-picks parmi TOUS les
+  // champions du rôle, pas seulement ceux déjà recommandés
+  let countersPanel = null;
+  if (enemyLaner && counterTable.size) {
+    const minGames = 300;
+    const lignes = [...counterTable.entries()]
+      .filter(([, l]) => l.games >= minGames)
+      .map(([key, l]) => {
+        const c = champions.get(key);
+        return c ? { name: c.name, icon: c.iconUrl, wr: l.wr, games: l.games } : null;
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null)
+      .sort((a, b) => b.wr - a.wr);
+    countersPanel = {
+      enemyName: enemyLaner.name,
+      enemyIcon: enemyLaner.iconUrl,
+      best: lignes.slice(0, 5),
+      worst: lignes.slice(-5).reverse(),
+    };
+  }
+
   const [major, minor] = ddVersion.split(".");
   return {
     role,
+    counters: countersPanel,
     patch: {
       ddragonVersion: ddVersion,
       display: `${Number(major) + 10}.${minor}`,
