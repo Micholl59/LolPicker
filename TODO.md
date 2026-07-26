@@ -7,9 +7,8 @@
   Piste écartée : les « Tips & tricks » du wiki ne contiennent que des minuties
   techniques (temps d'incantation, hitbox), pas de stratégie exploitable.
 - [ ] **Règles de runes par matchup** : seuls 5 champions ont le bloc `runes`
-  (Garen, Nasus, Mordekaiser, Malphite, Singed) — à étendre.
-- [ ] **Règles de runes de matchup** : n'existent que pour 5 champions curated
-  (bloc `runes` dans les fiches). À étendre au fil de la phase 2.
+  (Garen, Nasus, Mordekaiser, Malphite, Singed) — à étendre aux 168 autres.
+  La page de runes par défaut (u.gg), elle, marche déjà pour tous.
 - [ ] **Mode draft — affinage** : valeurs de `champion-attributes.json`
   (provisoires) ; jauge burst/DPS.
 - [ ] **Phase 3 styles** : valider les vecteurs avec les champs `challenges`
