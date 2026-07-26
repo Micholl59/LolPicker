@@ -266,6 +266,44 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
       })
       .sort((a, b) => b.score - a.score);
 
+  // Menaces : les champions ennemis déjà pické, avec de quoi jouer contre eux.
+  // Utile en draft ET pendant la partie (l'écran reste ouvert).
+  const monChampId = ally.lanes.findIndex((l) => l === role);
+  const monChamp = monChampId >= 0 ? byId.get(ally.picks[monChampId]) ?? null : null;
+
+  const threats = await Promise.all(
+    enemy.picks.map(async (id, i) => {
+      const c = byId.get(id);
+      if (!c) return null;
+      const laneEnnemie = enemy.lanes[i] ?? null;
+      const fiche = loadStyles().get(c.id);
+      // Tips Riot en priorité ; sinon on retombe sur la ligne « draft » de
+      // notre fiche, qui décrit ses faiblesses
+      const tips = c.enemytips.length
+        ? c.enemytips
+        : fiche?.plan?.draft
+          ? [fiche.plan.draft]
+          : [];
+      // Winrate de TON champion contre lui, si tu as déjà pické dans ce rôle
+      let versus: { wr: number; games: number } | null = null;
+      if (monChamp && laneEnnemie === role) {
+        const t = await getCounterTable(c.key, role, ddVersion);
+        const l = t.get(monChamp.key);
+        if (l && l.games >= 300) versus = { wr: l.wr, games: l.games };
+      }
+      return {
+        name: c.name,
+        icon: c.iconUrl,
+        lane: laneEnnemie,
+        archetype: fiche?.archetype ?? null,
+        estMaLane: laneEnnemie === role,
+        tips,
+        tipsSource: c.enemytips.length ? "riot" : fiche?.plan?.draft ? "fiche" : null,
+        versus,
+      };
+    }),
+  );
+
   // Panneau counters : meilleurs et pires contre-picks parmi TOUS les
   // champions du rôle, pas seulement ceux déjà recommandés
   let countersPanel = null;
@@ -291,6 +329,8 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
   return {
     role,
     counters: countersPanel,
+    threats: threats.filter((t) => t !== null),
+    monChampion: monChamp ? { name: monChamp.name, icon: monChamp.iconUrl } : null,
     patch: {
       ddragonVersion: ddVersion,
       display: `${Number(major) + 10}.${minor}`,

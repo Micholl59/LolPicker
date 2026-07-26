@@ -150,6 +150,100 @@ body {
   line-height: 1.45;
 }
 
+/* Ennemis : liste rouge, chaque ligne dépliable sur ses conseils */
+.side-threats {
+  border-color: rgba(224, 112, 112, 0.45);
+}
+
+.side-threats .side-title {
+  color: #e07070;
+}
+
+.th-row {
+  border-top: 1px solid var(--border);
+}
+
+.th-row:first-of-type {
+  border-top: none;
+}
+
+.th-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.th-head:hover .th-name {
+  color: #fff;
+}
+
+.th-head img {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(224, 112, 112, 0.5);
+}
+
+.th-name {
+  flex: 1;
+  font-size: 13px;
+  color: #e58a8a;
+  font-weight: 600;
+}
+
+.th-lane {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  margin-left: 6px;
+}
+
+.th-row.ma-lane .th-name::after {
+  content: " ⚔";
+  color: var(--gold);
+}
+
+.th-wr {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.th-wr.good {
+  color: var(--green);
+}
+
+.th-wr.bad {
+  color: #e07070;
+}
+
+.th-chevron {
+  color: var(--text-dim);
+  font-size: 11px;
+  width: 12px;
+}
+
+.th-tips {
+  padding: 0 0 8px 34px;
+  margin: 0;
+  list-style: disc;
+}
+
+.th-tips li {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.th-tips .th-none {
+  color: var(--text-dim);
+  font-style: italic;
+  list-style: none;
+}
+
 @media (max-width: 900px) {
   .picks-layout {
     grid-template-columns: 1fr;

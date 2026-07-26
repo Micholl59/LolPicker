@@ -8,6 +8,7 @@ export interface Champion {
   title: string;
   blurb: string;
   allytips: string[];
+  enemytips: string[]; // conseils pour jouer CONTRE ce champion (Riot)
   difficulty: number; // 1-10
   tags: string[];
   iconUrl: string;
@@ -28,7 +29,7 @@ export async function getVersion(): Promise<string> {
 }
 
 export async function getChampions(version: string): Promise<Map<string, Champion>> {
-  const key = `dd-champions-v3-${version}-${config.locale}`;
+  const key = `dd-champions-v4-${version}-${config.locale}`;
   let list = cacheGet<Champion[]>(key, config.ttl.ddragon);
   if (!list) {
     const res = await fetch(`${DD}/cdn/${version}/data/${config.locale}/championFull.json`);
@@ -41,6 +42,7 @@ export async function getChampions(version: string): Promise<Map<string, Champio
       title: c.title,
       blurb: c.blurb,
       allytips: c.allytips ?? [],
+      enemytips: c.enemytips ?? [],
       // Certains champions récents ont une difficulté absente ou à 0 chez
       // Riot : on considère alors une difficulté moyenne
       difficulty: c.info?.difficulty > 0 ? c.info.difficulty : 5,

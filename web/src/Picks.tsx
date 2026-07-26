@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { DraftResult, Role, TeamAnalysis } from "./types";
+import type { DraftResult, Role, TeamAnalysis, Threat } from "./types";
 import { Row } from "./Row";
 
 interface ChampLite {
@@ -103,6 +103,37 @@ function TeamPanel({
             ))}
           </div>
         </>
+      )}
+    </div>
+  );
+}
+
+function ThreatRow({ t }: { t: Threat }) {
+  const [open, setOpen] = useState(false);
+  const dur = t.versus !== null && t.versus.wr < 48;
+  return (
+    <div className={`th-row ${t.estMaLane ? "ma-lane" : ""}`}>
+      <div className="th-head" onClick={() => setOpen(!open)}>
+        <img src={t.icon} alt="" loading="lazy" />
+        <span className="th-name">
+          {t.name}
+          {t.lane && <em className="th-lane">{ROLE_LABELS[t.lane]}</em>}
+        </span>
+        {t.versus && (
+          <b className={`th-wr ${dur ? "bad" : "good"}`}>
+            {t.versus.wr.toFixed(1).replace(".", ",")} %
+          </b>
+        )}
+        <span className="th-chevron">{open ? "▾" : "▸"}</span>
+      </div>
+      {open && (
+        <ul className="th-tips">
+          {t.tips.length ? (
+            t.tips.map((tip, i) => <li key={i}>{tip}</li>)
+          ) : (
+            <li className="th-none">Pas encore de conseil pour ce champion.</li>
+          )}
+        </ul>
       )}
     </div>
   );
@@ -224,6 +255,11 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
   };
 
   const counters = result?.counters ?? null;
+  // Ta lane d'abord : c'est l'adversaire que tu affrontes directement
+  const threats = useMemo(
+    () => [...(result?.threats ?? [])].sort((a, b) => Number(b.estMaLane) - Number(a.estMaLane)),
+    [result],
+  );
 
   return (
     <div className="picks-layout">
@@ -351,49 +387,65 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
           </p>
         </section>
 
-        <section className="side-card side-counters">
+        <section className="side-card side-threats">
           <p className="side-title">
-            Counters
-            {counters && (
+            Ennemis
+            {result?.monChampion && (
+              <span className="side-sub">
+                {" "}
+                — tu joues <img className="side-face" src={result.monChampion.icon} alt="" />{" "}
+                {result.monChampion.name}
+              </span>
+            )}
+          </p>
+          {!threats.length ? (
+            <p className="side-empty">
+              Ajoute les champions ennemis : tu auras ici comment jouer contre chacun, à garder
+              ouvert pendant la partie.
+            </p>
+          ) : (
+            <>
+              {threats.map((t) => (
+                <ThreatRow key={t.name} t={t} />
+              ))}
+              <p className="side-foot">
+                Conseils officiels Riot pour jouer contre eux · le winrate affiché est celui de ton
+                champion dans ce duel
+              </p>
+            </>
+          )}
+        </section>
+
+        {counters && (
+          <section className="side-card side-counters">
+            <p className="side-title">
+              Contre-picks
               <span className="side-sub">
                 {" "}
                 face à <img className="side-face" src={counters.enemyIcon} alt="" />{" "}
                 {counters.enemyName}
               </span>
-            )}
-          </p>
-          {!counters ? (
-            <p className="side-empty">
-              Ajoute l'adversaire de ta lane ({ROLE_LABELS[role]}) chez les ennemis pour voir les
-              contre-picks chiffrés.
             </p>
-          ) : (
-            <>
-              <p className="side-group good">Le contrent</p>
-              {counters.best.map((c) => (
-                <div key={c.name} className="ct-row">
-                  <img src={c.icon} alt="" loading="lazy" />
-                  <span className="ct-name">{c.name}</span>
-                  <b className="ct-wr good">{c.wr.toFixed(1).replace(".", ",")} %</b>
-                  <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
-                </div>
-              ))}
-              <p className="side-group bad">Se font contrer</p>
-              {counters.worst.map((c) => (
-                <div key={c.name} className="ct-row">
-                  <img src={c.icon} alt="" loading="lazy" />
-                  <span className="ct-name">{c.name}</span>
-                  <b className="ct-wr bad">{c.wr.toFixed(1).replace(".", ",")} %</b>
-                  <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
-                </div>
-              ))}
-              <p className="side-foot">
-                Winrate réel du duel (nb de parties à droite) · l'effet sur les scores est renforcé
-                au top et au mid, réglable dans Calculs
-              </p>
-            </>
-          )}
-        </section>
+            <p className="side-group good">Le contrent</p>
+            {counters.best.slice(0, 4).map((c) => (
+              <div key={c.name} className="ct-row">
+                <img src={c.icon} alt="" loading="lazy" />
+                <span className="ct-name">{c.name}</span>
+                <b className="ct-wr good">{c.wr.toFixed(1).replace(".", ",")} %</b>
+                <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
+              </div>
+            ))}
+            <p className="side-group bad">Se font contrer</p>
+            {counters.worst.slice(0, 4).map((c) => (
+              <div key={c.name} className="ct-row">
+                <img src={c.icon} alt="" loading="lazy" />
+                <span className="ct-name">{c.name}</span>
+                <b className="ct-wr bad">{c.wr.toFixed(1).replace(".", ",")} %</b>
+                <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
+              </div>
+            ))}
+          </section>
+        )}
       </aside>
     </div>
   );

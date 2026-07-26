@@ -25,7 +25,11 @@
 
 - [ ] **Panneau Objets** (carré en haut à droite de l'écran Picks) : emplacement
   créé et visible, contenu à faire — recommandations d'achat selon la draft,
-  pendant la partie.
+  consultables pendant la partie.
+- [ ] **Conseils anti-champion manquants** : 26 champions n'ont pas
+  d'`enemytips` chez Riot (Ambessa, Aurora, Bel'Veth, Briar, Locke, Naafiri,
+  Nilah, Qiyana, Akshan, Aurelion Sol, Fiddlesticks, Lillia…). Ils retombent sur
+  la ligne « draft » de notre fiche — à compléter par des conseils dédiés.
 
 ## Fait
 
@@ -51,9 +55,12 @@
   ±15 points, seuil de 300 parties. Tout est réglable dans l'onglet Calculs.
   Astuce de perf : on télécharge les matchups de **l'adversaire** une seule
   fois puis on inverse, au lieu d'un fichier de 3 Mo par candidat (2026-07-25)
-- [x] **Écran Picks réorganisé** : draft à gauche, colonne de droite avec
-  l'emplacement Objets en haut et le panneau Counters en bas (meilleurs et
-  pires contre-picks parmi tous les champions du rôle) (2026-07-25)
+- [x] **Écran Picks réorganisé** (d'après le croquis de l'utilisateur) : draft à
+  gauche, colonne de droite avec l'emplacement Objets en haut, puis le panneau
+  **Ennemis** (liste rouge, une ligne par champion adverse, dépliable sur les
+  conseils Riot `enemytips` pour jouer contre lui, ta lane en premier avec le
+  winrate de ton duel) et le panneau **Contre-picks**. Pensé pour rester ouvert
+  pendant la partie (2026-07-25)
 - [x] **Matchups réels** : endpoint u.gg `matchups` décodé
   (`[champId, victoires, parties, …]`, vérifié par recoupement du winrate
   agrégé). Source vivante cachée 24 h : contre-picks chiffrés dans les fiches

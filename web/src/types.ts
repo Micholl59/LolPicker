@@ -51,8 +51,21 @@ export interface CounterEntry {
   games: number;
 }
 
+export interface Threat {
+  name: string;
+  icon: string;
+  lane: Role | null;
+  archetype: string | null;
+  estMaLane: boolean;
+  tips: string[];
+  tipsSource: "riot" | "fiche" | null;
+  versus: { wr: number; games: number } | null;
+}
+
 export interface DraftResult {
   role: Role;
+  threats: Threat[];
+  monChampion: { name: string; icon: string } | null;
   counters: {
     enemyName: string;
     enemyIcon: string;
