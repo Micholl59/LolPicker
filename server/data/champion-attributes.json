@@ -2,8 +2,8 @@
   "_meta": {
     "cc": "quantité de contrôle de foule apportée (0-100)",
     "mobility": "dashs, blinks, vitesse — capacité à échapper ou survivre au CC (0-100)",
-    "note": "provisoire (draft) : valeurs à affiner. frontline/dégâts/burst sont dérivés (archétype + Data Dragon).",
-    "updatedAt": "2026-07-22"
+    "note": "cc/mobility estimés à la main puis recoupés avec les descriptions de sorts Data Dragon (fr). 19 valeurs corrigées le 2026-07-25 (CC dur ou outil de fuite avérés mais sous-cotés). Le reste demande encore une vérification au cas par cas. mobility = capacité à échapper/se repositionner, pas un dash offensif.",
+    "updatedAt": "2026-07-25"
   },
   "Garen": {
     "cc": 25,
@@ -58,11 +58,11 @@
     "mobility": 45
   },
   "Fiora": {
-    "cc": 20,
+    "cc": 40,
     "mobility": 60
   },
   "Jax": {
-    "cc": 25,
+    "cc": 40,
     "mobility": 60
   },
   "Tryndamere": {
@@ -119,7 +119,7 @@
   },
   "Kayle": {
     "cc": 15,
-    "mobility": 30
+    "mobility": 45
   },
   "Yorick": {
     "cc": 35,
@@ -147,7 +147,7 @@
   },
   "MasterYi": {
     "cc": 5,
-    "mobility": 25
+    "mobility": 35
   },
   "Amumu": {
     "cc": 85,
@@ -158,7 +158,7 @@
     "mobility": 50
   },
   "Shaco": {
-    "cc": 25,
+    "cc": 40,
     "mobility": 60
   },
   "JarvanIV": {
@@ -282,7 +282,7 @@
     "mobility": 60
   },
   "Belveth": {
-    "cc": 35,
+    "cc": 45,
     "mobility": 75
   },
   "Gragas": {
@@ -358,7 +358,7 @@
     "mobility": 45
   },
   "Cassiopeia": {
-    "cc": 35,
+    "cc": 55,
     "mobility": 10
   },
   "Xerath": {
@@ -371,7 +371,7 @@
   },
   "Vladimir": {
     "cc": 25,
-    "mobility": 35
+    "mobility": 55
   },
   "Swain": {
     "cc": 60,
@@ -406,7 +406,7 @@
     "mobility": 85
   },
   "Leblanc": {
-    "cc": 35,
+    "cc": 45,
     "mobility": 90
   },
   "Anivia": {
@@ -415,10 +415,10 @@
   },
   "TwistedFate": {
     "cc": 50,
-    "mobility": 15
+    "mobility": 30
   },
   "Ryze": {
-    "cc": 35,
+    "cc": 50,
     "mobility": 25
   },
   "AurelionSol": {
@@ -431,7 +431,7 @@
   },
   "Zoe": {
     "cc": 55,
-    "mobility": 35
+    "mobility": 45
   },
   "Qiyana": {
     "cc": 55,
@@ -450,11 +450,11 @@
     "mobility": 20
   },
   "Jinx": {
-    "cc": 35,
+    "cc": 45,
     "mobility": 15
   },
   "Caitlyn": {
-    "cc": 35,
+    "cc": 45,
     "mobility": 25
   },
   "Ashe": {
@@ -474,7 +474,7 @@
     "mobility": 15
   },
   "Vayne": {
-    "cc": 25,
+    "cc": 40,
     "mobility": 55
   },
   "Tristana": {
@@ -490,15 +490,15 @@
     "mobility": 25
   },
   "Draven": {
-    "cc": 20,
+    "cc": 30,
     "mobility": 30
   },
   "Xayah": {
     "cc": 40,
-    "mobility": 30
+    "mobility": 50
   },
   "Aphelios": {
-    "cc": 30,
+    "cc": 45,
     "mobility": 10
   },
   "Zeri": {
@@ -586,7 +586,7 @@
     "mobility": 15
   },
   "Yuumi": {
-    "cc": 35,
+    "cc": 45,
     "mobility": 60
   },
   "Karma": {
