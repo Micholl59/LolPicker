@@ -2,6 +2,7 @@ import { config } from "./config.js";
 import { cacheGet, cacheSet } from "./cache.js";
 import { curlJson, type Role } from "./ugg.js";
 import type { Champion } from "./ddragon.js";
+import { loadStyles } from "./styles.js";
 
 // Matchups réels u.gg : victoires/parties pour chaque paire de champions.
 // Format décodé : { region: { tier: { role: [ [ [champId, wins, games, ...deltas], … ], date ] } } }
@@ -90,6 +91,7 @@ export interface MatchupView {
   icon: string;
   wr: number;
   games: number;
+  tips: string[]; // comment jouer contre CE champion
 }
 
 export interface MatchupReport {
@@ -104,7 +106,15 @@ export interface MatchupReport {
 function toView(line: MatchupLine, byKey: Map<string, Champion>): MatchupView | null {
   const champ = byKey.get(line.key);
   if (!champ) return null;
-  return { name: champ.name, icon: champ.iconUrl, wr: line.wr, games: line.games };
+  // Conseils Riot pour jouer contre lui ; repli sur la ligne « draft » de notre
+  // fiche pour les 26 champions que Riot ne documente pas
+  const fiche = loadStyles().get(champ.id);
+  const tips = champ.enemytips.length
+    ? champ.enemytips
+    : fiche?.plan?.draft
+      ? [fiche.plan.draft]
+      : [];
+  return { name: champ.name, icon: champ.iconUrl, wr: line.wr, games: line.games, tips };
 }
 
 export async function getMatchupReport(

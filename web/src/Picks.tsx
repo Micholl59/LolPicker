@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { DraftResult, Role, TeamAnalysis, Threat } from "./types";
+import type { DraftResult, Role, TeamAnalysis } from "./types";
 import { Row } from "./Row";
 
 interface ChampLite {
@@ -108,34 +108,86 @@ function TeamPanel({
   );
 }
 
-function ThreatRow({ t }: { t: Threat }) {
+interface MatchupEntry {
+  name: string;
+  icon: string;
+  wr: number;
+  games: number;
+  tips: string[];
+}
+
+// Un matchup défavorable : winrate en rouge, dépliable sur les conseils
+function BadMatchup({ m }: { m: MatchupEntry }) {
   const [open, setOpen] = useState(false);
-  const dur = t.versus !== null && t.versus.wr < 48;
   return (
-    <div className={`th-row ${t.estMaLane ? "ma-lane" : ""}`}>
+    <div className="th-row">
       <div className="th-head" onClick={() => setOpen(!open)}>
-        <img src={t.icon} alt="" loading="lazy" />
-        <span className="th-name">
-          {t.name}
-          {t.lane && <em className="th-lane">{ROLE_LABELS[t.lane]}</em>}
-        </span>
-        {t.versus && (
-          <b className={`th-wr ${dur ? "bad" : "good"}`}>
-            {t.versus.wr.toFixed(1).replace(".", ",")} %
-          </b>
-        )}
+        <img src={m.icon} alt="" loading="lazy" />
+        <span className="th-name">{m.name}</span>
+        <b className="th-wr bad">{m.wr.toFixed(1).replace(".", ",")} %</b>
         <span className="th-chevron">{open ? "▾" : "▸"}</span>
       </div>
       {open && (
         <ul className="th-tips">
-          {t.tips.length ? (
-            t.tips.map((tip, i) => <li key={i}>{tip}</li>)
+          <li className="th-meta">
+            {m.games.toLocaleString("fr-FR")} parties dans ce duel
+          </li>
+          {m.tips.length ? (
+            m.tips.map((tip, i) => <li key={i}>{tip}</li>)
           ) : (
             <li className="th-none">Pas encore de conseil pour ce champion.</li>
           )}
         </ul>
       )}
     </div>
+  );
+}
+
+// Panneau rouge : les matchups défavorables du champion sélectionné
+function BadMatchups({ champKey, champName, role }: { champKey: string | null; champName: string | null; role: Role }) {
+  const [data, setData] = useState<{ hardest?: MatchupEntry[]; avgWr?: number | null; sample?: number } | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!champKey) { setData(null); return; }
+    setLoading(true);
+    fetch(`/api/matchups?champ=${champKey}&role=${role}`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then(setData)
+      .catch(() => setData(null))
+      .finally(() => setLoading(false));
+  }, [champKey, role]);
+
+  return (
+    <section className="side-card side-threats">
+      <p className="side-title">
+        Matchups défavorables
+        {champName && <span className="side-sub"> — {champName}</span>}
+      </p>
+      {!champKey ? (
+        <p className="side-empty">
+          Clique un champion dans la liste de gauche pour voir contre qui il souffre, et comment
+          jouer face à eux.
+        </p>
+      ) : loading ? (
+        <p className="side-empty">Chargement…</p>
+      ) : !data?.hardest?.length ? (
+        <p className="side-empty">Pas assez de données pour ce champion à ce rôle.</p>
+      ) : (
+        <>
+          {data.hardest.map((m) => (
+            <BadMatchup key={m.name} m={m} />
+          ))}
+          <p className="side-foot">
+            Winrate de {champName} dans le duel · moyenne{" "}
+            {data.avgWr !== null && data.avgWr !== undefined
+              ? `${data.avgWr.toFixed(1).replace(".", ",")} %`
+              : "—"}{" "}
+            · déplie une ligne pour les conseils
+          </p>
+        </>
+      )}
+    </section>
   );
 }
 
@@ -149,6 +201,7 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
   const [result, setResult] = useState<DraftResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [lcuOn, setLcuOn] = useState(() => localStorage.getItem("lcuOn") === "1");
   const [lcuStatus, setLcuStatus] = useState<"off" | "waiting" | "noclient" | "live">("off");
   const debounce = useRef<number>();
@@ -254,11 +307,15 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
     live: "Champ select suivi en direct",
   };
 
-  const counters = result?.counters ?? null;
-  // Ta lane d'abord : c'est l'adversaire que tu affrontes directement
-  const threats = useMemo(
-    () => [...(result?.threats ?? [])].sort((a, b) => Number(b.estMaLane) - Number(a.estMaLane)),
+  // Champion sélectionné dans la liste de gauche : pilote le panneau rouge.
+  // Par défaut, la meilleure recommandation.
+  const recos = useMemo(
+    () => [...(result?.recommendations.pool ?? []), ...(result?.recommendations.discover ?? [])],
     [result],
+  );
+  const selected = useMemo(
+    () => recos.find((r) => r.key === selectedKey) ?? recos[0] ?? null,
+    [recos, selectedKey],
   );
 
   return (
@@ -367,13 +424,28 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
             <>
               <h2>Ton pool</h2>
               {result.recommendations.pool.map((rec) => (
-                <Row key={rec.key} rec={rec} role={role} enemyId={enemyLaner} />
+                <Row
+                  key={rec.key}
+                  rec={rec}
+                  role={role}
+                  enemyId={enemyLaner}
+                  selected={rec.key === selected?.key}
+                  onSelect={() => setSelectedKey(rec.key)}
+                />
               ))}
             </>
           )}
           <h2>À découvrir</h2>
           {result.recommendations.discover.map((rec) => (
-            <Row key={rec.key} rec={rec} discover role={role} enemyId={enemyLaner} />
+            <Row
+              key={rec.key}
+              rec={rec}
+              discover
+              role={role}
+              enemyId={enemyLaner}
+              selected={rec.key === selected?.key}
+              onSelect={() => setSelectedKey(rec.key)}
+            />
           ))}
         </main>
       )}
@@ -387,65 +459,7 @@ export default function Picks({ riotId, refreshToken }: { riotId: string; refres
           </p>
         </section>
 
-        <section className="side-card side-threats">
-          <p className="side-title">
-            Ennemis
-            {result?.monChampion && (
-              <span className="side-sub">
-                {" "}
-                — tu joues <img className="side-face" src={result.monChampion.icon} alt="" />{" "}
-                {result.monChampion.name}
-              </span>
-            )}
-          </p>
-          {!threats.length ? (
-            <p className="side-empty">
-              Ajoute les champions ennemis : tu auras ici comment jouer contre chacun, à garder
-              ouvert pendant la partie.
-            </p>
-          ) : (
-            <>
-              {threats.map((t) => (
-                <ThreatRow key={t.name} t={t} />
-              ))}
-              <p className="side-foot">
-                Conseils officiels Riot pour jouer contre eux · le winrate affiché est celui de ton
-                champion dans ce duel
-              </p>
-            </>
-          )}
-        </section>
-
-        {counters && (
-          <section className="side-card side-counters">
-            <p className="side-title">
-              Contre-picks
-              <span className="side-sub">
-                {" "}
-                face à <img className="side-face" src={counters.enemyIcon} alt="" />{" "}
-                {counters.enemyName}
-              </span>
-            </p>
-            <p className="side-group good">Le contrent</p>
-            {counters.best.slice(0, 4).map((c) => (
-              <div key={c.name} className="ct-row">
-                <img src={c.icon} alt="" loading="lazy" />
-                <span className="ct-name">{c.name}</span>
-                <b className="ct-wr good">{c.wr.toFixed(1).replace(".", ",")} %</b>
-                <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
-              </div>
-            ))}
-            <p className="side-group bad">Se font contrer</p>
-            {counters.worst.slice(0, 4).map((c) => (
-              <div key={c.name} className="ct-row">
-                <img src={c.icon} alt="" loading="lazy" />
-                <span className="ct-name">{c.name}</span>
-                <b className="ct-wr bad">{c.wr.toFixed(1).replace(".", ",")} %</b>
-                <em className="ct-delta">{(c.games / 1000).toFixed(1).replace(".", ",")}k</em>
-              </div>
-            ))}
-          </section>
-        )}
+        <BadMatchups champKey={selected?.key ?? null} champName={selected?.name ?? null} role={role} />
       </aside>
     </div>
   );

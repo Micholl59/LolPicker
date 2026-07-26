@@ -56,11 +56,16 @@
   Astuce de perf : on télécharge les matchups de **l'adversaire** une seule
   fois puis on inverse, au lieu d'un fichier de 3 Mo par candidat (2026-07-25)
 - [x] **Écran Picks réorganisé** (d'après le croquis de l'utilisateur) : draft à
-  gauche, colonne de droite avec l'emplacement Objets en haut, puis le panneau
-  **Ennemis** (liste rouge, une ligne par champion adverse, dépliable sur les
-  conseils Riot `enemytips` pour jouer contre lui, ta lane en premier avec le
-  winrate de ton duel) et le panneau **Contre-picks**. Pensé pour rester ouvert
-  pendant la partie (2026-07-25)
+  gauche, colonne de droite avec l'emplacement Objets en haut et le panneau
+  rouge **Matchups défavorables** en bas. Il suit le champion sélectionné dans
+  la liste de gauche (clic = sélection, bordure dorée) et liste ses pires
+  duels ; chaque ligne se déplie sur les conseils pour jouer contre ce
+  champion. Les matchups ont donc quitté la ligne dépliée de « ton pool ».
+  Pensé pour rester ouvert pendant la partie (2026-07-25)
+- [x] **Filtre des conseils corrompus de Riot** : K'Sante servait les
+  `enemytips` de Lee Sin (erreur de copier-coller côté Riot, patch 16.14). Les
+  tips qui citent un autre champion sans jamais nommer le leur sont écartés et
+  remplacés par notre fiche (2026-07-25)
 - [x] **Matchups réels** : endpoint u.gg `matchups` décodé
   (`[champId, victoires, parties, …]`, vérifié par recoupement du winrate
   agrégé). Source vivante cachée 24 h : contre-picks chiffrés dans les fiches

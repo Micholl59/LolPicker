@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { Recommendation, Role } from "./types";
-import Matchups from "./Matchups";
 
 export function scoreClass(score: number): string {
   if (score >= 72) return "score high";
@@ -84,15 +83,25 @@ export function Row({
   discover,
   role,
   enemyId,
+  selected,
+  onSelect,
 }: {
   rec: Recommendation;
   discover?: boolean;
   role?: Role;
   enemyId?: string | null;
+  selected?: boolean;
+  onSelect?: () => void;
 }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`row ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
+    <div
+      className={`row ${open ? "open" : ""} ${selected ? "selected" : ""}`}
+      onClick={() => {
+        onSelect?.();
+        setOpen(!open);
+      }}
+    >
       <div className="row-main">
         <span className={scoreClass(rec.score) + (discover ? " discover" : "")}>
           {rec.score}
@@ -123,8 +132,8 @@ export function Row({
       </div>
       {open && (
         <div className="row-detail" onClick={(e) => e.stopPropagation()}>
+          {/* Les matchups ont déménagé dans le panneau rouge de droite */}
           {role && <Runes champKey={rec.key} role={role} enemyId={enemyId ?? null} />}
-          {role && <Matchups champKey={rec.key} role={role} enemyId={enemyId ?? null} />}
           {rec.plan ? (
             <dl className="plan">
               <dt>Early</dt>

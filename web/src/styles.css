@@ -244,6 +244,14 @@ body {
   list-style: none;
 }
 
+.th-tips .th-meta {
+  color: var(--text-dim);
+  font-size: 11px;
+  list-style: none;
+  margin-left: -14px;
+  margin-bottom: 6px;
+}
+
 @media (max-width: 900px) {
   .picks-layout {
     grid-template-columns: 1fr;
@@ -809,6 +817,11 @@ h2 {
 
 .row:hover {
   background: var(--card-hover);
+}
+
+/* Champion dont les matchups sont affichés dans le panneau de droite */
+.row.selected {
+  border-color: var(--gold);
 }
 
 .row-main {

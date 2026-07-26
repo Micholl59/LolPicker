@@ -29,7 +29,7 @@ export async function getVersion(): Promise<string> {
 }
 
 export async function getChampions(version: string): Promise<Map<string, Champion>> {
-  const key = `dd-champions-v4-${version}-${config.locale}`;
+  const key = `dd-champions-v5-${version}-${config.locale}`;
   let list = cacheGet<Champion[]>(key, config.ttl.ddragon);
   if (!list) {
     const res = await fetch(`${DD}/cdn/${version}/data/${config.locale}/championFull.json`);
@@ -54,6 +54,18 @@ export async function getChampions(version: string): Promise<Map<string, Champio
           : 50,
       ranged: (c.stats?.attackrange ?? 125) >= 300,
     }));
+
+    // Riot laisse parfois passer des enemytips copiés d'un autre champion
+    // (K'Sante contient ceux de Lee Sin au patch 16.14). On écarte ceux qui
+    // citent un autre champion sans jamais nommer le leur.
+    const noms = list.map((c) => c.name).filter((n) => n.length >= 4);
+    for (const c of list) {
+      if (!c.enemytips.length) continue;
+      const texte = c.enemytips.join(" ");
+      const parleDAutrui = noms.some((n) => n !== c.name && texte.includes(n));
+      if (parleDAutrui && !texte.includes(c.name)) c.enemytips = [];
+    }
+
     cacheSet(key, list);
   }
   return new Map(list.map((c) => [c.key, c]));
