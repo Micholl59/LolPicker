@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Recommendation, Role } from "./types";
+import Matchups from "./Matchups";
 
 export function scoreClass(score: number): string {
   if (score >= 72) return "score high";
@@ -123,6 +124,7 @@ export function Row({
       {open && (
         <div className="row-detail" onClick={(e) => e.stopPropagation()}>
           {role && <Runes champKey={rec.key} role={role} enemyId={enemyId ?? null} />}
+          {role && <Matchups champKey={rec.key} role={role} enemyId={enemyId ?? null} />}
           {rec.plan ? (
             <dl className="plan">
               <dt>Early</dt>

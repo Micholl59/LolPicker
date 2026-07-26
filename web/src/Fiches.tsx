@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import Matchups from "./Matchups";
+import type { Role } from "./types";
 
 interface Fiche {
   key: string;
@@ -69,6 +71,7 @@ export default function Fiches() {
   const [edit, setEdit] = useState<Record<string, number>>({});
   const [saved, setSaved] = useState(false);
   const [onlyTodo, setOnlyTodo] = useState(false);
+  const [roleOverride, setRoleOverride] = useState<Role | null>(null);
 
   const reload = () =>
     fetch("/api/champions")
@@ -83,6 +86,7 @@ export default function Fiches() {
   useEffect(() => {
     setEditing(false);
     setSaved(false);
+    setRoleOverride(null);
   }, [selectedKey]);
 
   const filtered = useMemo(
@@ -102,6 +106,15 @@ export default function Fiches() {
     () => (all ?? []).find((c) => c.key === selectedKey) ?? null,
     [all, selectedKey],
   );
+
+  // Rôle des matchups : celui choisi, sinon le plus joué du champion
+  const matchupRole = useMemo<Role | null>(() => {
+    if (!selected) return null;
+    if (roleOverride && selected.wrByRole[roleOverride]) return roleOverride;
+    const roles = Object.entries(selected.wrByRole);
+    if (!roles.length) return null;
+    return roles.sort((a, b) => b[1].pickRate - a[1].pickRate)[0][0] as Role;
+  }, [selected, roleOverride]);
 
   if (error) return <p className="error">{error}</p>;
   if (!all) return <p className="loading">Chargement des fiches…</p>;
@@ -314,6 +327,26 @@ export default function Fiches() {
                 <li key={i}>{t}</li>
               ))}
             </ul>
+          )}
+
+          {matchupRole && (
+            <div className="fiche-matchups">
+              <div className="mu-head">
+                <span className="mu-title">Matchups réels</span>
+                <span className="mu-roles">
+                  {Object.keys(selected.wrByRole).map((r) => (
+                    <button
+                      key={r}
+                      className={r === matchupRole ? "active" : ""}
+                      onClick={() => setRoleOverride(r as Role)}
+                    >
+                      {ROLE_LABELS[r]}
+                    </button>
+                  ))}
+                </span>
+              </div>
+              <Matchups champKey={selected.key} role={matchupRole} />
+            </div>
           )}
 
           {selected.sources.length > 0 && (

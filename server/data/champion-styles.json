@@ -351,15 +351,16 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Sett",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Sett.json"
     ],
     "plan": {
-      "early": "Trades avec le W chargé (le Grip d'acier inflige de vrais dégâts selon les coups encaissés). Garde ta passive pour les gros échanges. Solide en 1v1 rapproché.",
-      "mid": "Ton R (Toute la mise) attrape la cible clé et l'écrase sur son équipe : cherche l'engage sur un carry mal placé. Le W traverse et zone en plein combat.",
-      "late": "Frontline-engage : entre avec R sur la meilleure cible, W au milieu du fight pour les vrais dégâts et la zone, encaisse et disloque leur backline.",
+      "early": "Trades au Q (Rogne, dégâts selon les PV max) en alternant tes coups (passive Roi de l'arène). Le W (Coup cathartique) stocke les dégâts subis en agressivité — encaisse puis rends-les.",
+      "mid": "Ton R (Le Clou du spectacle) saisit un champion et l'écrase sur son équipe : cherche l'engage sur un carry mal placé. Le E (Casse-tête) attire les ennemis de deux côtés et les étourdit.",
+      "late": "Frontline-engage : R sur la meilleure cible, W au milieu du fight pour les vrais dégâts et la zone, E pour regrouper, puis encaisse.",
       "draft": "Fort contre les compos sans peel et les mêlées. Faible contre le kite et les Blessures graves ; manque de mobilité pour rattraper."
     },
-    "editedAt": "2026-07-22",
+    "editedAt": "2026-07-25",
     "difficulty": 3
   },
   "Illaoi": {
@@ -585,16 +586,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/K%27Sante",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/KSante.json"
     ],
     "difficulty": 9,
     "plan": {
-      "early": "Tanky et sûr en lane : trades au Q (2 charges, la 3e stun contre un mur), Sceau du sentinelle (W) pour bloquer/knock-up. Farm et scale, tu es peu punissable.",
-      "mid": "En fight normal, joue frontline (dash au E, contrôle au W). Ton R (Tout ou rien) sort une cible du groupe et te transforme en duelliste (perds armure/RM, gagnes dégâts) — isole leur carry en 1v1.",
-      "late": "Choisis ton moment de R : ejecter une menace pour l'isoler, ou rester tank. En forme All Out tu es un assassin fragile — engage seulement quand tu peux tuer vite.",
-      "draft": "Fort contre un carry à isoler et beaucoup de dégâts à encaisser. Faible contre le kite en forme All Out et les compos très mobiles."
+      "early": "Tanky et sûr en lane : trades au Q (Coups de ntofo, 2 charges puis version chargée qui tire et étourdit). Le W (Pour Nazumah !) réduit les dégâts puis repousse. Farm et scale.",
+      "mid": "En fight normal, joue frontline (dash au E Jeu de jambes, contrôle au W). Ton R (Grand jeu) repousse une cible à travers les murs et te transforme en duelliste (perds armure/RM, gagnes dégâts).",
+      "late": "Choisis ton moment de R : éjecter une menace pour l'isoler, ou rester tank. En forme Grand jeu tu es un assassin fragile — engage seulement quand tu peux tuer vite.",
+      "draft": "Fort contre un carry à isoler et beaucoup de dégâts à encaisser. Faible contre le kite en forme Grand jeu et les compos très mobiles."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Ornn": {
     "archetype": "Vanguard",
@@ -793,16 +795,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Gwen",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Gwen.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Farm au Q (Ciseaux à dentelle) qui applique Malveillance (dégât en vrai % PV bonus). Ton bouclier de brume (E) te protège des sorts à distance en zone.",
-      "mid": "Snowball via le stack de Malveillance et le W (Fil du destin, dash + slow). Splitpush efficace grâce à tes vrais dégâts.",
-      "late": "R (Bris de destinée) crée une zone où elle inflige des dégâts et se soigne — combo décisif en duel ou petit fight. Excellente en side-lane.",
-      "draft": "Forte contre les tanks (vrais dégâts) et en splitpush. Faible contre le CC à distance qui l'empêche d'utiliser son bouclier de brume (bloque seulement les projectiles)."
+      "early": "Farm au Q (Tchac, tchac !, 6 coups en cône, vrais dégâts au centre). Ta passive (Mille coupures) ajoute des dégâts selon les PV de la cible et te soigne.",
+      "mid": "Le W (Brume sacrée) te rend inciblable depuis l'extérieur de la zone — pose-le pour gagner un trade ou survivre à un gank. Le E (Élan incisif) donne dash, portée et vitesse d'attaque.",
+      "late": "Le R (Piqûre) ralentit, blesse et applique Mille coupures à distance : poke puis rentre au E. Excellente en splitpush grâce à tes dégâts en % de PV.",
+      "draft": "Forte contre les tanks (dégâts en % de PV) et en splitpush. Faible contre le CC à distance qui la sort de sa Brume sacrée."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Teemo": {
     "archetype": "Specialist",
@@ -1235,16 +1238,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Briar",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Briar.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Frénésie (passive) : plus tu attaques, plus tu es rapide, mais tu perds le contrôle de tes déplacements en la surchargeant — gère bien le timing. Ganks agressifs early.",
-      "mid": "Combo Q (charge + étourdissement) pour engage, sustain massif via le vol de vie de la frénésie. Cherche les skirmishes où tu peux rester en frénésie longtemps.",
-      "late": "Dive la backline en frénésie, quasi imblocable en duel prolongé. Le R t'isole avec une cible pour un 1v1 favorable.",
+      "early": "Ta passive (Malédiction écarlate) fait saigner et te soigne. Le W (Folie sanguinaire) te lance en frénésie : tu poursuis sans relâche mais perds le contrôle de tes déplacements.",
+      "mid": "Engage au Q (À table !, bond + étourdissement + brise l'armure). Le E (Cri sanglant) te sort de la frénésie quand tu veux reprendre la main — c'est ton vrai outil de contrôle.",
+      "late": "R (Vol mortel) marque une proie à travers la carte et t'y projette : dive la backline, le sustain du saignement te maintient en vie en duel prolongé.",
       "draft": "Forte en duel et contre les compos sans peel. Faible contre le CC qui interrompt la frénésie et le kite prolongé."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Naafiri": {
     "archetype": "Assassin",
@@ -1261,16 +1265,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Naafiri",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Naafiri.json"
     ],
     "difficulty": 5,
     "plan": {
-      "early": "Invoque 2 comparses (passive) à chaque cast d'un sort de base — ils frappent avec toi, boostant tes trades. Snowball rapide sur les premiers kills.",
-      "mid": "Combo dash (Q) + comparses pour un burst rapide sur les isolés. Roame pour les picks, ton kit favorise l'agression constante.",
-      "late": "Le R (Fais tes valises) te donne une mobilité globale pour rejoindre un fight ou fuir. Cherche toujours les squishy isolés plutôt que le teamfight frontal.",
+      "early": "Ta passive (La meute s'agrandit) fait apparaître des membres de meute qui frappent tes cibles. Poke au Q (Dagues des Darkin, jusqu'à deux dagues qui font saigner).",
+      "mid": "Combo E (Éviscération, ruée + dégâts de zone) + meute pour un burst rapide sur les isolés. Le W (Appel de la meute) te rend inciblable et renforce la meute.",
+      "late": "Le R (Hallali) te lance avec la meute sur un champion et révèle les ennemis proches. Cherche toujours les squishy isolés plutôt que le teamfight frontal.",
       "draft": "Forte contre les squishy isolables. Faible contre les tanks (peu de dégâts soutenus) et le CC dur qui neutralise le burst initial."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Shyvana": {
     "archetype": "Juggernaut",
@@ -1521,16 +1526,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Lillia",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Lillia.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "Clear en zone avec le Q (Poussière d'endormissement, s'accumule sur les cibles touchées). Ganks doux : l'accumulation du sommeil ralentit puis endort si stack complet.",
-      "mid": "Poke à distance en AoE, empile le sommeil sur les cibles prioritaires avant un fight. Bon clear et bonne pression de zone.",
-      "late": "R (Berceuse alanguie) : version chargée = sommeil global sur toute une équipe si bien stacké. Teamfight-winner majeur, à combiner avec du suivi allié.",
-      "draft": "Forte contre les compos groupées (sommeil AoE). Faible contre les dives rapides qui l'empêchent d'accumuler ses stacks de sommeil."
+      "early": "Clear efficace au Q (Frappe fleurie), qui te donne aussi des paliers de vitesse quand tu touches des ennemis. Ta passive brûle les cibles touchées sur la durée.",
+      "mid": "Poke au W (Attention, désolée !, gros dégâts au centre) et engage à distance au E (Graine tournoyante, la graine roule jusqu'à toucher). Empile la somnolence avant un fight.",
+      "late": "R (Douce berceuse) endort tous les ennemis marqués par ta Poussière de rêve : teamfight-winner majeur, à combiner avec le suivi de ton équipe.",
+      "draft": "Forte contre les compos groupées (endormissement en zone). Faible contre les dives rapides qui l'empêchent d'accumuler sa poussière."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Sejuani": {
     "archetype": "Vanguard",
@@ -1573,16 +1579,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Zac",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Zac.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "Clear rapide (régénération passive entre les camps). Gank au Q (Bras élastiques, tire vers une cible) — engage surprenant dès le lvl 3-4.",
-      "mid": "Chasse les picks : E (Rebond) pour sauter sur une cible isolée. Ton corps se sépare en morceaux quand tu prends des dégâts — ramasse-les pour survivre.",
-      "late": "R (Explosion cellulaire) knock-up AoE = engage de teamfight majeur, suivi par ton équipe. Increvable si tu gères bien les fragments.",
+      "early": "Clear rapide et régénération entre les camps (passive Division cellulaire : tes morceaux te soignent, ramasse-les). Gank au Q (Étirements, attrape et rapproche).",
+      "mid": "Chasse les picks au E (Fronde) : charge puis saute sur une cible isolée. Le W (Matière instable) fait des dégâts de zone en % de PV autour de toi.",
+      "late": "R (Boing !) rebondit et projette en zone : engage de teamfight majeur que ton équipe suit. Increvable si tu ramasses bien tes morceaux.",
       "draft": "Fort : engage AoE fiable, sustain unique, difficile à tuer d'un coup. Faible contre le burst concentré qui l'empêche de se régénérer et les exécutions."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Nunu": {
     "archetype": "Vanguard",
@@ -1729,16 +1736,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Elise",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Elise.json"
     ],
     "difficulty": 8,
     "plan": {
-      "early": "Une des meilleures gankeuses lvl 3 : Cocon (E araignée) stun à distance → Rappel pour dive par-dessus les murs → burst en forme humaine (Piqûre venimeuse fait % de PV). Charge-toi vite.",
-      "mid": "Pic early-mid : cherche les picks et les dives 2v2/3v3. Tu perds en puissance avec le temps — convertis ton avance vite.",
+      "early": "Une des meilleures gankeuses lvl 3 : Cocon (E en forme humaine) étourdit à distance, puis passe en araignée et enchaîne (Morsure venimeuse fait des dégâts en % de PV).",
+      "mid": "Pic early-mid : la Suspension (E en forme araignée) te fait franchir les murs pour dive. Cherche les picks et les 2v2/3v3 — tu perds en puissance avec le temps.",
       "late": "Faible en late : joue en amorce (Cocon sur la cible clé) et en pick, pas en carry. Reste sur l'info et la vision.",
       "draft": "Forte en early contre les immobiles et les junglers lents. Faible en scaling, contre le CC dur et les squishy protégés."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Ekko": {
     "archetype": "Assassin",
@@ -1833,16 +1841,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Skarner",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Skarner.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Clear rapide grâce à tes sorts sur les monstres. Gank avec la charge de Fracture (E, dash + immobilise via Q) dès que dispo. Bon 1v1 early.",
-      "mid": "Cherche les picks avec le combo Q (Faille sismique, root/slow) + E. Empile les items de CDR pour spammer.",
-      "late": "R (Élan impérial) t'empale une cible et te fait foncer avec elle, l'isolant du reste — combo décisif sur un carry adverse.",
+      "early": "Clear rapide grâce à tes sorts de zone. Gank au E (Impact d'Ixtal) : tu charges en emportant les ennemis touchés contre le décor pour les étourdir. Bon 1v1 early.",
+      "mid": "Cherche les picks avec le Q (Terre brisée, ralentit puis version Soulèvement) et le bouclier du W (Bastion sismique). Empile la CDR pour spammer.",
+      "late": "R (Empalement) supprime une cible et te fait foncer avec elle, l'isolant du reste de son équipe — combo décisif sur un carry adverse.",
       "draft": "Fort contre les carries isolables. Faible contre le kite prolongé et les compos qui évitent l'isolement."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Ivern": {
     "archetype": "Catcher",
@@ -1911,16 +1920,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Bel%27Veth",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Belveth.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Clear rapide grâce au reset d'attaque sur monstres (passive). Évite les duels avant le 6, scale vite grâce au jungle.",
-      "mid": "R (Royaume du Néant) transforme temporairement tes autos en AoE et te donne un dash sur chaque kill/assist — cherche les skirmishes en groupe pour enchaîner.",
-      "late": "Snowball extrême en teamfight grâce aux resets du R. Reste mobile, punis les regroupements ennemis.",
-      "draft": "Forte contre les compos qui se regroupent (elle explose les fights à plusieurs cibles). Faible contre le pick isolé et le kite qui l'empêche d'enchaîner les resets."
+      "early": "Clear rapide (ta passive donne des resets d'attaque). Q (Charge du Néant) pour te déplacer et esquiver. Évite les duels avant le 6, scale vite grâce au jungle.",
+      "mid": "Le E (Maelström impérial) te fait canaliser des dégâts de zone en réduisant ceux subis. Le W (Projection cinglante) projette et ralentit — bon engage de skirmish.",
+      "late": "R (Banquet infini) te transforme : autos en zone et relance sur les kills/assists. Cherche les fights groupés pour enchaîner et snowball.",
+      "draft": "Forte contre les compos qui se regroupent. Faible contre le pick isolé et le kite qui l'empêche d'enchaîner ses resets."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Gragas": {
     "archetype": "Vanguard",
@@ -2223,16 +2233,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Yone",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Yone.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Trade avec Mortem Bane (Q, 3 charges, la 3e knock-up) et Fendoir spirituel (E, dash traversant, forme spectrale au retour). Farm safe, apprends le timing du parry (W).",
-      "mid": "Empile crit + AD/AP hybride. Cherche les knock-ups (les tiens ou alliés) pour ton R (Vent déchaîné, dash aérien massif dans une ligne).",
-      "late": "Combo E (aller) → fight → E (retour, forme spectrale, esquive les sorts) pour un engage sécurisé. R sur plusieurs cibles airborne pour un reset de teamfight.",
-      "draft": "Fort avec des CC alliés à knock-up. Faible contre le stack de résistances mixtes et le CC qui l'attrape avant son E de retour."
+      "early": "Trade au Q (Acier mortel, 3 charges dont la dernière projette). Le W (Fendoir spirituel) frappe en cône et te donne un bouclier — c'est ton outil de trade, pas un dash.",
+      "mid": "Le E (Libération spirituelle) fait sortir ton esprit du corps : engage, puis reviens au point de départ en récupérant une partie des dégâts subis. Empile crit + AD.",
+      "late": "Cherche les cibles projetées (les tiennes ou celles d'alliés) pour ton R (Destin scellé), qui frappe une ligne entière. Combo E aller-retour pour engager sans risque.",
+      "draft": "Fort avec des CC alliés à projection. Faible contre le stack de résistances mixtes et le CC qui l'attrape avant le retour de son E."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Vex": {
     "archetype": "Burst Mage",
@@ -2249,16 +2260,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Vex",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Vex.json"
     ],
     "difficulty": 5,
     "plan": {
-      "early": "Poke au Q (Presse-purée, plus fort si l'ennemi utilise un dash récemment — passive Épuisement). Reste en sécurité, ton kit est peu mobile.",
-      "mid": "Punis les dashs adverses : ton Q inflige un dégât bonus après une esquive/dash ennemi récent. Le E (Peur) fear la cible touchée par le mur.",
-      "late": "R (Rideau final noir) exécute les cibles sous un seuil de PV en AoE — teamfight-winner si bien placé sur plusieurs cibles basses.",
-      "draft": "Forte contre les compos à dashs fréquents (punit chaque esquive). Faible contre le poke qui l'use avant qu'elle approche et le CC direct (peu mobile)."
+      "early": "Poke au Q (Mistral perdant). Ta passive (Malheur et Désespoir) punit les ennemis qui utilisent un dash : leur prochain sort subi fait plus mal et tu gagnes en portée.",
+      "mid": "Le W (Lâchez-moi !) crée une zone qui apeure les ennemis proches — outil anti-dive. Le E (Ténèbres imminentes) marque et ralentit pour préparer ton burst.",
+      "late": "R (Déferlement d'Ombre) fonce sur une cible et se relance si elle meurt : enchaîne les exécutions dans un teamfight. Reste protégée, tu es peu mobile.",
+      "draft": "Forte contre les compos à dashs fréquents (elle les punit). Faible contre le poke qui l'use avant qu'elle approche et le CC direct."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Akshan": {
     "archetype": "Marksman",
@@ -2275,16 +2287,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Akshan",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Akshan.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "Poke au Q (rebonds sur les sbires) et reste caché dans les buissons (Camouflage). Marque les tueurs de tes alliés (passive) pour une revanche facile en resurrectant un allié.",
-      "mid": "Roame en profitant de la mobilité (grappin sur les structures). Cherche les marques (ennemis ayant tué un allié récemment) — les exécuter rend l'or et ressuscite ta cible.",
-      "late": "R (Fusillade téméraire) marque plusieurs ennemis et charge un tir dévastateur avec délai — bon en pick et en teamfight à distance.",
-      "draft": "Fort contre les compos qui killed des alliés (revanche facile) et pour le contrôle de map. Faible contre les burst directs et le CC dur qui l'empêche de kiter."
+      "early": "Poke au Q (Vengerang, boomerang qui frappe à l'aller et au retour, portée croissante). Ta passive et le W (Cavalier seul) marquent les tueurs de tes alliés — les exécuter les ressuscite.",
+      "mid": "Roame grâce au E (Envolée héroïque) : grappin sur le décor pour te balancer et tirer pendant le mouvement. Cherche les Crapules (ennemis ayant tué un allié) pour l'or et la résurrection.",
+      "late": "R (Bien mérité !) se verrouille sur un champion et stocke des balles, qui partent toutes à la relâche — bon en pick, en finish et à travers le décor.",
+      "draft": "Fort pour le contrôle de map et quand tes alliés meurent (revanche facile). Faible contre le burst direct et le CC dur qui l'empêche de kiter."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Sylas": {
     "archetype": "Burst Mage",
@@ -2613,16 +2626,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Hwei",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Hwei.json"
     ],
     "difficulty": 8,
     "plan": {
-      "early": "Kit à choix : chaque sort a 2 variantes (Q = zone slow/root, W = dash ally/burst root, E = fear/shield). Poke prudent en apprenant les combos, mana-dépendant.",
-      "mid": "Combo E (Peur, si silence) → Q pour un burst/CC lourd. Roame en gardant la pression de lane grâce au bon zoning.",
-      "late": "R (Réalité fracturée) offre 3 variantes selon la situation (execute, root en ligne, ou bouclier de zone) — immense flexibilité en teamfight.",
-      "draft": "Fort : flexibilité extrême, poke + CC + peel selon le besoin. Faible : courbe d'apprentissage élevée, vulnérable aux ganks si mal joué en early."
+      "early": "Kit à combinaisons : chaque sujet (Q Désastres, W Sérénités, E Tourments) ouvre trois sorts selon la touche suivante — dix sorts en tout. Poke prudemment, tu es cher en mana.",
+      "mid": "Enchaîne un contrôle du E (Tourments : peur, apeurement ou zone qui draine) puis un dégât du Q (Désastres) pour verrouiller une cible. Le W (Sérénités) soigne, accélère ou protège ton équipe.",
+      "late": "R (Vision de désespoir) prend le premier champion touché comme centre d'une zone de dégâts continus — combine-le avec ton CC pour bloquer un teamfight.",
+      "draft": "Fort : flexibilité extrême (dégâts, CC, peel selon le besoin). Faible : courbe d'apprentissage élevée et vulnérable aux ganks si tu tardes à choisir ton sort."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Akali": {
     "archetype": "Assassin",
@@ -2873,16 +2887,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Zoe",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Zoe.json"
     ],
     "difficulty": 7,
     "plan": {
-      "early": "Poke à distance énorme avec le Q (Pew Bolt) qui rebondit sur les objets consommables au sol (Sleepy Trouble Bubble avec potions). Harcèle sans risque.",
-      "mid": "Combo : bulle de sommeil (W) sur une cible → burst pendant qu'elle dort (dégâts doublés) → E (Portal Jump) pour repositionner/fuir.",
-      "late": "Reste en poke, one-shot les squishy endormis. Peu de présence en teamfight groupé direct, vise les picks isolés.",
-      "draft": "Forte contre les immobiles à faibles PV. Faible contre le CC qui la punit avant qu'elle ne puisse fuir avec son E (portée limitée)."
+      "early": "Poke énorme au Q (Astro-pong !, plus fort de loin). Ton W (Voleuse de sorts) ramasse les sorts d'invocateur et objets tombés pour les relancer — surveille le sol.",
+      "mid": "Combo : E (Bulle soporifique) endort la cible, puis Q pendant son sommeil (les dégâts sont doublés à son réveil). Le R (Bond dimensionnel) te fait aller-retour pour lancer en sécurité.",
+      "late": "Reste en poke, one-shot les squishy endormis. Peu de présence en teamfight groupé direct, vise les picks isolés depuis une position sûre.",
+      "draft": "Forte contre les immobiles à faibles PV. Faible contre le CC qui la punit une fois son R utilisé (il ne fait qu'un aller-retour court)."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Qiyana": {
     "archetype": "Assassin",
@@ -2925,16 +2940,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Heimerdinger",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Heimerdinger.json"
     ],
     "difficulty": 5,
     "plan": {
-      "early": "Place tes tourelles (Q) pour zoner et poker massivement — domine la lane par le zoning pur. Reste en retrait, laisse les tourelles faire le travail.",
-      "mid": "Continue de poker au CC-Boum (W, grenade collante) et zone les chemins clés avec les tourelles. Excellent en siège de tour.",
-      "late": "R (Réaction en chaîne UPGRADE!!!) améliore tous tes sorts temporairement — combine avec un déploiement massif de tourelles pour un teamfight/siège dévastateur.",
+      "early": "Place tes tourelles (Q) pour zoner et poker — domine la lane par le zoning pur. Reste en retrait, laisse les tourelles travailler.",
+      "mid": "Poke aux Micro-roquettes Hextech (W) et étourdis au E (Grenade électro-tempête CH-2, aveugle et étourdit au centre). Excellent en siège de tour.",
+      "late": "R (AMÉLIORATION !) améliore le prochain sort : tourelle géante, salve de roquettes ou grenade élargie — combine avec un déploiement massif pour un teamfight dévastateur.",
       "draft": "Fort en zoning et siège. Faible contre les dives rapides sur sa position (peu de mobilité) et le poke qui détruit ses tourelles à distance."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Aurora": {
     "archetype": "Battlemage",
@@ -2951,16 +2967,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Aurora",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Aurora.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "Poke et harcèle avec tes sorts à courte-moyenne portée. Ton Q applique un marquage qui explose au second sort touché — enchaîne pour le burst.",
-      "mid": "Roame avec ta mobilité (dash) pour picker les isolés. Combine marquage + dash pour rentrer et sortir en sécurité.",
-      "late": "Ton R passe à travers les unités et permute leur position — utilise-le pour repositionner un ennemi loin de son équipe (isolement) ou sauver un allié en fuite.",
-      "draft": "Forte contre les compos qui comptent sur le positionnement (le R le perturbe). Faible contre le CC qui l'attrape avant qu'elle ne puisse dash."
+      "early": "Poke au Q (Maléfice) qui maudit, puis relance pour un second coup sur les cibles maudites. Ta passive te soigne et t'accélère quand tu touches plusieurs ennemis.",
+      "mid": "Le W (Derrière le voile) te fait bondir et entrer dans le royaume spirituel : tu deviens invisible brièvement, idéal pour rentrer ou décrocher. Le E (Sortilège) projette et repousse.",
+      "late": "R (Entre les mondes) crée une grande zone spirituelle : les ennemis à l'intérieur sont ralentis et coupés du reste — engage de teamfight, pas un simple déplacement.",
+      "draft": "Forte contre les compos groupées (sa zone les enferme). Faible contre le CC qui l'attrape avant son W et le poke à longue portée."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Mel": {
     "archetype": "Artillery",
@@ -2977,16 +2994,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Mel",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Mel.json"
     ],
     "difficulty": 5,
     "plan": {
-      "early": "Poke à distance avec tes sorts, gère ton mana. Ton bouclier réfléchit les projectiles ennemis (passive/sort actif) — punis les mages qui poke sans discernement.",
-      "mid": "Continue le siège à distance, utilise ton kit de contrôle pour setup les picks avec ton équipe. Bon en teamfight à distance.",
-      "late": "Ton R inflige un gros dégât à distance sur une zone — combine avec le CC allié. Reste en backline, ton kit est fragile.",
-      "draft": "Forte contre les compos qui spam les projectiles (réflexion). Faible contre les assassins mobiles qui l'atteignent malgré la distance."
+      "early": "Poke au Q (Salve radieuse, projectiles qui explosent en zone). Chaque sort applique Accablement (passive) : c'est la marque que ton ultime consommera.",
+      "mid": "Le W (Réfutation) renvoie les projectiles ennemis à l'envoyeur — punis les mages et ADC qui tirent sans réfléchir. Le E (Piège solaire) immobilise au centre et ralentit autour.",
+      "late": "R (Éclipse dorée) frappe tous les ennemis marqués par Accablement quelle que soit la distance : empile les marques en teamfight avant de le lancer.",
+      "draft": "Forte contre les compos à projectiles (le W les retourne). Faible contre les assassins mobiles et les dégâts de mêlée qui ignorent son renvoi."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Jinx": {
     "archetype": "Marksman",
@@ -3341,16 +3359,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Zeri",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Zeri.json"
     ],
     "difficulty": 8,
     "plan": {
-      "early": "Kit atypique : ton auto (Q) est un tir on-hit à la façon d'un sort. E dash (traverse les murs fins) = mobilité constante. W (tir chargé longue portée à travers les murs) pour poke/snipe. Early moyen, farm.",
-      "mid": "Kite et harcèle avec ta mobilité. Empile vitesse d'attaque + un peu de crit. Le E te donne un boost pour engage/fuir.",
-      "late": "Hypercarry mobile : ton R (Décharge foudroyante) empile en fight et transforme tes autos en AoE électrique. Kite en permanence, très dure à attraper.",
-      "draft": "Forte : mobilité, scaling, kite. Faible early, et contre le hard CC qui la fixe malgré sa mobilité."
+      "early": "Kit atypique : ton auto (Q, Rafale) est un tir traité comme un sort. Le E (Charge ionique) te fait franchir les murs fins. Early moyen, farm et scale.",
+      "mid": "Poke au W (Laser électrocuteur, longue portée à travers les murs). Kite en permanence avec le E, empile vitesse d'attaque et un peu de crit.",
+      "late": "R (Éruption électrique) s'empile en fight et transforme tes autos en éclairs de zone. Hypercarry très mobile, quasi impossible à attraper.",
+      "draft": "Forte : mobilité, scaling, kite. Faible early et contre le CC dur qui la fixe malgré sa mobilité."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Samira": {
     "archetype": "Marksman",
@@ -3367,16 +3386,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Samira",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Samira.json"
     ],
     "difficulty": 8,
     "plan": {
-      "early": "Agressive : monte ta note de style (jusqu'à S) en variant les sorts. Le W bloque les projectiles (timing crucial). Trades explosifs mais c'est all-in ou rien.",
-      "mid": "Cherche les 2v2 avec un engage allié : dash (E) sur ennemis/alliés pour rester au corps-à-corps et empiler le style. À note S, R (Détente d'enfer) = burst AoE dévastateur.",
-      "late": "Entre en second dans les fights groupés (le W bloque les projectiles, le R nettoie les squishy entassés). Gratifiante mais punitive : un mauvais engage = mort.",
-      "draft": "Forte avec du hard engage/CC (Leona, Nautilus, Amumu) pour setup son R. Faible contre le kite, le disengage et le poke qui l'use avant l'all-in."
+      "early": "Agressive : monte ta note de style (jusqu'à S) en variant les sorts et les autos. Le W (Tourbillon de lame) détruit les projectiles — timing crucial. Trades explosifs, c'est all-in ou rien.",
+      "mid": "Cherche les 2v2 avec un engage allié : le E (Charge sauvage) traverse un ennemi et te donne de la vitesse d'attaque, pour rester au contact et empiler le style.",
+      "late": "À note S, ton R (Gâchette infernale) arrose tous les ennemis autour de toi : entre en second dans les fights groupés, le W bloque les projectiles pendant que tu nettoies.",
+      "draft": "Forte avec du hard engage (Leona, Nautilus, Amumu) qui prépare son R. Faible contre le kite, le disengage et le poke qui l'use avant l'all-in."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "KogMaw": {
     "archetype": "Marksman",
@@ -3445,16 +3465,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Sivir",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Sivir.json"
     ],
     "difficulty": 3,
     "plan": {
-      "early": "Poke au Boomerang (Q, revient : repositionne-toi pour toucher). Le Bouclier de sort (E) bloque un sort de disable clé — garde-le pour ça. Ricochet (W) reset le timing d'attaque.",
-      "mid": "Waveclear et push suprêmes : prends les tours, force les objectifs. Le E qui bloque un sort d'engage (hook de Blitz, R d'Ashe) est immense.",
-      "late": "Ton R (À la curée) donne une grosse vitesse à toute l'équipe : engage ou disengage collectif. Positionne et kite en backline.",
-      "draft": "Forte : push, utilitaire (spell shield + R vitesse d'équipe), engage/disengage. Faible : dégâts mono-cible moyens, dépend du timing du spell shield."
+      "early": "Poke au Q (Lame boomerang, touche à l'aller et au retour : repositionne-toi). Le E (Bouclier magique) bloque un sort — garde-le pour un CC clé, il te soigne en cas de blocage.",
+      "mid": "Waveclear et push suprêmes avec le W (Ricochet, attaques qui rebondissent) : prends les tours, force les objectifs. Bloquer un engage (hook de Blitzcrank, R d'Ashe) au E change un fight.",
+      "late": "R (En chasse) accélère toute l'équipe et renforce tes attaques : engage ou disengage collectif. Positionne et kite en backline.",
+      "draft": "Forte : push, utilitaire (blocage de sort + vitesse d'équipe), engage/disengage. Faible : dégâts mono-cible moyens, dépend du timing de son bouclier."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Varus": {
     "archetype": "Marksman",
@@ -3523,16 +3544,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Smolder",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Smolder.json"
     ],
     "difficulty": 4,
     "plan": {
-      "early": "Scale via les kills/assists/tours qui font grandir ton dragon (passive). Farm et cherche les kills tôt pour accélérer ta montée en puissance. Q applique un DoT qui stack.",
-      "mid": "Ton Q inflige plus de dégâts (et cracks) à mesure que tu stack. W (Bombe volante) pour le poke AoE. Continue de chercher les kills pour scaler plus vite.",
-      "late": "Hypercarry si bien scalé : R (Vol du dragon) pour repositionner/dive/fuir avec un gros AoE. Sinon reste en retrait et laisse le temps faire.",
-      "draft": "Fort si le scaling est permis (peu de pression early adverse). Faible contre les lanes agressives qui l'empêchent de stack tôt."
+      "early": "Scale via les stacks de ta passive (kills, assists, structures). Le Q (Boule de feu draconique) devient de plus en plus fort à mesure que tu empiles — farm et cherche les kills tôt.",
+      "mid": "Poke au W (Atchoum !, explosion sur les champions touchés). Le E (Flap, flap, flap !) te fait survoler les obstacles en bombardant l'ennemi le plus bas — c'est ton outil de fuite et de finish.",
+      "late": "Hypercarry si bien scalé : le R (MAMAAAN !) fait cracher du feu par ta mère sur une grande zone. Sinon reste en retrait et laisse tes stacks monter.",
+      "draft": "Fort si le scaling est permis (peu de pression early adverse). Faible contre les lanes agressives qui l'empêchent d'empiler tôt."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Nilah": {
     "archetype": "Skirmisher",
@@ -3549,16 +3571,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Nilah",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Nilah.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "AoE sur tes attaques (frappe les cibles proches) — bon en trade rapproché. Ton Q (Croissant scintillant) applique un slow en cône. Farm et scale.",
-      "mid": "Ta vie volée est partagée avec les alliés proches (unique) — reste groupée pour maximiser ton impact d'équipe. Kite avec ton dash (E, esquive les projectiles).",
-      "late": "R (Étreinte de la joie) tire les ennemis proches d'une cible vers toi — combo dévastateur avec des CC/dégâts d'équipe AoE. Increvable en fight prolongé grâce au vol de vie partagé.",
-      "draft": "Forte en teamfight groupé avec des alliés en mêlée. Faible en solo lane rigide et contre le kite à distance qui évite le corps-à-corps."
+      "early": "Ta passive partage l'expérience et te donne un vol de vie que tes alliés proches reçoivent aussi. Poke au Q (Lame fluide) en ligne, bon en trade rapproché.",
+      "mid": "Le W (Voile de liesse) t'enveloppe de brume : vitesse accrue et esquive des attaques — garde-le pour absorber un engage. Le E (Torrent) est ton dash pour coller ou décrocher.",
+      "late": "R (Apothéose) frappe les ennemis autour de toi puis les attire : combo dévastateur avec des dégâts d'équipe en zone. Reste groupée, ton vol de vie partagé soigne l'équipe.",
+      "draft": "Forte en teamfight groupé avec des alliés en mêlée. Faible en solo lane rigide et contre le kite qui évite le corps-à-corps."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Senna": {
     "archetype": "Marksman",
@@ -3575,16 +3598,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Senna",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Senna.json"
     ],
     "difficulty": 6,
     "plan": {
-      "early": "Last-hit les sbires ET les âmes (tes propres autos ou celles qui tuent près de toi) pour stacker AD/portée/vie à l'infini. Joue safe, chaque âme est un scaling permanent.",
-      "mid": "Forme brumeuse (E) pour la vision/mobilité en soutien tout en restant utile en dégâts. Peut jouer support (utilitaire) ou ADC (carry) selon le besoin d'équipe.",
-      "late": "Hypercarry à portée normale mais scaling illimité : plus tu stack, plus tu deviens un vrai ADC. Le R (Malédiction de la brume) a une portée globale pour zoner/blesser à distance.",
-      "draft": "Forte : scaling infini, flexible (ADC ou support), bon avec du CC allié. Faible early (fragile, dégâts limités avant le stack) et contre la pression directe."
+      "early": "Last-hit les sbires et récupère les âmes (passive Absolution) : chaque âme augmente AD, portée et vol de vie, à l'infini. Poke au Q (Ombre perforante), qui soigne aussi tes alliés.",
+      "mid": "Le W (Dernière étreinte) enracine après un délai — setup de kill. Le E (Malédiction de la Brume noire) te camoufle et accélère ton équipe : bon pour l'engage ou la fuite.",
+      "late": "R (Ténèbres aveuglantes) traverse la carte : bouclier pour toute ton équipe et dégâts sur la ligne. Tu deviens un vrai carry si tu as bien stacké.",
+      "draft": "Forte : scaling illimité, flexible (ADC ou support), bonne avec du CC allié. Faible early et contre la pression directe (fragile)."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Corki": {
     "archetype": "Marksman",
@@ -3887,16 +3911,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Yuumi",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Yuumi.json"
     ],
     "difficulty": 4,
     "plan": {
-      "early": "Attache-toi (W) à ton carry le plus fiable (celui qui va le plus fight/farmer). Intouchable en étant attachée — zéro risque mais zéro présence physique. Poke léger au Q.",
-      "mid": "Suis ton hôte, soigne/bouclie au fil des trades. Ton root (recast du W après le tir de Q) setup les kills alliés — spam pour le proc.",
-      "late": "R (Ultime Union) donne bouclier + vitesse à toute l'équipe proche pour engage ou disengage. Reste attachée en teamfight, zéro danger direct pour toi.",
-      "draft": "Forte avec un hôte qui fight/farm beaucoup (elle scale avec lui). Faible si ton hôte meurt (tu perds toute présence) et contre le poke qui décourage l'attache."
+      "early": "Attache-toi au W (Félin pour l'autre !) à ton carry le plus fiable — tu es inciblable tant que tu es accrochée. Poke au Q (Tête chat-sseuse), qui accélère en restant attachée.",
+      "mid": "Le E (Zouuu !) soigne et accélère ton hôte : spamme-le dans les trades. Suis-le partout, ton impact dépend entièrement du sien.",
+      "late": "R (Chat-pitre final) envoie plusieurs vagues qui enracinent les ennemis touchés — c'est ton seul vrai CC, garde-le pour le teamfight décisif.",
+      "draft": "Forte avec un hôte qui fight et farm beaucoup. Faible si ton hôte meurt (tu perds toute présence) et contre le poke en zone."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Karma": {
     "archetype": "Enchanter",
@@ -4147,16 +4172,17 @@
     "provenance": "curated",
     "sources": [
       "https://wiki.leagueoflegends.com/en-us/Seraphine",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Seraphine.json"
     ],
     "difficulty": 5,
     "plan": {
-      "early": "Poke avec le Q (dégâts bonus si combiné avec des alliés/sbires proches de la cible). Peut jouer support ou mid selon la draft. Notes (passive) s'empilent avec les sorts.",
-      "mid": "Combo E (bulle qui root si elle touche un mur) → Q → R pour le CC en chaîne. Ardent Censer si tu joues enchanteresse.",
-      "late": "Ton R (Encore) est un CC en ligne qui touche toute l'équipe adverse alignée — cherche l'angle qui maximise le nombre de cibles. Utilitaire d'équipe complet (dégât + soin + CC).",
-      "draft": "Forte dans les compos qui se regroupent pour ses sorts en zone. Faible contre le poke qui l'empêche d'utiliser sa passive de synergie et le CC direct."
+      "early": "Poke au Q (Note aiguë), dont la portée grandit si des alliés sont proches. Ta passive (Présence sur scène) renforce chaque 3e sort et le fait résonner via tes alliés.",
+      "mid": "Le W (Son ambiophonique) soigne et protège l'équipe, le E (Battement) ralentit et enracine si la cible est déjà ralentie ou immobilisée. Combine E puis Q pour verrouiller.",
+      "late": "R (Bis) charme et attire tous les ennemis alignés, et se propage via les champions touchés — cherche l'angle qui traverse le plus d'adversaires.",
+      "draft": "Forte dans les compos groupées qui profitent de ses sorts en zone. Faible contre le poke qui l'isole de ses alliés et le CC direct."
     },
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   },
   "Zyra": {
     "archetype": "Catcher",
@@ -4588,16 +4614,17 @@
     "tempo": 55,
     "difficulty": 6,
     "plan": {
-      "early": "Empile Détermination (passive) en touchant les ennemis (autos/sorts) pour gagner de l'AD. Trades réguliers pour monter tes charges, le Q tire la cible vers toi.",
-      "mid": "À pleines charges : AD bonus élevé et possibilité de ressusciter après la mort — engage plus agressivement pendant cette fenêtre. W (dash + tourbillon AoE) pour le clear et l'engage.",
-      "late": "R : tu t'élèves et t'écrases en nova AoE massive avec du soin — teamfight-winner qui combine dégâts, sustain et menace de résurrection.",
-      "draft": "Fort : teamfight AoE, résurrection qui force l'ennemi à te tuer deux fois. Faible contre les Blessures graves (coupent le soin du R) et le kite qui empêche d'empiler."
+      "early": "Empile Détermination (passive Guerrier immortel) en touchant les ennemis pour gagner de l'AD. Le Q (Glaive des Darkin) rend ta prochaine attaque double — utilise-le dans chaque trade.",
+      "mid": "Le W (Retour redoutable) frappe d'estoc et attire les ennemis touchés vers toi : c'est ton outil d'engage. Le E (Incursion dorée) sert à la ruée et au clear en zone.",
+      "late": "R (Libération inexorable) : tu t'élèves puis t'écrases en nova de zone en récupérant des PV. À pleines charges tu peux ressusciter — l'ennemi doit te tuer deux fois.",
+      "draft": "Fort : teamfight en zone, résurrection qui force un double kill. Faible contre les Blessures graves (coupent ses soins) et le kite qui l'empêche d'empiler."
     },
     "provenance": "curated",
     "sources": [
       "https://esportsinsider.com/league-of-legends-zaahen-abilities",
-      "https://wiki.leagueoflegends.com/en-us/Champion_classes"
+      "https://wiki.leagueoflegends.com/en-us/Champion_classes",
+      "https://ddragon.leagueoflegends.com/cdn/16.14.1/data/fr_FR/champion/Zaahen.json"
     ],
-    "editedAt": "2026-07-23"
+    "editedAt": "2026-07-25"
   }
 }

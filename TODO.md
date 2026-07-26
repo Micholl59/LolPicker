@@ -3,9 +3,9 @@
 ## À faire
 
 - [ ] **Phase 2 bis (optionnel)** : renforcer les fiches avec des preuves Reddit
-  quand la clé API sera disponible (r/summonerschool, subreddits de mains), et
-  affiner au fil des retours de jeu. Les fiches rédigées sans page `/Strategy`
-  (champions récents) sont les plus à vérifier.
+  quand la clé API sera disponible (r/summonerschool, subreddits de mains).
+  Piste écartée : les « Tips & tricks » du wiki ne contiennent que des minuties
+  techniques (temps d'incantation, hitbox), pas de stratégie exploitable.
 - [ ] **Règles de runes par matchup** : seuls 5 champions ont le bloc `runes`
   (Garen, Nasus, Mordekaiser, Malphite, Singed) — à étendre.
 - [ ] **Règles de runes de matchup** : n'existent que pour 5 champions curated
@@ -35,6 +35,14 @@
   persistées dans `server/data/weights.json` (2026-07-22)
 - [x] Fiches éditables : curseurs sur les 7 dimensions + tempo + CC +
   mobilité, sauvegarde dans les fichiers de données (2026-07-22)
+- [x] **Matchups réels** : endpoint u.gg `matchups` décodé
+  (`[champId, victoires, parties, …]`, vérifié par recoupement du winrate
+  agrégé). Source vivante cachée 24 h : contre-picks chiffrés dans les fiches
+  (sélecteur de rôle) et winrate du duel direct en mode draft (2026-07-25)
+- [x] **Vérification factuelle des 35 fiches écrites « au kit »** contre les
+  descriptions officielles Data Dragon fr : **27 corrigées** (noms de sorts
+  inventés, lettres Q/W/E/R inversées, effets faux). Chaque fiche corrigée cite
+  désormais Data Dragon en source (2026-07-25)
 - [x] **Phase 2 styles TERMINÉE : 173/173 fiches curées** (plan de jeu FR
   early/mid/late/draft + difficulté maison 1-10 + sources), dont les 12
   champions qui n'avaient aucune fiche (vecteur de style + attributs créés)

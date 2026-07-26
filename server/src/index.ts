@@ -12,6 +12,7 @@ import { analyzeTeam, adjustForDraft, loadAttributes, updateAttributes } from ".
 import { updateStyle } from "./styles.js";
 import { allWeights, saveWeights, resetWeights } from "./weights.js";
 import { getRunesFor } from "./runes.js";
+import { getMatchupReport } from "./matchups.js";
 import { getLcuDraft } from "./lcu.js";
 
 const app = Fastify({ logger: { level: "info" } });
@@ -157,6 +158,20 @@ app.get<{ Querystring: RunesQuery }>("/api/runes", async (req, reply) => {
     ? ([...champions.values()].find((c) => c.id === req.query.enemy) ?? null)
     : null;
   return getRunesFor(champ, role, ddVersion, enemy);
+});
+
+// Matchups réels (u.gg) : contre-picks chiffrés, et duel direct si `enemy`
+app.get<{ Querystring: RunesQuery }>("/api/matchups", async (req, reply) => {
+  const role = (req.query.role ?? "top") as Role;
+  if (!ROLES.includes(role)) return reply.code(400).send({ error: "Rôle invalide" });
+  const ddVersion = await getVersion();
+  const champions = await getChampions(ddVersion);
+  const champ = champions.get(req.query.champ ?? "");
+  if (!champ) return reply.code(404).send({ error: "Champion inconnu" });
+  const enemy = req.query.enemy
+    ? ([...champions.values()].find((c) => c.id === req.query.enemy) ?? null)
+    : null;
+  return (await getMatchupReport(champ, role, ddVersion, champions, enemy)) ?? { role, sample: 0 };
 });
 
 app.get("/api/lcu/draft", async () => {
