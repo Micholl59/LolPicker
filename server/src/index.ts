@@ -160,7 +160,7 @@ app.get<{ Querystring: RunesQuery }>("/api/runes", async (req, reply) => {
   return getRunesFor(champ, role, ddVersion, enemy);
 });
 
-// Matchups réels (u.gg) : contre-picks chiffrés, et duel direct si `enemy`
+// Matchups réels (lolalytics) : contre-picks chiffrés, et duel direct si `enemy`
 app.get<{ Querystring: RunesQuery }>("/api/matchups", async (req, reply) => {
   const role = (req.query.role ?? "top") as Role;
   if (!ROLES.includes(role)) return reply.code(400).send({ error: "Rôle invalide" });
@@ -232,7 +232,7 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
   const enemyLaner = enemyLanerId >= 0 ? byId.get(enemy.picks[enemyLanerId]) ?? null : null;
   // Un seul téléchargement (celui de l'adversaire), puis inversion
   const counterTable = enemyLaner
-    ? await getCounterTable(enemyLaner.key, role, ddVersion)
+    ? await getCounterTable(enemyLaner.key, role, ddVersion, champions)
     : new Map();
 
   const base = computeRole(role, patch, champions, personal, profile);
@@ -285,11 +285,11 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
           ? [fiche.plan.draft]
           : [];
       // Winrate de TON champion contre lui, si tu as déjà pické dans ce rôle
-      let versus: { wr: number; games: number } | null = null;
+      let versus: { wr: number; delta1: number | null } | null = null;
       if (monChamp && laneEnnemie === role) {
-        const t = await getCounterTable(c.key, role, ddVersion);
+        const t = await getCounterTable(c.key, role, ddVersion, champions);
         const l = t.get(monChamp.key);
-        if (l && l.games >= 300) versus = { wr: l.wr, games: l.games };
+        if (l) versus = { wr: l.wr, delta1: l.delta1 };
       }
       return {
         name: c.name,
@@ -308,12 +308,10 @@ app.get<{ Querystring: DraftQuery }>("/api/draft", async (req, reply) => {
   // champions du rôle, pas seulement ceux déjà recommandés
   let countersPanel = null;
   if (enemyLaner && counterTable.size) {
-    const minGames = 300;
     const lignes = [...counterTable.entries()]
-      .filter(([, l]) => l.games >= minGames)
       .map(([key, l]) => {
         const c = champions.get(key);
-        return c ? { name: c.name, icon: c.iconUrl, wr: l.wr, games: l.games } : null;
+        return c ? { name: c.name, icon: c.iconUrl, wr: l.wr, delta1: l.delta1 } : null;
       })
       .filter((x): x is NonNullable<typeof x> => x !== null)
       .sort((a, b) => b.wr - a.wr);

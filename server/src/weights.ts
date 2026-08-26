@@ -177,12 +177,6 @@ export const WEIGHT_DEFS: WeightDef[] = [
     min: 0, max: 30, step: 1, default: 15, group: "Counters",
   },
   {
-    key: "draft.counterMinGames",
-    label: "Parties minimum pour un counter",
-    description: "En dessous, l'échantillon du matchup est jugé trop faible et l'effet est ignoré.",
-    min: 50, max: 3000, step: 50, default: 300, group: "Counters",
-  },
-  {
     key: "draft.counterRoleTop",
     label: "Multiplicateur — Top",
     description: "Le duel de lane décide beaucoup au top : effet renforcé.",

@@ -112,7 +112,7 @@ interface MatchupEntry {
   name: string;
   icon: string;
   wr: number;
-  games: number;
+  delta1: number | null;
   tips: string[];
 }
 
@@ -129,9 +129,12 @@ function BadMatchup({ m }: { m: MatchupEntry }) {
       </div>
       {open && (
         <ul className="th-tips">
-          <li className="th-meta">
-            {m.games.toLocaleString("fr-FR")} parties dans ce duel
-          </li>
+          {m.delta1 !== null && (
+            <li className="th-meta">
+              {m.delta1 > 0 ? "+" : ""}
+              {m.delta1.toFixed(2).replace(".", ",")} pt par rapport à son winrate habituel
+            </li>
+          )}
           {m.tips.length ? (
             m.tips.map((tip, i) => <li key={i}>{tip}</li>)
           ) : (
@@ -179,11 +182,11 @@ function BadMatchups({ champKey, champName, role }: { champKey: string | null; c
             <BadMatchup key={m.name} m={m} />
           ))}
           <p className="side-foot">
-            Winrate de {champName} dans le duel · moyenne{" "}
+            Winrate de {champName} dans le duel · médiane{" "}
             {data.avgWr !== null && data.avgWr !== undefined
               ? `${data.avgWr.toFixed(1).replace(".", ",")} %`
               : "—"}{" "}
-            · déplie une ligne pour les conseils
+            · source lolalytics · déplie une ligne pour les conseils
           </p>
         </>
       )}

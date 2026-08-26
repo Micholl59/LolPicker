@@ -25,7 +25,7 @@ export interface Recommendation {
   counter?: {
     delta: number;
     wr: number;
-    games: number;
+    delta1: number | null;
     enemyName: string;
   } | null;
 }
@@ -48,7 +48,7 @@ export interface CounterEntry {
   name: string;
   icon: string;
   wr: number;
-  games: number;
+  delta1: number | null;
 }
 
 export interface Threat {
@@ -59,7 +59,7 @@ export interface Threat {
   estMaLane: boolean;
   tips: string[];
   tipsSource: "riot" | "fiche" | null;
-  versus: { wr: number; games: number } | null;
+  versus: { wr: number; delta1: number | null } | null;
 }
 
 export interface DraftResult {

@@ -31,6 +31,19 @@
   Nilah, Qiyana, Akshan, Aurelion Sol, Fiddlesticks, Lillia…). Ils retombent sur
   la ligne « draft » de notre fiche — à compléter par des conseils dédiés.
 
+- [ ] **Lolalytics — étude faite le 2026-07-26, non retenu pour l'instant.**
+  Pas d'API : le site est entièrement rendu côté serveur, aucune requête de
+  données (vérifié en inspectant tout le trafic réseau d'une page). Le serveur
+  `a1.lolalytics.com/mega/` existe mais répond « invalid end point » sur toutes
+  les variantes essayées — il manque probablement un jeton.
+  Récupération possible en téléchargeant la page : **188 Ko compressée** (1,7 Mo
+  brute), donc plus légère que nos fichiers u.gg (~3 Mo). **Mais** l'extraction
+  passe par l'analyse de leur HTML, et un premier essai a donné des chiffres
+  faux (Garen/Kayle à 46,8 % contre 56,3 % chez u.gg — le motif attrapait un
+  lien de menu). Fragile et à revérifier systématiquement : à ne reprendre que
+  si on veut une donnée qu'u.gg n'a pas (winrate de **lane** plutôt que de
+  partie, deltas).
+
 ## Fait
 
 - [x] v1 : recommandations par rôle (winrates patch u.gg + stats perso Riot +

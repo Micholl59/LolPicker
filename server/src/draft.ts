@@ -155,7 +155,7 @@ const COUNTER_ROLE_W: Record<Role, string> = {
 export interface CounterEffect {
   delta: number;
   wr: number; // winrate du candidat contre l'adversaire de lane
-  games: number;
+  delta1: number | null; // écart lolalytics avec son winrate habituel
   enemyName: string;
 }
 
@@ -166,19 +166,20 @@ export function counterEffect(
   champKey: string,
   role: Role,
   baselineWr: number | null, // winrate du champion dans le rôle, en %
-  table: Map<string, { wr: number; games: number }>,
+  table: Map<string, { wr: number; delta1: number | null }>,
   enemyName: string,
 ): CounterEffect | null {
   const line = table.get(champKey);
   if (!line || baselineWr === null) return null;
-  if (line.games < getW("draft.counterMinGames")) return null;
 
-  const ecart = line.wr - baselineWr;
+  // Δ1 de lolalytics = écart déjà calculé avec le winrate habituel du champion.
+  // On le préfère quand il existe, sinon on le recalcule sur nos données.
+  const ecart = line.delta1 ?? line.wr - baselineWr;
   const brut = ecart * getW("draft.counterFactor") * getW(COUNTER_ROLE_W[role]);
   const cap = getW("draft.counterMax");
   const delta = Math.round(clamp(brut, -cap, cap));
   if (delta === 0) return null;
-  return { delta, wr: line.wr, games: line.games, enemyName };
+  return { delta, wr: line.wr, delta1: line.delta1, enemyName };
 }
 
 // Ajuste une recommandation selon les deux compositions. Retourne le delta et
