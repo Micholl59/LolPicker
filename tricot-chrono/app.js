@@ -22,7 +22,7 @@ function sauver() {
   try {
     localStorage.setItem(CLE, JSON.stringify(projets));
   } catch {
-    alert("Impossible d'enregistrer : la mémoire du navigateur est pleine.");
+    boite("Impossible d'enregistrer : la mémoire du téléphone est pleine.", { annuler: false });
   }
 }
 
@@ -247,7 +247,7 @@ function vueProjet(p) {
         try {
           await ajouterPhoto(p.id, await reduire(fichier));
         } catch {
-          alert('Une photo n’a pas pu être ajoutée.');
+          await boite('Une photo n’a pas pu être ajoutée.', { annuler: false });
         }
       }
       afficher();
@@ -311,16 +311,16 @@ function vueProjet(p) {
 
 // ---------- Actions ----------
 
-function creerProjet() {
-  const titre = (prompt('Nom du projet ?') || '').trim();
+async function creerProjet() {
+  const titre = ((await boite('Nom du projet', { champ: '' })) || '').trim();
   if (!titre) return;
   projets.push({ id: nouvelId(), titre, totalMs: 0, debut: null, rangs: 0, creeLe: Date.now() });
   sauver();
   afficher();
 }
 
-function renommer(p) {
-  const titre = (prompt('Nouveau nom du projet ?', p.titre) || '').trim();
+async function renommer(p) {
+  const titre = ((await boite('Nouveau nom du projet', { champ: p.titre })) || '').trim();
   if (!titre) return;
   p.titre = titre;
   sauver();
@@ -328,7 +328,7 @@ function renommer(p) {
 }
 
 async function supprimerProjet(p) {
-  if (!confirm(`Supprimer « ${p.titre} » ainsi que son temps, ses rangs et ses photos ?`)) return;
+  if (!(await boite(`Supprimer « ${p.titre} » ainsi que son temps, ses rangs et ses photos ?`, { ok: 'Supprimer' }))) return;
   projets = projets.filter(x => x.id !== p.id);
   sauver();
   await supprimerPhotosDe(p.id);
@@ -342,8 +342,8 @@ function changerRangs(p, delta) {
   afficher();
 }
 
-function remettreRangs(p) {
-  if (!confirm('Remettre le compteur de rangs à zéro ?')) return;
+async function remettreRangs(p) {
+  if (!(await boite('Remettre le compteur de rangs à zéro ?', { ok: 'Remettre à zéro' }))) return;
   p.rangs = 0;
   sauver();
   afficher();
@@ -354,8 +354,34 @@ async function copier(texte, bouton) {
     await navigator.clipboard.writeText(texte);
     bouton.textContent = 'Lien copié ✓';
   } catch {
-    prompt('Copie ce lien :', texte);
+    boite('Copie ce lien', { champ: texte, annuler: false });
   }
+}
+
+// ---------- Boîte de dialogue ----------
+
+// Remplace alert/confirm/prompt, dont le navigateur préfixe le message par
+// l'adresse du site. Résout le texte saisi (avec `champ`), sinon true ;
+// null ou false si annulé.
+function boite(message, { champ = null, ok = 'OK', annuler = true } = {}) {
+  return new Promise(resoudre => {
+    const fond = el('div', { class: 'boite-fond' });
+    const saisie = champ === null ? null : el('input', { class: 'boite-champ', type: 'text', value: champ });
+    const fermer = valeur => { fond.remove(); resoudre(valeur); };
+    fond.append(el('form', {
+      class: 'boite',
+      onsubmit: e => { e.preventDefault(); fermer(saisie ? saisie.value : true); },
+    },
+      el('p', { class: 'boite-message' }, message),
+      saisie,
+      el('div', { class: 'boite-actions' },
+        annuler ? el('button', { type: 'button', class: 'bouton', onclick: () => fermer(saisie ? null : false) }, 'Annuler') : null,
+        el('button', { type: 'submit', class: 'bouton bouton-principal' }, ok),
+      ),
+    ));
+    document.body.append(fond);
+    if (saisie) { saisie.focus(); saisie.select(); }
+  });
 }
 
 // ---------- Visionneuse photo ----------
@@ -372,7 +398,7 @@ function ouvrirPhoto(photo, url) {
 
 document.getElementById('visionneuse-fermer').onclick = () => { visionneuse.hidden = true; };
 document.getElementById('visionneuse-suppr').onclick = async () => {
-  if (!confirm('Supprimer cette photo ?')) return;
+  if (!(await boite('Supprimer cette photo ?', { ok: 'Supprimer' }))) return;
   await supprimerPhoto(photoAffichee.id);
   visionneuse.hidden = true;
   afficher();
@@ -386,7 +412,7 @@ function lireLien() {
   history.replaceState(null, '', location.pathname + location.search);
   const p = trouver(id);
   if (!p) {
-    alert('Ce projet est introuvable ici. Le raccourci doit ouvrir l’appli dans Safari, là où tes projets sont enregistrés.');
+    boite('Ce projet est introuvable ici. Le raccourci doit ouvrir l’appli dans Safari, là où tes projets sont enregistrés.', { annuler: false });
     return;
   }
   demarrer(p);

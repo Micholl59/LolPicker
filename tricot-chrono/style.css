@@ -278,3 +278,43 @@ h1 {
 }
 
 .visionneuse-actions { display: flex; gap: 10px; width: 100%; max-width: 420px; }
+
+/* ---------- Boîte de dialogue ---------- */
+
+.boite-fond {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(91, 69, 96, 0.45);
+}
+
+.boite {
+  width: 100%;
+  max-width: 380px;
+  padding: 22px 18px 18px;
+  border-radius: 26px;
+  background: var(--fond);
+  box-shadow: var(--ombre);
+  text-align: center;
+}
+
+.boite-message { margin: 0 0 16px; font-size: 1.1rem; line-height: 1.4; }
+
+.boite-champ {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 2px solid var(--rose);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--texte);
+  font: inherit;
+  font-size: 1rem; /* 16 px minimum : évite le zoom automatique d'iOS */
+}
+
+.boite-champ:focus { outline: none; border-color: var(--rose-fonce); }
+
+.boite-actions { display: flex; gap: 10px; }
