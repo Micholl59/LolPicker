@@ -28,8 +28,8 @@ contiennent cette adresse : si elle change, il faut refaire les raccourcis.
 ## Widget sur l'écran d'accueil (app Raccourcis)
 
 Un vrai widget iPhone n'est possible qu'avec une appli native. On passe donc
-par l'app **Raccourcis** d'Apple (ces étapes sont aussi affichées dans la page
-de chaque projet) :
+par l'app **Raccourcis** d'Apple (la page de chaque projet
+affiche son lien à copier) :
 
 1. Dans l'appli, ouvrir le projet, puis « Copier le lien » (section
    *Raccourci écran d'accueil*).
