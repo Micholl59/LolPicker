@@ -16,12 +16,20 @@ Décision : l'appli s'utilise **dans Safari** (et pas en « appli web »
 ajoutée à l'écran d'accueil). Sur iPhone, une appli web ajoutée à l'écran
 d'accueil a sa propre mémoire, séparée de Safari ; or les raccourcis du widget
 ouvrent toujours Safari. Si les deux étaient utilisés, le widget ne
-retrouverait pas les projets.
+retrouverait pas les projets. Ouverte depuis l'écran d'accueil, l'appli
+affiche un avertissement.
+
+## Adresse
+
+Publiée via GitHub Pages depuis la branche `ccr-5bf17415-99ny99` :
+<https://micholl59.github.io/LolPicker/tricot-chrono/>. Les liens des widgets
+contiennent cette adresse : si elle change, il faut refaire les raccourcis.
 
 ## Widget sur l'écran d'accueil (app Raccourcis)
 
 Un vrai widget iPhone n'est possible qu'avec une appli native. On passe donc
-par l'app **Raccourcis** d'Apple :
+par l'app **Raccourcis** d'Apple (ces étapes sont aussi affichées dans la page
+de chaque projet) :
 
 1. Dans l'appli, ouvrir le projet, puis « Copier le lien » (section
    *Raccourci écran d'accueil*).

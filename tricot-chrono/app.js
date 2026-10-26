@@ -158,6 +158,16 @@ function dateCourte(ts) {
   return new Date(ts).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
+// Ouverte depuis l'écran d'accueil, l'appli a une mémoire séparée de Safari,
+// alors que le widget ouvre toujours Safari : il ne trouverait pas les projets.
+const horsSafari = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
+
+function avertissementSafari() {
+  return el('p', { class: 'alerte' },
+    'Tu as ouvert l’appli depuis l’écran d’accueil. Le widget, lui, ouvre Safari, qui garde ses propres projets : '
+    + 'utilise plutôt l’appli dans Safari pour que le widget les retrouve.');
+}
+
 function lienRaccourci(p) {
   return `${location.origin}${location.pathname}#lancer=${p.id}`;
 }
@@ -206,6 +216,7 @@ function vueListe() {
       el('h1', {}, 'Mailles & Minutes'),
       el('p', { class: 'sous-titre' }, 'Mes projets tricot & crochet'),
     ),
+    horsSafari ? avertissementSafari() : null,
     projets.length
       ? el('section', { class: 'liste' }, ...cartes)
       : el('p', { class: 'vide' }, 'Aucun projet pour l’instant.', el('br'), 'Crée le premier ! 🧶'),
@@ -275,9 +286,18 @@ function vueProjet(p) {
     ),
 
     el('section', { class: 'bloc bloc-peche' },
-      el('h3', {}, 'Raccourci écran d’accueil'),
-      el('p', { class: 'aide' },
-        'Colle ce lien dans un raccourci de l’app Raccourcis : un appui sur le widget lancera le chrono de ce projet.'),
+      el('h3', {}, 'Widget écran d’accueil'),
+      horsSafari ? avertissementSafari() : null,
+      el('p', { class: 'aide' }, 'Un appui sur le widget lancera le chrono de ce projet. À faire une fois par projet :'),
+      el('ol', { class: 'etapes' },
+        el('li', {}, 'Touche « Copier le lien » ci-dessous.'),
+        el('li', {}, 'Ouvre l’app Raccourcis, touche « + » puis « Ajouter une action ».'),
+        el('li', {}, 'Cherche « Ouvrir les URL », choisis-la, touche « URL » et colle le lien.'),
+        el('li', {}, `Touche le nom en haut, « Renommer », écris « ${p.titre} » puis « OK ».`),
+        el('li', {}, 'Sur l’écran d’accueil : appui long, « Modifier », « Ajouter un widget », puis « Raccourcis ». Prends la taille moyenne (4 projets).'),
+        el('li', {}, 'Pour choisir les projets affichés : appui long sur le widget, puis « Modifier le widget ».'),
+      ),
+      el('p', { class: 'aide' }, 'Au premier appui, l’iPhone peut demander s’il peut ouvrir la page : réponds « Autoriser ».'),
       el('p', { class: 'lien-raccourci' }, lien),
       el('button', { class: 'bouton bouton-secondaire', onclick: e => copier(lien, e.target) }, 'Copier le lien'),
     ),
@@ -308,7 +328,7 @@ function renommer(p) {
 }
 
 async function supprimerProjet(p) {
-  if (!confirm(`Supprimer « ${p.titre} » ainsi que son temps, ses rangs et ses photos ?`)) return;
+  if (!confirm(`Supprimer « ${p.titre} » ainsi que son temps, ses rangs et ses photos ?`)) return;
   projets = projets.filter(x => x.id !== p.id);
   sauver();
   await supprimerPhotosDe(p.id);
