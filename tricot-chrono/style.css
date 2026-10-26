@@ -50,7 +50,7 @@ h1 {
 
 .sous-titre { margin: 4px 0 0; color: var(--texte-doux); }
 
-.liste { display: grid; gap: 14px; margin-bottom: 24px; }
+.liste { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-bottom: 24px; }
 
 .carte {
   display: flex;
