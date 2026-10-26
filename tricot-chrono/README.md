@@ -41,7 +41,9 @@ de chaque projet) :
    et les raccourcis à afficher.
 
 Un appui sur un projet du widget ouvre l'appli dans Safari et démarre son
-chrono (s'il tournait déjà, il continue).
+chrono ; un second appui le met en pause. Pour n'afficher que les projets
+favoris, les ranger dans un dossier Raccourcis et choisir ce dossier dans le
+widget (taille moyenne : jusqu'à 4 projets).
 
 ## Limites connues
 

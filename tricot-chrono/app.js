@@ -288,14 +288,14 @@ function vueProjet(p) {
     el('section', { class: 'bloc bloc-peche' },
       el('h3', {}, 'Widget écran d’accueil'),
       horsSafari ? avertissementSafari() : null,
-      el('p', { class: 'aide' }, 'Un appui sur le widget lancera le chrono de ce projet. À faire une fois par projet :'),
+      el('p', { class: 'aide' }, 'Un appui sur ce projet dans le widget démarre son chrono, un second appui le met en pause. À faire une fois par projet :'),
       el('ol', { class: 'etapes' },
         el('li', {}, 'Touche « Copier le lien » ci-dessous.'),
         el('li', {}, 'Ouvre l’app Raccourcis, touche « + » puis « Ajouter une action ».'),
         el('li', {}, 'Cherche « Ouvrir les URL », choisis-la, touche « URL » et colle le lien.'),
         el('li', {}, `Touche le nom en haut, « Renommer », écris « ${p.titre} » puis « OK ».`),
         el('li', {}, 'Sur l’écran d’accueil : appui long, « Modifier », « Ajouter un widget », puis « Raccourcis ». Prends la taille moyenne (4 projets).'),
-        el('li', {}, 'Pour choisir les projets affichés : appui long sur le widget, puis « Modifier le widget ».'),
+        el('li', {}, 'Pour n’afficher que tes projets favoris : dans Raccourcis, range-les dans un dossier (par exemple « Tricot »), puis appui long sur le widget, « Modifier le widget » et choisis ce dossier.'),
       ),
       el('p', { class: 'aide' }, 'Au premier appui, l’iPhone peut demander s’il peut ouvrir la page : réponds « Autoriser ».'),
       el('p', { class: 'lien-raccourci' }, lien),
@@ -415,7 +415,8 @@ function lireLien() {
     boite('Ce projet est introuvable ici. Le raccourci doit ouvrir l’appli dans Safari, là où tes projets sont enregistrés.', { annuler: false });
     return;
   }
-  demarrer(p);
+  // Chaque appui sur le widget démarre ou met en pause le chrono.
+  p.debut ? mettreEnPause(p) : demarrer(p);
   projetOuvert = p.id;
 }
 
